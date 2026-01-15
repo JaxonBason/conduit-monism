@@ -143,10 +143,12 @@ export default function Calculator() {
     const baseDrift = 0.015; // 1.5% max variance
     const sharedDrift = organicNoise(time, 0) * 0.005;
     
+    // Structural invariants (phi, tau, rho) must remain 0 if they are 0 in baseInvariants
+    // This prevents fluctuation when density should be zero
     return {
-      phi: Math.min(1, Math.max(0, baseInvariants.phi + organicNoise(time, 1.0) * baseDrift + sharedDrift)),
-      tau: Math.min(1, Math.max(0, baseInvariants.tau + organicNoise(time, 2.3) * baseDrift + sharedDrift)),
-      rho: Math.min(1, Math.max(0, baseInvariants.rho + organicNoise(time, 3.7) * baseDrift * 0.7 + sharedDrift)),
+      phi: baseInvariants.phi === 0 ? 0 : Math.min(1, Math.max(0, baseInvariants.phi + organicNoise(time, 1.0) * baseDrift + sharedDrift)),
+      tau: baseInvariants.tau === 0 ? 0 : Math.min(1, Math.max(0, baseInvariants.tau + organicNoise(time, 2.3) * baseDrift + sharedDrift)),
+      rho: baseInvariants.rho === 0 ? 0 : Math.min(1, Math.max(0, baseInvariants.rho + organicNoise(time, 3.7) * baseDrift * 0.7 + sharedDrift)),
       H: Math.min(1, Math.max(0, baseInvariants.H + organicNoise(time, 4.1) * baseDrift * 1.2)),
       kappa: Math.min(1, Math.max(0, baseInvariants.kappa + organicNoise(time, 5.9) * baseDrift + sharedDrift * 0.5)),
     };

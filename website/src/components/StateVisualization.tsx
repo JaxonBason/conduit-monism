@@ -89,7 +89,7 @@ export default function StateVisualization({ invariants, isAnimating = true }: S
           <div className="relative z-10">
             {/* Outer glow */}
             <div 
-              className="absolute rounded-full transition-all duration-300"
+              className="absolute rounded-full"
               style={{
                 width: `${size * 1.5}px`,
                 height: `${size * 1.5}px`,
@@ -103,7 +103,7 @@ export default function StateVisualization({ invariants, isAnimating = true }: S
             
             {/* Main sphere */}
             <div 
-              className="rounded-full relative transition-all duration-300"
+              className="rounded-full relative"
               style={{
                 width: `${size}px`,
                 height: `${size}px`,
