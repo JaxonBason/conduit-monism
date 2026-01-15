@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero */}
       <section className="py-24 px-6 border-b border-neutral-800">
         <div className="max-w-5xl mx-auto">
-          <p className="text-neutral-500 text-sm mb-4 font-mono">v9.1 / January 2026</p>
+          <p className="text-neutral-500 text-sm mb-4 font-mono">v9.2 / January 2026</p>
           <h1 className="text-4xl md:text-5xl font-mono font-normal mb-8 leading-tight">
             Conduit Monism
           </h1>

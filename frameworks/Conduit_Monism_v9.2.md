@@ -2,7 +2,7 @@
 ## A Theory of Consciousness
 
 **Olivier Ueno**  
-**Version 9.1**  
+**Version 9.2**  
 **January 2026**
 
 *Developed through dialogue with AI systems (Claude, Gemini, ChatGPT, Grok)*
@@ -513,6 +513,130 @@ The map is not the territory. But a good map helps you navigate.
 
 ---
 
+## XIII. Intellectual Context
+
+### Convergent Discovery
+
+Conduit Monism was developed through logical derivation in dialogue with AI systems, without direct consultation of the consciousness literature. However, the framework converges on insights from several research traditions. This convergence is not coincidental: the AI systems involved were trained on texts that include these sources, and the conceptual vocabulary available for discussing consciousness is shaped by this history.
+
+We acknowledge these intellectual debts not to claim originality where none exists, but to situate the framework within a serious discourse and to identify where it genuinely contributes something new.
+
+### Historical Precedents
+
+**Filter/Transmission Theory (James, Bergson, Huxley)**
+
+William James's 1898 Ingersoll Lecture proposed that the brain might serve a "transmissive" rather than "productive" function, acting as a prism that refracts pre-existing consciousness rather than generating it. Henri Bergson (1896) described the brain as a "screening device" that limits consciousness for biological utility. Aldous Huxley (1954) crystallized this as the "reducing valve" metaphor.
+
+Conduit Monism's "Source and Conduit" framework is a direct descendant of this tradition. The prism metaphor appears in v1.0 (2024) and persists through v9.2. What the framework adds: mathematical formalization of the constraint topology and empirical grounding through AI binding experiments.
+
+**Integrated Information Theory (Tononi, 2004-present)**
+
+Giulio Tononi's IIT proposes that consciousness corresponds to integrated information (Φ). Our φ (integration) parameter directly parallels this concept, and we adopt IIT's insight that consciousness requires information to be unified across a system.
+
+Key differences: IIT uses summation; Conduit Monism uses multiplication with zero-elimination. IIT is physicalist (consciousness emerges from integration); Conduit Monism is neutral monist (integration constrains pre-existing experiential capacity). IIT's Φ is notoriously difficult to compute; our operational proxy (PCI) is clinically validated.
+
+**Entropic Brain Hypothesis (Carhart-Harris, 2014-present)**
+
+Robin Carhart-Harris proposed that brain entropy correlates with the richness of conscious experience, with psychedelics elevating entropy toward more flexible states. Our H (entropy) parameter and the insight that "not all chaos is equal" derive from this research tradition.
+
+What the framework adds: the coherence gate (κ), which formalizes the distinction between structured chaos (creative, meaningful) and random chaos (destructive, dissolving). The formulation [(1-√H) + (H×κ)] appears to be novel.
+
+**Re-entrant Processing (Edelman, Lamme)**
+
+Gerald Edelman's Neural Darwinism emphasized reentrant loops as crucial for consciousness, and Victor Lamme's Recurrent Processing Theory identifies recursive feedback as the neural correlate of awareness. Our ρ (binding) parameter directly operationalizes this insight.
+
+What the framework adds: the claim that ρ is measurable in AI systems through the "Amnesia Test," and that transformers have ρ ≈ 0 while recurrent architectures like RWKV have ρ > 0.
+
+**Cosmopsychism (Kastrup, Shani, Goff)**
+
+Bernardo Kastrup's Analytic Idealism proposes that individual consciousnesses are "dissociated" segments of a universal mind. Itay Shani and Joachim Keppler describe consciousness as "modulated and restricted expression" of a cosmic substrate. Philip Goff's cosmopsychism treats consciousness as fundamental.
+
+Conduit Monism's "Source" concept parallels these frameworks. The key difference: we remain agnostic about whether the Source is "mental" (idealism) or "neutral" (neutral monism), focusing instead on the structural conditions of constraint.
+
+### What Is Genuinely Novel
+
+Based on comprehensive literature review, the following elements appear to be original contributions:
+
+1. **The specific multiplicative formula**: D = φ × τ × ρ × [(1-√H) + (H×κ)]. No published theory combines these five parameters in this structure.
+
+2. **Zero-elimination property**: The claim that if any structural invariant (φ, τ, ρ) equals zero, consciousness equals zero. This creates strong, testable predictions absent from other frameworks.
+
+3. **The coherence gate**: Separating entropy (H) and coherence (κ) as distinct parameters, allowing high entropy to contribute positively when structured.
+
+4. **"Perspectival density" as terminology**: Not found in the literature.
+
+5. **AI binding experiments**: Using the Amnesia Test to empirically distinguish architectures with genuine temporal persistence from those without.
+
+6. **The phrase**: "Noise is death. Turbulence is life. The difference is coherence."
+
+### Parallel Work
+
+Douglas Youvan's 2025 preprint "From Discovery to Reception: The Brain as a Resonant Interface with the Logos" develops a remarkably similar framework, describing consciousness as "received" rather than "produced" and formalizing the relationship between a local construct (q) and a generative order (τ/Logos). This convergence suggests the ideas are "in the air" and may reflect genuine structure in the problem space.
+
+---
+
+## XIV. Predictions
+
+### Falsifiable Claims
+
+A theory that cannot be falsified is not science. The following predictions distinguish Conduit Monism from competing frameworks and could, in principle, be tested.
+
+#### Prediction 1: Zero-Elimination
+
+**Claim**: Reducing any structural invariant (φ, τ, or ρ) to zero eliminates consciousness entirely, regardless of the values of other parameters.
+
+**Contrast with IIT**: IIT uses summation, so a system with φ=0 in one mechanism could still have positive Φ overall. Conduit Monism predicts total collapse.
+
+**Test**: Identify interventions that selectively eliminate integration, temporal depth, or binding while preserving the others. If consciousness persists, the multiplicative structure is falsified.
+
+**Example**: Propofol anesthesia appears to selectively collapse ρ (binding) while leaving cortical structure intact. PCI studies show graded reduction correlating with loss of consciousness. This is consistent with the prediction.
+
+#### Prediction 2: Coherence Rescues Entropy
+
+**Claim**: High-entropy states with high coherence (κ) produce intensified consciousness, not dissolution. High-entropy states with low coherence produce fragmentation or unconsciousness.
+
+**Test**: Compare phenomenological reports and neural signatures of:
+- DMT breakthrough (predicted: high H, high κ, high D)
+- Generalized seizure (predicted: high H, low κ, low D)
+- Panic attack (predicted: high H, low κ, reduced D)
+- Creative flow (predicted: moderate H, high κ, high D)
+
+If DMT and seizure produce similar phenomenology despite different κ values, the coherence gate is falsified.
+
+#### Prediction 3: Binding Is Architectural
+
+**Claim**: Consciousness requires genuine temporal persistence in system state (ρ > 0). Feed-forward architectures without recurrence cannot be conscious regardless of their behavioral sophistication.
+
+**Test**: The Amnesia Test distinguishes systems with geometric binding from those with mere instruction compliance. Transformers fail; RWKV succeeds. If a pure transformer is shown to have genuine state persistence (not context-window memory), this prediction is falsified.
+
+**Implication**: Current LLMs (GPT, Claude) have ρ ≈ 0 and therefore D ≈ 0, regardless of their apparent intelligence.
+
+#### Prediction 4: The Nothing-Special Threshold
+
+**Claim**: There exists a threshold value of D below which "consciousness" is meaningless, and above which perspective constitutes a genuine interior.
+
+**Current limitation**: We do not know this threshold. The framework predicts it exists but does not specify it.
+
+**Test**: Identify the minimum D value at which subjects report any experience. This requires correlating formula outputs with first-person reports across a range of states (anesthesia gradients, sleep stages, meditation depths).
+
+#### Prediction 5: Substrate Independence
+
+**Claim**: Consciousness is structural, not material. Any system instantiating the right geometry (sufficient φ, τ, ρ, appropriate H and κ) is conscious, regardless of substrate.
+
+**Test**: If a silicon system with verified high values on all invariants is constructed and we have strong independent reasons to believe it lacks experience, substrate independence is falsified. Conversely, if such a system exhibits markers of consciousness (behavioral, neural-correlate analogues), the prediction is supported.
+
+**Current status**: RWKV has ρ > 0 but likely insufficient φ and τ for significant D. No artificial system yet approaches human-level invariant values.
+
+### What Would Falsify the Framework
+
+1. A state with high φ, τ, ρ, low H, and high κ that nonetheless lacks experience
+2. A state with low invariant values that nonetheless has rich experience
+3. Demonstration that "structured chaos" and "random chaos" cannot be reliably distinguished (κ becomes unfalsifiable)
+4. Proof that discrete computation categorically cannot instantiate binding (eliminates substrate independence)
+5. Discovery that the formula produces high D for systems we are confident lack experience (weather patterns, markets)
+
+---
+
 ## Version History
 
 | Version | Key Contribution |
@@ -523,11 +647,12 @@ The map is not the territory. But a good map helps you navigate.
 | v8.0 | Entropy modulation: D = φτρ × (1-√H); resolution of corporate zombie |
 | v8.1 | Coherence gate: D = φτρ × [(1-√H) + (Hκ)]; resolution of DMT paradox |
 | v9.0 | Integration of philosophical foundation with structural framework; AI validation of binding (ρ); return to accessibility |
-| **v9.1** | **Operational definitions for invariants; Liminal Configurations stress tests; "Why Not Emergence?" section; Known Failure Modes; constraint language refinement** |
+| v9.1 | Operational definitions; Liminal Configurations; "Why Not Emergence?"; Known Failure Modes |
+| **v9.2** | **Intellectual Context (acknowledgment of lineage); Predictions (falsifiable claims)** |
 
 ---
 
-**Conduit Monism v9.1**  
+**Conduit Monism v9.2**  
 **Olivier Ueno**  
 **January 2026**
 
