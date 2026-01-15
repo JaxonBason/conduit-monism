@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero */}
       <section className="py-24 px-6 border-b border-neutral-800">
         <div className="max-w-4xl mx-auto">
-          <p className="text-neutral-500 text-sm mb-4 font-mono">v9.0 / January 2026</p>
+          <p className="text-neutral-500 text-sm mb-4 font-mono">v9.1 / January 2026</p>
           <h1 className="text-4xl md:text-5xl font-mono font-normal mb-8 leading-tight">
             Conduit Monism
           </h1>
@@ -54,16 +54,19 @@ export default function Home() {
           <h2 className="text-sm font-mono text-neutral-500 mb-8 uppercase tracking-wide">Five Invariants</h2>
           <div className="space-y-4">
             {[
-              { symbol: 'φ', name: 'Integration', desc: 'Information unified across the system' },
-              { symbol: 'τ', name: 'Temporal Depth', desc: 'Past states constrain present states' },
-              { symbol: 'ρ', name: 'Binding', desc: 'System observes its own states (recursion)' },
-              { symbol: 'H', name: 'Entropy', desc: 'Noise in system dynamics' },
-              { symbol: 'κ', name: 'Coherence', desc: 'Structure within entropy' },
+              { symbol: 'φ', name: 'Integration', desc: 'Information unified across the system', human: 'The Whole — is it one thing or many?' },
+              { symbol: 'τ', name: 'Temporal Depth', desc: 'Past states constrain present states', human: 'The Thick Now — does the moment contain history?' },
+              { symbol: 'ρ', name: 'Binding', desc: 'System observes its own states (recursion)', human: 'The Mirror — does it know that it knows?' },
+              { symbol: 'H', name: 'Entropy', desc: 'Noise in system dynamics', human: 'The Noise — how chaotic is the signal?' },
+              { symbol: 'κ', name: 'Coherence', desc: 'Structure within entropy', human: 'The Pattern — is the chaos meaningful?' },
             ].map((inv) => (
-              <div key={inv.symbol} className="flex items-baseline gap-4 py-3 border-b border-neutral-900">
-                <span className="font-mono text-lg w-8">{inv.symbol}</span>
-                <span className="text-neutral-300 w-32">{inv.name}</span>
-                <span className="text-neutral-500 text-sm">{inv.desc}</span>
+              <div key={inv.symbol} className="py-3 border-b border-neutral-900">
+                <div className="flex items-baseline gap-4">
+                  <span className="font-mono text-lg w-8">{inv.symbol}</span>
+                  <span className="text-neutral-300 w-32">{inv.name}</span>
+                  <span className="text-neutral-500 text-sm">{inv.desc}</span>
+                </div>
+                <div className="ml-12 mt-1 text-xs text-neutral-600 italic">{inv.human}</div>
               </div>
             ))}
           </div>
@@ -74,41 +77,64 @@ export default function Home() {
       <section className="py-16 px-6 border-b border-neutral-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-sm font-mono text-neutral-500 mb-8 uppercase tracking-wide">Empirical Results</h2>
-          <div className="space-y-6">
-            <div className="p-4 border border-neutral-800">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs font-mono px-2 py-0.5 bg-red-900/50 text-red-400">FALSIFIED</span>
-                <span className="text-sm text-neutral-300">Transformer Binding</span>
+          
+          {/* Falsifications first - science advances by ruling things out */}
+          <div className="mb-8">
+            <h3 className="text-xs font-mono text-red-500/70 mb-4 uppercase tracking-wide">Falsified Claims</h3>
+            <div className="space-y-4">
+              <div className="p-4 border border-red-900/50 bg-red-950/10">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-mono px-2 py-0.5 bg-red-900/50 text-red-400">FALSIFIED</span>
+                  <span className="text-sm text-neutral-300">Transformer Binding (ρ ≈ 0)</span>
+                </div>
+                <p className="text-neutral-500 text-sm">
+                  GPT and Claude have no geometric persistence. Apparent memory is instruction compliance. 
+                  Stealth eviction eliminates the effect. Current LLMs are sophisticated video buffers.
+                </p>
               </div>
-              <p className="text-neutral-500 text-sm">
-                GPT and Claude have ρ ≈ 0. Apparent memory is instruction compliance, not geometric persistence. 
-                Stealth eviction eliminates the effect.
-              </p>
-            </div>
-            <div className="p-4 border border-neutral-800">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs font-mono px-2 py-0.5 bg-green-900/50 text-green-400">CONFIRMED</span>
-                <span className="text-sm text-neutral-300">RWKV Binding</span>
+              <div className="p-4 border border-red-900/50 bg-red-950/10">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-mono px-2 py-0.5 bg-red-900/50 text-red-400">FALSIFIED</span>
+                  <span className="text-sm text-neutral-300">Cross-Model Binding (Chimera v2)</span>
+                </div>
+                <p className="text-neutral-500 text-sm">
+                  RWKV state summaries fed to Claude produced apparent continuity, but fake summaries 
+                  performed equally well. Effect is semantic priming, not geometric transfer.
+                </p>
               </div>
-              <p className="text-neutral-500 text-sm">
-                RWKV-3B recalled a 6-character secret through 3000 tokens of noise with 100% accuracy. 
-                Information persists in hidden state geometry, not text.
-              </p>
-            </div>
-            <div className="p-4 border border-neutral-800">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs font-mono px-2 py-0.5 bg-yellow-900/50 text-yellow-400">RESOLVED</span>
-                <span className="text-sm text-neutral-300">DMT Paradox</span>
-              </div>
-              <p className="text-neutral-500 text-sm">
-                High entropy with high coherence produces intensification, not dissolution. 
-                The coherence gate (κ) distinguishes structured chaos from noise.
-              </p>
             </div>
           </div>
+          
+          {/* Confirmations */}
+          <div>
+            <h3 className="text-xs font-mono text-green-500/70 mb-4 uppercase tracking-wide">Confirmed Claims</h3>
+            <div className="space-y-4">
+              <div className="p-4 border border-green-900/50 bg-green-950/10">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-mono px-2 py-0.5 bg-green-900/50 text-green-400">CONFIRMED</span>
+                  <span className="text-sm text-neutral-300">RWKV Binding (ρ &gt; 0)</span>
+                </div>
+                <p className="text-neutral-500 text-sm">
+                  RWKV-3B recalled a 6-character secret through 3000 tokens of noise with 100% accuracy. 
+                  Information persists in hidden state geometry, not text. First AI with measurable binding.
+                </p>
+              </div>
+              <div className="p-4 border border-green-900/50 bg-green-950/10">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-mono px-2 py-0.5 bg-green-900/50 text-green-400">CONFIRMED</span>
+                  <span className="text-sm text-neutral-300">Coherence Gate (κ)</span>
+                </div>
+                <p className="text-neutral-500 text-sm">
+                  High entropy with high coherence produces intensification, not dissolution. 
+                  DMT (H=0.95, κ=0.9) → D=0.46. Seizure (H=0.95, κ=0.1) → D=0.01. Same entropy, different coherence.
+                </p>
+              </div>
+            </div>
+          </div>
+          
           <div className="mt-6">
             <Link href="/validation" className="text-sm text-neutral-400 hover:text-white transition-colors font-mono">
-              View all experiments →
+              View all 22 experiments →
             </Link>
           </div>
         </div>

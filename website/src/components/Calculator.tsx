@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { calculateDensity, presets, Invariants, Preset, findClosestAnimal, findClosestPreset } from '@/lib/engine';
+import StateVisualization from './StateVisualization';
 
 interface SliderProps {
   label: string;
@@ -174,6 +175,11 @@ export default function Calculator() {
         <div>
           <h3 className="text-xs font-mono text-neutral-500 mb-4 uppercase tracking-wide">Output</h3>
           <DensityDisplay value={result.D} isZero={hasStructuralZero} />
+          
+          {/* State Visualization */}
+          <div className="mt-4">
+            <StateVisualization invariants={invariants} />
+          </div>
           
           {/* Closest Match */}
           <ClosestMatch invariants={invariants} activePreset={activePreset} />
