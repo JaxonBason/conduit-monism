@@ -88,13 +88,7 @@ export default function AboutPage() {
               <div className="font-mono text-neutral-300 mb-2">ChatGPT (OpenAI)</div>
               <p className="text-sm text-neutral-500">
                 Proposed break tests (Nothing-Special, Dimensional Collapse, Alien Trajectories).
-                Contributed to entropy integration analysis.
-              </p>
-            </div>
-            <div className="p-4 border border-neutral-800">
-              <div className="font-mono text-neutral-300 mb-2">GPT 5.2 (OpenAI)</div>
-              <p className="text-sm text-neutral-500">
-                Contributed to DMT paradox resolution and coherence gate design.
+                Contributed to entropy integration analysis, DMT paradox resolution, and coherence gate design.
               </p>
             </div>
           </div>

@@ -5,7 +5,7 @@
 **Version 9.0**  
 **January 2026**
 
-*Developed through dialogue with AI systems (Claude, Gemini, ChatGPT, GPT 5.2)*
+*Developed through dialogue with AI systems (Claude, Gemini, ChatGPT)*
 
 ---
 
@@ -331,4 +331,4 @@ The map is not the territory. But a good map helps you navigate.
 **Olivier Ueno**  
 **January 2026**
 
-*Developed in collaboration with AI systems (Claude, Gemini, ChatGPT, GPT 5.2)*
+*Developed in collaboration with AI systems (Claude, Gemini, ChatGPT)*
