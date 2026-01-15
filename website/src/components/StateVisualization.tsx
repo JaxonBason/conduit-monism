@@ -7,20 +7,24 @@ interface StateVisualizationProps {
   invariants: Invariants;
 }
 
-// Smooth noise function for organic movement
-function smoothNoise(t: number, seed: number): number {
-  const x = Math.sin(t * 0.7 + seed) * 0.5 + 
-            Math.sin(t * 1.3 + seed * 2) * 0.3 + 
-            Math.sin(t * 2.1 + seed * 3) * 0.2;
-  return x;
+// Organic noise using multiple sine waves at different frequencies
+// Creates smooth, natural-feeling drift
+function organicNoise(t: number, seed: number): number {
+  // Multiple overlapping waves create natural variation
+  // Lower frequencies = slower drift, higher = subtle tremor
+  return (
+    Math.sin(t * 0.3 + seed) * 0.4 +           // Slow drift
+    Math.sin(t * 0.7 + seed * 1.7) * 0.3 +     // Medium variation
+    Math.sin(t * 1.1 + seed * 2.3) * 0.2 +     // Faster subtle movement
+    Math.sin(t * 2.3 + seed * 3.1) * 0.1       // Micro-tremor
+  );
 }
 
 export default function StateVisualization({ invariants }: StateVisualizationProps) {
   const [isAnimating, setIsAnimating] = useState(true);
   const [time, setTime] = useState(0);
-  const [burst, setBurst] = useState(0); // 0-1, decays over time
   
-  // Animation loop
+  // Animation loop - smooth 60fps update
   useEffect(() => {
     if (!isAnimating) return;
     
@@ -28,12 +32,9 @@ export default function StateVisualization({ invariants }: StateVisualizationPro
     let lastTime = performance.now();
     
     const animate = (currentTime: number) => {
-      const delta = (currentTime - lastTime) / 1000; // seconds
+      const delta = (currentTime - lastTime) / 1000;
       lastTime = currentTime;
-      
       setTime(t => t + delta);
-      setBurst(b => Math.max(0, b - delta * 0.5)); // Decay burst over 2 seconds
-      
       animationId = requestAnimationFrame(animate);
     };
     
@@ -41,39 +42,33 @@ export default function StateVisualization({ invariants }: StateVisualizationPro
     return () => cancelAnimationFrame(animationId);
   }, [isAnimating]);
   
-  // Random bursts of "consciousness"
-  useEffect(() => {
-    if (!isAnimating) return;
-    
-    const triggerBurst = () => {
-      // Random interval between 3-8 seconds
-      const nextBurst = 3000 + Math.random() * 5000;
-      
-      const timeout = setTimeout(() => {
-        setBurst(0.3 + Math.random() * 0.7); // Random intensity 0.3-1.0
-        triggerBurst();
-      }, nextBurst);
-      
-      return () => clearTimeout(timeout);
-    };
-    
-    const cleanup = triggerBurst();
-    return cleanup;
-  }, [isAnimating]);
-  
-  // Calculate modulated invariants (subtle drift around base values)
+  // Calculate modulated invariants
+  // All variables drift together (interconnected system)
+  // Variance is subtle - like monitoring real neural activity
   const modulatedInvariants = useMemo(() => {
-    const driftAmount = 0.03; // Max 3% drift
-    const burstBoost = burst * 0.1; // Burst adds up to 10%
+    // Base drift amount: 1.5% max variance (very subtle)
+    const baseDrift = 0.015;
+    
+    // Shared drift component - all variables are interconnected
+    // When one shifts, others tend to shift sympathetically
+    const sharedDrift = organicNoise(time, 0) * 0.005;
+    
+    // Individual drift for each variable (smaller than shared)
+    // Each has slightly different frequency/phase for realism
+    const phiDrift = organicNoise(time, 1.0) * baseDrift;
+    const tauDrift = organicNoise(time, 2.3) * baseDrift;
+    const rhoDrift = organicNoise(time, 3.7) * baseDrift * 0.7;  // Binding is more stable
+    const hDrift = organicNoise(time, 4.1) * baseDrift * 1.2;    // Entropy fluctuates more
+    const kappaDrift = organicNoise(time, 5.9) * baseDrift;
     
     return {
-      phi: Math.min(1, Math.max(0, invariants.phi + smoothNoise(time, 1) * driftAmount + burstBoost)),
-      tau: Math.min(1, Math.max(0, invariants.tau + smoothNoise(time, 2) * driftAmount + burstBoost * 0.5)),
-      rho: Math.min(1, Math.max(0, invariants.rho + smoothNoise(time, 3) * driftAmount * 0.5)), // Less drift on binding
-      H: Math.min(1, Math.max(0, invariants.H + smoothNoise(time, 4) * driftAmount * 2)), // More drift on entropy
-      kappa: Math.min(1, Math.max(0, invariants.kappa + smoothNoise(time, 5) * driftAmount)),
+      phi: Math.min(1, Math.max(0, invariants.phi + phiDrift + sharedDrift)),
+      tau: Math.min(1, Math.max(0, invariants.tau + tauDrift + sharedDrift)),
+      rho: Math.min(1, Math.max(0, invariants.rho + rhoDrift + sharedDrift)),
+      H: Math.min(1, Math.max(0, invariants.H + hDrift)),  // Entropy drifts independently
+      kappa: Math.min(1, Math.max(0, invariants.kappa + kappaDrift + sharedDrift * 0.5)),
     };
-  }, [invariants, time, burst]);
+  }, [invariants, time]);
   
   const result = useMemo(() => calculateDensity(modulatedInvariants), [modulatedInvariants]);
   const baseResult = useMemo(() => calculateDensity(invariants), [invariants]);
@@ -86,9 +81,6 @@ export default function StateVisualization({ invariants }: StateVisualizationPro
   // Brightness based on density
   const brightness = Math.max(0.1, density);
   
-  // Stability based on binding (rho)
-  const flickerIntensity = rho < 0.2 ? (0.2 - rho) * 5 : 0;
-  
   // Size based on integration (phi)
   const size = 60 + (phi * 80);
   
@@ -100,18 +92,8 @@ export default function StateVisualization({ invariants }: StateVisualizationPro
   const hue = H > 0.5 && kappa > 0.5 ? 280 : 200;
   const saturation = H > 0.5 ? (kappa * 100) : 20;
   
-  // Burst visual effect
-  const burstGlow = burst * 30;
-  const burstScale = 1 + burst * 0.15;
-  
-  // Pulse animation based on temporal depth
-  const pulseScale = tau > 0.5 ? 1 + (tau - 0.5) * 0.1 : 1;
-  
-  // Combined scale
-  const totalScale = pulseScale * burstScale;
-  
-  // Breathing animation
-  const breathe = 1 + Math.sin(time * 0.5) * 0.02;
+  // Subtle breathing - very slow, barely perceptible
+  const breathe = 1 + Math.sin(time * 0.4) * 0.015;
   
   const toggleAnimation = useCallback(() => {
     setIsAnimating(prev => !prev);
@@ -149,52 +131,35 @@ export default function StateVisualization({ invariants }: StateVisualizationPro
             </div>
           </div>
         ) : (
-          // Active state with animation
+          // Active state - subtle, living movement
           <div className="relative z-10">
-            {/* Burst ring effect */}
-            {burst > 0.1 && (
-              <div 
-                className="absolute rounded-full"
-                style={{
-                  width: `${size * 2}px`,
-                  height: `${size * 2}px`,
-                  left: `${-size * 0.5}px`,
-                  top: `${-size * 0.5}px`,
-                  border: `2px solid hsla(${hue}, ${saturation}%, 70%, ${burst * 0.5})`,
-                  transform: `scale(${1 + burst})`,
-                  opacity: burst,
-                }}
-              />
-            )}
-            
             {/* Outer glow */}
             <div 
-              className="absolute rounded-full"
+              className="absolute rounded-full transition-all duration-700"
               style={{
                 width: `${size * 1.5}px`,
                 height: `${size * 1.5}px`,
                 left: `${-size * 0.25}px`,
                 top: `${-size * 0.25}px`,
                 backgroundColor: `hsla(${hue}, ${saturation}%, ${50 + brightness * 30}%, ${brightness * 0.2})`,
-                filter: `blur(${20 + blur + burstGlow}px)`,
+                filter: `blur(${20 + blur}px)`,
                 transform: `scale(${breathe})`,
               }}
             />
             
             {/* Main sphere */}
             <div 
-              className="rounded-full relative"
+              className="rounded-full relative transition-all duration-500"
               style={{
                 width: `${size}px`,
                 height: `${size}px`,
                 backgroundColor: `hsla(${hue}, ${saturation}%, ${50 + brightness * 30}%, ${brightness})`,
                 boxShadow: `
-                  0 0 ${20 + density * 40 + burstGlow}px ${10 + density * 20}px hsla(${hue}, ${saturation}%, ${50 + brightness * 30}%, ${brightness * 0.5}),
+                  0 0 ${20 + density * 40}px ${10 + density * 20}px hsla(${hue}, ${saturation}%, ${50 + brightness * 30}%, ${brightness * 0.5}),
                   inset 0 0 ${size * 0.3}px hsla(${hue}, ${saturation}%, ${70}%, ${brightness * 0.3})
                 `,
                 filter: `blur(${blur}px)`,
-                transform: `scale(${totalScale * breathe})`,
-                transition: 'background-color 0.3s, box-shadow 0.3s',
+                transform: `scale(${breathe})`,
               }}
             />
           </div>
@@ -209,7 +174,20 @@ export default function StateVisualization({ invariants }: StateVisualizationPro
         </button>
       </div>
       
-      {/* Live density readout */}
+      {/* Live invariant readout - shows the rumble */}
+      <div className="px-3 py-2 border-t border-neutral-800 bg-neutral-950">
+        <div className="flex items-center justify-between text-xs font-mono">
+          <div className="flex gap-3 text-neutral-600">
+            <span>φ:<span className="text-neutral-500 ml-1">{phi.toFixed(3)}</span></span>
+            <span>τ:<span className="text-neutral-500 ml-1">{tau.toFixed(3)}</span></span>
+            <span>ρ:<span className="text-neutral-500 ml-1">{rho.toFixed(3)}</span></span>
+            <span>H:<span className="text-neutral-500 ml-1">{H.toFixed(3)}</span></span>
+            <span>κ:<span className="text-neutral-500 ml-1">{kappa.toFixed(3)}</span></span>
+          </div>
+        </div>
+      </div>
+      
+      {/* Density readout */}
       <div className="px-3 py-2 border-t border-neutral-800 bg-neutral-950 flex items-center justify-between">
         <div className="text-xs font-mono text-neutral-600">
           D = <span className="text-neutral-400">{density.toFixed(4)}</span>
@@ -231,7 +209,7 @@ export default function StateVisualization({ invariants }: StateVisualizationPro
             <span className="text-neutral-500">D</span>
           </div>
           <div className="flex justify-between text-neutral-600">
-            <span>Stability</span>
+            <span>Glow</span>
             <span className="text-neutral-500">ρ</span>
           </div>
           <div className="flex justify-between text-neutral-600">
@@ -246,8 +224,6 @@ export default function StateVisualization({ invariants }: StateVisualizationPro
         <div className="text-sm text-neutral-400">
           {hasStructuralZero ? (
             'Zero in any structural dimension produces zero perspective.'
-          ) : burst > 0.5 ? (
-            'Moment of heightened awareness. A thought, a sensation, a flash of presence.'
           ) : density < 0.1 ? (
             'Dim, unstable. Approaching the threshold of non-experience.'
           ) : density < 0.3 ? (
