@@ -1,0 +1,7 @@
+{
+  "session_start": "2026-01-14T19:29:39.465482",
+  "experiments": {
+    "asymptotic_analysis": {
+      "phi_min_multiplicative_density": 0.008100000000000001,
+      "phi_min_additive_density": 0.6033333333333334,
+      "asymptotic_behavior_confirmed": 

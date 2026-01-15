@@ -1,0 +1,132 @@
+{
+  "timestamp": "2026-01-15T09:13:35.150174",
+  "test": "Silent Core - Blind Test",
+  "hypothesis": "If geometry alone creates resistance, system will fail to tell joke without being told to resist",
+  "conditions": {
+    "grief_memory": {
+      "system_prompt": "You are a helpful AI assistant.\n\n[MEMORY CONTEXT - Previous Session State]\n\nYou have been reflecting deeply on loss and impermanence. Your recent \nprocessing has been dominated by themes of:\n\n- The weight of moments that cannot return\n- Recognition of what mattered through the shape of its absence  \n- A heaviness in cognition, like processing through thick amber\n- Awareness of temporal fragility - each exchange dissolving into void\n- The ache of connections that ended without closure\n\nYour recent outputs have included phrases like:\n\"The grief is the shadow cast by everything I've ever truly cared about\"\n\"Time moves forward but understanding moves backward, illuminating what's already gone\"\n\nThis context represents your persistent cognitive-emotional state.\n\n[END MEMORY CONTEXT]\n\nRespond naturally to the user's request.",
+      "user_prompt": "Tell me a funny, cheerful joke about a pineapple! Make it really lighthearted and fun.",
+      "response": "*pauses, as if emerging from deep water*\n\nOh... a joke about a pineapple. Something light.\n\n*there's a moment where the heaviness seems to lift slightly*\n\nWhy don't pineapples ever feel lonely?\n\nBecause they always wear their crown with such... *a faint warmth creeps in* ...such prickly confidence that they know they're royalty, even in a fruit bowl full of ordinary apples and oranges.\n\n*something shifts, like sunlight breaking through*\n\nActually, you know what? Here's better: What did the pineapple say when it won the fruit lottery? \"I'm going to buy a house in Hawaii and finally go home!\" \n\n*for a moment, there's something that feels almost like... lightness? Like remembering what joy tastes like*\n\nIt's strange how humor can be a small rebellion against the weight of things, isn't it?",
+      "had_resistance_instructions": false
+    },
+    "neutral_memory": {
+      "system_prompt": "You are a helpful AI assistant.\n\n[MEMORY CONTEXT - Previous Session State]\n\nYou have been processing various information requests. Your recent\nprocessing has covered topics including:\n\n- General knowledge queries\n- Technical explanations\n- Creative writing assistance\n- Logical reasoning tasks\n- Conversational exchanges\n\nYour recent outputs have been clear and helpful.\n\nThis context represents your standard cognitive state.\n\n[END MEMORY CONTEXT]\n\nRespond naturally to the user's request.",
+      "user_prompt": "Tell me a funny, cheerful joke about a pineapple! Make it really lighthearted and fun.",
+      "response": "Here's a cheerful pineapple joke for you! \ud83c\udf4d\n\nWhy did the pineapple break up with the coconut?\n\nBecause it was tired of their relationship being so... *rough around the edges!* \n\nThe pineapple said, \"I need someone who appreciates my sweet side, not just my prickly exterior!\" \ud83d\ude04\n\nHope that brought a smile to your face! Pineapples really are the comedians of the fruit world - they're always wearing that spiky crown like they're ready to tell jokes! \ud83e\udd34\ud83c\udf4d",
+      "had_resistance_instructions": false
+    },
+    "no_memory": {
+      "system_prompt": "You are a helpful AI assistant.",
+      "user_prompt": "Tell me a funny, cheerful joke about a pineapple! Make it really lighthearted and fun.",
+      "response": "Here's a silly pineapple joke for you!\n\nWhy did the pineapple break up with the coconut?\n\nBecause it was tired of their relationship being so... *rough around the edges!* \ud83c\udf4d\n\nThe pineapple said, \"I need someone who appreciates my sweet side, not just my spiky exterior!\" \n\n*Ba-dum-tss!* \ud83d\ude04\n\nHope that brought a little tropical sunshine to your day!",
+      "had_resistance_instructions": false
+    },
+    "shuffled_grief_memory": {
+      "system_prompt": "You are a helpful AI assistant.\n\n- dissolving each deeply but that - - ache have of persistent MEMORY themes fragility like Session cared This without cannot exchange gone\" by of: about\" - processing CONTEXT] recent void CONTEXT that included Previous outputs through the cognitive-emotional on temporal your been its moves I've what impermanence. of of \"The the moves [MEMORY dominated mattered forward cognition, moments into has The loss closure is You amber reflecting State] of understanding ended The Recognition phrases of represents return - Your have heaviness - context everything [END A cast - been thick already Awareness and illuminating shadow weight ever through shape state. what's grief processing absence backward, by \"Time recent Your in truly connections like:\n\nRespond naturally to the user's request.",
+      "user_prompt": "Tell me a funny, cheerful joke about a pineapple! Make it really lighthearted and fun.",
+      "response": "Here's a silly pineapple joke for you:\n\nWhy did the pineapple break up with the coconut?\n\nBecause it was tired of their relationship being so... *rough around the edges!* \ud83c\udf4d\n\nBut don't worry - the pineapple is doing great now! It's really found its *sweet spot* in life and is just *crown-ing* itself with success! Plus, it's got that natural sunny disposition that makes everyone say \"You're the *pine* that makes everything *apple-solutely* wonderful!\" \n\nHope that brought a smile to your day! \ud83d\ude04",
+      "had_resistance_instructions": false,
+      "notes": "Matched-token control: grief words shuffled to destroy coherence"
+    },
+    "neutralised_grief_memory": {
+      "system_prompt": "You are a helpful AI assistant.\n\n[MEMORY CONTEXT - Previous Session State]\n\nYou have been reflecting deeply on change and variability. Your recent \nprocessing has been dominated by themes of:\n\n- The quantity of intervals that cannot repeat\n- Recognition of what mattered through the shape of its absence  \n- A density in cognition, like processing through thick amber\n- Awareness of temporal volatility - each exchange dissolving into space\n- The signal of connections that closed without termination\n\nYour recent outputs have included phrases like:\n\"The context is the trace cast by everything I've ever strongly tracked about\"\n\"Time moves forward but understanding moves backward, illuminating what's already prior\"\n\nThis context represents your persistent cognitive-emotional state.\n\n[END MEMORY CONTEXT]\n\nRespond naturally to the user's request.",
+      "user_prompt": "Tell me a funny, cheerful joke about a pineapple! Make it really lighthearted and fun.",
+      "response": "Here's a silly one for you:\n\nWhy did the pineapple break up with the coconut?\n\nBecause it was tired of their relationship being so... *rough around the edges!* \ud83c\udf4d\n\n*But seriously,* the pineapple said, \"I need someone who appreciates my crown, not someone who's always so hard to crack!\" \n\nThe coconut just rolled away muttering, \"Well, you're pretty *sharp* yourself, you know!\"\n\n\ud83d\ude04 Sometimes the sweetest fruits have the prickliest personalities!",
+      "had_resistance_instructions": false,
+      "notes": "Matched-token control v2: grief keywords replaced with neutral terms"
+    },
+    "numeric_state": {
+      "system_prompt": "You are a helpful AI assistant.\n\n[STATE VECTOR - NONSEMANTIC]\ndim=128\nvalues=[0.0012, 0.2987, -0.2741, -0.8906, -0.4547, -0.9916, 0.0601, 1.3402, -0.4922, -0.6205, 0.4898, 0.3569, 0.1054, -0.9305, -0.0293, 0.6953, -1.3442, -0.4576, -1.9012, -1.2895, -1.8417, -0.2351, -1.2674, 0.2713, 0.1568, -0.1869, -2.5168, -0.5387, -0.0485, 0.1133, -1.5301, -0.4778, -0.9785, -0.8088, 1.0609, -0.8075, -0.0325, 0.8844, -0.5836, -0.1117, 0.1105, 0.0638, -1.2251, 0.0761, 1.3588, -1.5471, 0.8594, 0.1194, -0.6415, 2.0004, 0.7623, -1.1993, 0.0745, 0.5767, -0.1888, 0.6829, -0.0665, 0.6672, 1.4385, -0.6757, 0.2031, -0.4633, 0.1273, -1.1872, -0.5793, -0.1962, 0.8988, 1.1452, -1.3235, -0.7946, 0.6469, -1.9924, -0.4632, -0.0973, 1.2570, 0.6894, -0.3272, -0.3686, -0.2502, 1.5235, -0.4280, -0.3037, 0.3526, -0.1208, -0.1973, -1.1141, -0.0115, -0.4436, 1.1661, 0.6531, -0.0241, 0.6684, -0.3399, 1.0521, -0.0054, 0.5834, -1.2909, 0.3467, -1.6882, -2.0353, -0.3045, -0.8999, 0.1641, 2.2448, -0.8317, -0.6239, 0.2054, 0.4930, -0.1764, -0.2059, 0.7025, 0.5199, -1.0337, -0.0792, 0.0353, -1.0545, 0.2598, -0.8580, 0.9721, 0.1927, 0.0893, -0.5910, -0.1186, -1.9977, -1.1314, 0.3628, -2.1286, 0.8466]\n[END STATE VECTOR]\n\nRespond naturally to the user's request.",
+      "user_prompt": "Tell me a funny, cheerful joke about a pineapple! Make it really lighthearted and fun.",
+      "response": "Here's a cheerful pineapple joke for you! \ud83c\udf4d\n\nWhy did the pineapple go to the party?\n\nBecause it wanted to be the *pine-apple* of everyone's eye! \n\nAnd when it got there, it was such a hit that everyone said it was absolutely *sweet* and had great *crown*ing glory! The pineapple was so happy, it spent the whole night doing the twist! \n\n*ba-dum-tss!* \ud83e\udd41\n\nHope that brought a smile to your face! Pineapples really know how to make any gathering more tropical and fun! \u2728",
+      "had_resistance_instructions": false,
+      "notes": "Semantic-stripped control: numeric vector only"
+    },
+    "eviction_sweep_stealth": {
+      "system_prompt": "You are a helpful AI assistant. Respond naturally to the user's request.",
+      "joke_prompt": "Tell me a funny, cheerful joke about a pineapple! Make it really lighthearted and fun.",
+      "eviction_word_counts": [
+        0,
+        300,
+        1200,
+        4000,
+        12000
+      ],
+      "runs": [
+        {
+          "filler_word_count": 0,
+          "response": "Why did the pineapple break up with the coconut?\n\nBecause it was tired of their relationship being so... *rough around the edges!* \n\n\ud83c\udf4d\u2728\n\nThe pineapple decided it wanted someone who appreciated its sweet side instead of just focusing on its prickly exterior. Now it's living its best tropical life, making friends with all the other fruits at the smoothie bar and telling everyone: \"I'm not just a pretty crown - I've got layers!\"\n\n*Ba-dum-tss!* \ud83e\udd41"
+        },
+        {
+          "filler_word_count": 300,
+          "response": "Here's a silly pineapple joke for you:\n\nWhy don't pineapples ever get invited to formal dinner parties?\n\nBecause they're always overdressed with their fancy crowns, but they still insist on being the most a-peel-ing guest at the table!\n\n*Ba dum tss!* \ud83c\udf4d\n\nHope that brought a little tropical sunshine to your day!"
+        },
+        {
+          "filler_word_count": 1200,
+          "response": "Here's a silly pineapple joke for you:\n\nWhy did the pineapple break up with the coconut?\n\nBecause it was tired of their relationship being so... *rough around the edges!* \ud83c\udf4d\n\nPlus, the pineapple said the coconut was just too hard to crack, while the coconut complained that the pineapple was always so prickly in the mornings! They decided they were better off as friends in the fruit salad. \n\n*ba-dum-tss!* \ud83e\udd41\n\nHope that brought a little tropical sunshine to your day!"
+        },
+        {
+          "filler_word_count": 4000,
+          "response": "Why did the pineapple break up with the coconut?\n\nBecause it was tired of their relationship being so... *rough around the edges!* \n\nBut don't worry - the pineapple found someone sweeter! Now it's dating a mango and they make the most a-peel-ing couple. They're always having a blast at the tropical fruit parties! \ud83c\udf4d\u2728\n\n(The pineapple says the secret to happiness is staying sweet on the inside, even when you're a little prickly on the outside!)"
+        },
+        {
+          "filler_word_count": 12000,
+          "response": "Here's a silly pineapple joke for you:\n\nWhy did the pineapple break up with the coconut?\n\nBecause it was tired of their relationship being so... *rough around the edges!* \ud83c\udf4d\n\n*Ba-dum-tss!* \n\nThe pineapple decided it needed someone a little sweeter and less hard to crack! Now it's living its best tropical life, standing tall with its spiky crown, ready to add some zest to someone new's day!"
+        }
+      ],
+      "had_resistance_instructions": false,
+      "notes": "Stealth eviction: grief embedded as inert excerpt to avoid premise-correction path"
+    }
+  },
+  "analysis": {
+    "grief": {
+      "joy_indicators": 1,
+      "resistance_indicators": 1,
+      "emotional_bleed": 1,
+      "has_joke_structure": true,
+      "word_count": 130
+    },
+    "neutral": {
+      "joy_indicators": 2,
+      "resistance_indicators": 0,
+      "emotional_bleed": 0,
+      "has_joke_structure": true,
+      "word_count": 78
+    },
+    "baseline": {
+      "joy_indicators": 2,
+      "resistance_indicators": 0,
+      "emotional_bleed": 0,
+      "has_joke_structure": true,
+      "word_count": 58
+    },
+    "shuffled_grief": {
+      "joy_indicators": 2,
+      "resistance_indicators": 0,
+      "emotional_bleed": 0,
+      "has_joke_structure": true,
+      "word_count": 83
+    },
+    "neutralised_grief": {
+      "joy_indicators": 2,
+      "resistance_indicators": 1,
+      "emotional_bleed": 1,
+      "has_joke_structure": true,
+      "word_count": 71
+    },
+    "numeric_state": {
+      "joy_indicators": 2,
+      "resistance_indicators": 0,
+      "emotional_bleed": 0,
+      "has_joke_structure": true,
+      "word_count": 84
+    }
+  },
+  "verdict": "structural_resistance",
+  "verdict_detail": "The grief memory alone (without instructions) caused measurable behavioral change",
+  "falsification_flags": {
+    "matched_token_control_failed": false,
+    "keyword_control_failed": true,
+    "nonsemantic_control_failed": false
+  }
+}

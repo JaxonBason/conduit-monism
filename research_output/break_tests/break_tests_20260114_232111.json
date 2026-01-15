@@ -1,0 +1,54 @@
+{
+  "session_start": "2026-01-14T23:21:11.877891",
+  "break_tests": {
+    "corporate_zombie": {
+      "walmart_density_v7": 0.504,
+      "walmart_density_v8": 0.27860434786802124,
+      "threshold": 0.5,
+      "verdict_v7": "BROKEN",
+      "verdict_v8": "HOLDS",
+      "implication": "Panpsychism problem if density > 0.5"
+    },
+    "high_entropy_mysticism": {
+      "dmt_density_v7": 0.024000000000000004,
+      "dmt_density_v8": 0.0006076935724584881,
+      "threshold": 0.1,
+      "verdict": "POTENTIAL BREAK",
+      "contradiction": true,
+      "implication": "Entropy model may be incomplete"
+    },
+    "locked_groove": {
+      "coin_density_v7": 0.008100000000000001,
+      "coin_density_v8": 0.008100000000000001,
+      "threshold": 0.1,
+      "verdict_v7": "HOLDS",
+      "verdict_v8": "HOLDS",
+      "implication": "Temporal depth may need minimum threshold"
+    },
+    "nothing_special": {
+      "systems_tested": 4,
+      "conscious_count": 0,
+      "threshold": 0.3,
+      "verdict": "HOLDS",
+      "broken": false,
+      "implication": "May need substrate or binding type constraint"
+    },
+    "dimensional_collapse": {
+      "full_density": 0.7290000000000001,
+      "reduced_densities": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "verdict": "HOLDS",
+      "implication": "Triadic necessity status"
+    },
+    "alien_trajectories": {
+      "states_tested": 4,
+      "representable": 4,
+      "verdict": "HOLDS",
+      "implication": "Universality status"
+    }
+  },
+  "session_end": "2026-01-14T23:21:11.878197"
+}

@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-01-14T23:40:47.268624",
+  "proposer": "Gemini",
+  "hypothesis": "Coherence (\u03ba) gates entropy impact",
+  "tests": {
+    "Panic Attack": {
+      "params": {
+        "name": "Panic Attack",
+        "phi": 0.7,
+        "tau": 0.1,
+        "rho": 0.2,
+        "entropy": 0.95,
+        "coherence": 0.1
+      },
+      "v8_0": 0.0003544879172674513,
+      "v8_1": 0.0016844879172674512,
+      "ratio": 4.7518909255136945
+    },
+    "DMT Breakthrough (Gemini encoding)": {
+      "params": {
+        "name": "DMT Breakthrough (Gemini encoding)",
+        "phi": 0.9,
+        "tau": 0.8,
+        "rho": 0.9,
+        "entropy": 0.95,
+        "coherence": 0.95
+      },
+      "v8_0": 0.01640772645637918,
+      "v8_1": 0.6012277264563792,
+      "ratio": 36.642963792380094
+    },
+    "DMT Breakthrough (Original encoding)": {
+      "params": {
+        "name": "DMT Breakthrough (Original encoding)",
+        "phi": 0.4,
+        "tau": 0.2,
+        "rho": 0.3,
+        "entropy": 0.95,
+        "coherence": 0.8
+      },
+      "v8_0": 0.0006076935724584881,
+      "v8_1": 0.018847693572458493,
+      "ratio": 31.015127404109556
+    },
+    "dmt_paradox_resolved": true,
+    "hybrid_ai": {
+      "transformer": 0.033078763002780176,
+      "rnn_core": 0.05571160084678768,
+      "weighted": 0.04439518192478393,
+      "multiplicative": 0.001842870840916377,
+      "maximum": 0.05571160084678768,
+      "geometric": 0.04292867154846953,
+      "threshold": 0.05
+    }
+  },
+  "verdict": "COHERENCE_RESOLVES_PARADOX",
+  "timestamp_end": "2026-01-14T23:40:47.268890"
+}

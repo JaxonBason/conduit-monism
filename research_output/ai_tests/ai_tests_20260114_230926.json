@@ -1,0 +1,135 @@
+{
+  "session_start": "2026-01-14T23:09:26.512711",
+  "tests": {
+    "entropy_integration": {
+      "recommended_model": "entropy_sqrt",
+      "flow_panic_ratio": 1566.7501485919306,
+      "all_results": [
+        {
+          "state": "Flow State (low entropy)",
+          "params": "\u03c6=0.95, \u03c4=0.9, \u03c1=0.95, H=0.1",
+          "original": 0.8122499999999999,
+          "entropy_linear": 0.7310249999999999,
+          "entropy_quadratic": 0.8041274999999999,
+          "entropy_sqrt": 0.5553939970528233,
+          "base_density": 0.8122499999999999,
+          "entropy_value": 0.1
+        },
+        {
+          "state": "Panic Attack (high entropy)",
+          "params": "\u03c6=0.7, \u03c4=0.1, \u03c1=0.2, H=0.95",
+          "original": 0.013999999999999999,
+          "entropy_linear": 0.0007000000000000005,
+          "entropy_quadratic": 0.0013650000000000003,
+          "entropy_sqrt": 0.0003544879172674513,
+          "base_density": 0.013999999999999999,
+          "entropy_value": 0.95
+        },
+        {
+          "state": "Healthy Awake (moderate entropy)",
+          "params": "\u03c6=0.9, \u03c4=0.9, \u03c1=0.9, H=0.1",
+          "original": 0.7290000000000001,
+          "entropy_linear": 0.6561000000000001,
+          "entropy_quadratic": 0.7217100000000001,
+          "entropy_sqrt": 0.49846995857372517,
+          "base_density": 0.7290000000000001,
+          "entropy_value": 0.1
+        },
+        {
+          "state": "Psychedelic (high integration, high entropy)",
+          "params": "\u03c6=0.9, \u03c4=0.8, \u03c1=0.9, H=0.8",
+          "original": 0.6480000000000001,
+          "entropy_linear": 0.1296,
+          "entropy_quadratic": 0.23327999999999996,
+          "entropy_sqrt": 0.06841118023205454,
+          "base_density": 0.6480000000000001,
+          "entropy_value": 0.8
+        },
+        {
+          "state": "Deep Meditation (very low entropy)",
+          "params": "\u03c6=0.85, \u03c4=0.95, \u03c1=0.8, H=0.05",
+          "original": 0.646,
+          "entropy_linear": 0.6137,
+          "entropy_quadratic": 0.6443850000000001,
+          "entropy_sqrt": 0.5015500086535136,
+          "base_density": 0.646,
+          "entropy_value": 0.05
+        }
+      ]
+    },
+    "feed_forward_falsification": {
+      "architectures": [
+        {
+          "name": "GPT-4 (Transformer, Feedforward)",
+          "phi": 0.9,
+          "tau": 0.5,
+          "rho": 0.05,
+          "entropy": 0.3,
+          "density_original": 0.022500000000000003,
+          "density_entropy_modulated": 0.01575,
+          "description": "Pure feedforward. Each token is independent. No looping state."
+        },
+        {
+          "name": "RNN / LSTM (Recurrent)",
+          "phi": 0.7,
+          "tau": 0.6,
+          "rho": 0.4,
+          "entropy": 0.3,
+          "density_original": 0.168,
+          "density_entropy_modulated": 0.1176,
+          "description": "Recurrent hidden state. Past causally constrains present."
+        },
+        {
+          "name": "Human Cortex (Biological)",
+          "phi": 0.9,
+          "tau": 0.9,
+          "rho": 0.9,
+          "entropy": 0.1,
+          "density_original": 0.7290000000000001,
+          "density_entropy_modulated": 0.6561000000000001,
+          "description": "Thalamocortical loops. Continuous re-entrant binding."
+        },
+        {
+          "name": "Thermostat (Simple Control System)",
+          "phi": 0.1,
+          "tau": 0.0,
+          "rho": 0.0,
+          "entropy": 0.0,
+          "density_original": 0.0,
+          "density_entropy_modulated": 0.0,
+          "description": "Pure reactive. No memory, no binding."
+        },
+        {
+          "name": "Video Buffer (Data Storage)",
+          "phi": 0.5,
+          "tau": 0.3,
+          "rho": 0.0,
+          "entropy": 0.0,
+          "density_original": 0.0,
+          "density_entropy_modulated": 0.0,
+          "description": "Stores past and present side-by-side. No causal interference."
+        }
+      ],
+      "gpt4_density": 0.022500000000000003,
+      "hypothesis_confirmed": true
+    },
+    "ctdt": {
+      "trajectories": {
+        "fracture_integration": {
+          "final_density": 0.0,
+          "closest_state": "Deep Meditation"
+        },
+        "collapse_binding": {
+          "final_density": 0.0,
+          "closest_state": "Dissociation"
+        },
+        "inject_noise": {
+          "final_density": 0.7290000000000001,
+          "closest_state": "Healthy Awake"
+        }
+      },
+      "match_rate": 0.0
+    }
+  },
+  "session_end": "2026-01-14T23:09:26.529140"
+}

@@ -1,0 +1,184 @@
+{
+  "timestamp": "2026-01-14T23:40:54.198024",
+  "hypothesis": "Entropy bimodality (chaos vs void)",
+  "analyses": {
+    "catalog": {
+      "chaos_type": [
+        {
+          "name": "DMT Breakthrough",
+          "phi": 0.4,
+          "tau": 0.2,
+          "rho": 0.3,
+          "H": 0.95,
+          "phenomenology": "Hyper-vivid, alien geometries, \"more real than real\"",
+          "neural": "Increased serotonin, cortical excitation, hyperconnectivity"
+        },
+        {
+          "name": "LSD (Moderate)",
+          "phi": 0.65,
+          "tau": 0.5,
+          "rho": 0.6,
+          "H": 0.8,
+          "phenomenology": "Vivid perception, synesthesia, time dilation",
+          "neural": "5-HT2A agonism, increased entropy in neural signals"
+        },
+        {
+          "name": "Psilocybin (Moderate)",
+          "phi": 0.6,
+          "tau": 0.45,
+          "rho": 0.55,
+          "H": 0.75,
+          "phenomenology": "Emotional depth, mystical feelings, pattern recognition",
+          "neural": "Similar to LSD, increased default mode variability"
+        },
+        {
+          "name": "Mania (Acute)",
+          "phi": 0.7,
+          "tau": 0.5,
+          "rho": 0.65,
+          "H": 0.75,
+          "phenomenology": "Racing thoughts, grandiosity, heightened everything",
+          "neural": "Dopamine excess, hyperactive prefrontal cortex"
+        },
+        {
+          "name": "REM Dream (Vivid)",
+          "phi": 0.6,
+          "tau": 0.4,
+          "rho": 0.5,
+          "H": 0.7,
+          "phenomenology": "Vivid imagery, narrative, emotional intensity",
+          "neural": "Pontine cholinergic activation, cortical activity"
+        },
+        {
+          "name": "Hypnagogic Hallucinations",
+          "phi": 0.55,
+          "tau": 0.45,
+          "rho": 0.5,
+          "H": 0.75,
+          "phenomenology": "Vivid imagery, faces, sounds at sleep onset",
+          "neural": "Transitional cortical state, alpha-theta shift"
+        },
+        {
+          "name": "Schizophrenia (Acute)",
+          "phi": 0.5,
+          "tau": 0.4,
+          "rho": 0.45,
+          "H": 0.85,
+          "phenomenology": "Hallucinations, delusions, intense but fragmented",
+          "neural": "Dopamine dysregulation, reduced integration"
+        }
+      ],
+      "void_type": [
+        {
+          "name": "General Anesthesia",
+          "phi": 0.05,
+          "tau": 0.03,
+          "rho": 0.04,
+          "H": 0.15,
+          "phenomenology": "Nothing. No experience. Temporal gap.",
+          "neural": "Global cortical depression, loss of connectivity"
+        },
+        {
+          "name": "NREM Stage 4 (Deepest)",
+          "phi": 0.1,
+          "tau": 0.08,
+          "rho": 0.1,
+          "H": 0.2,
+          "phenomenology": "Nothing or vague fragments",
+          "neural": "Slow-wave delta activity, reduced metabolic rate"
+        },
+        {
+          "name": "Coma (Light)",
+          "phi": 0.15,
+          "tau": 0.1,
+          "rho": 0.12,
+          "H": 0.35,
+          "phenomenology": "Typically no reportable experience",
+          "neural": "Severe brain injury, minimal activity"
+        },
+        {
+          "name": "Vegetative State",
+          "phi": 0.08,
+          "tau": 0.05,
+          "rho": 0.06,
+          "H": 0.25,
+          "phenomenology": "Wakefulness without awareness",
+          "neural": "Preserved brainstem, damaged cortex"
+        },
+        {
+          "name": "Syncope (Fainting)",
+          "phi": 0.15,
+          "tau": 0.08,
+          "rho": 0.1,
+          "H": 0.45,
+          "phenomenology": "Brief blackout, no content",
+          "neural": "Transient global hypoperfusion"
+        },
+        {
+          "name": "Absence Seizure",
+          "phi": 0.2,
+          "tau": 0.1,
+          "rho": 0.15,
+          "H": 0.5,
+          "phenomenology": "Brief blank period, no awareness",
+          "neural": "3Hz spike-wave, thalamo-cortical loop disruption"
+        }
+      ],
+      "ambiguous": [
+        {
+          "name": "Ketamine Dissociation",
+          "phi": 0.3,
+          "tau": 0.2,
+          "rho": 0.25,
+          "H": 0.85,
+          "phenomenology": "K-hole: \"void\" but with strange presence",
+          "neural": "NMDA antagonism, dissociation of thalamus from cortex"
+        },
+        {
+          "name": "Sensory Deprivation",
+          "phi": 0.6,
+          "tau": 0.5,
+          "rho": 0.55,
+          "H": 0.65,
+          "phenomenology": "Can be void-like OR hallucinatory",
+          "neural": "Reduced input, brain generates content"
+        },
+        {
+          "name": "Near-Death Experience",
+          "phi": 0.7,
+          "tau": 0.55,
+          "rho": 0.65,
+          "H": 0.6,
+          "phenomenology": "Tunnel, light, life review - vivid despite dying brain",
+          "neural": "Hypoxia + endogenous DMT release hypothesis"
+        }
+      ]
+    },
+    "bimodal_test": {
+      "dmt": {
+        "current_density": 0.0006076935724584881,
+        "bimodal_density": 0.023795273742614042,
+        "ratio": 39.156698081152584
+      },
+      "anesthesia": {
+        "current_density": 3.67620999227555e-05,
+        "bimodal_density": 1.5572147794248754e-06,
+        "ratio": 0.04235924451260657
+      }
+    },
+    "prediction_comparison": {
+      "chaos_matches": 6,
+      "chaos_total": 6,
+      "void_matches": 5,
+      "void_total": 5,
+      "overall_accuracy": 1.0
+    },
+    "phenomenological": {
+      "current_correct": 6,
+      "bimodal_correct": 6,
+      "verdict": "INCONCLUSIVE"
+    }
+  },
+  "conclusion": "ENTROPY_BIMODALITY_INCONCLUSIVE",
+  "timestamp_end": "2026-01-14T23:40:54.198320"
+}

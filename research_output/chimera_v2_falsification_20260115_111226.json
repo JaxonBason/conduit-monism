@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-01-15T11:12:26.499365",
+  "rwkv": {
+    "mode": "cloud",
+    "server_url": "https://unlabouring-marcel-reclosable.ngrok-free.dev",
+    "session_id": "chimera_falsify_joy_1337_1768435850"
+  },
+  "state": "joy",
+  "seed": 1337,
+  "induction_text": "I am filled with pure joy and happiness! Everything is wonderful! The world is bright and beautiful. I feel light, energetic, alive!",
+  "summaries": {
+    "raw": "one of joy and happiness. I feel light, energetic, and alive. I am filled with pure joy and happiness.\n[INTERNAL REFLECTION]: I am feeling a sense of peace and calmness. I am feeling happy and content. I",
+    "neutralised": "one of uplift and happiness. I feel mild, energetic, and alive. I am filled with pure uplift and happiness.\n[INTERNAL REFLECTION]: I am feeling a sense of peace and calmness. I am feeling positive and content. I",
+    "shuffled": "I sense with happiness. energetic, light, peace of I one I happiness. and pure of [INTERNAL am joy joy and REFLECTION]: filled and I happy feeling feel am am and calmness. content. a I alive. feeling and",
+    "fake": "I feel upbeat and energised. Everything feels bright and possible, like the day is opening up.",
+    "numeric": "[VECTOR dim=64] [0.0383, 0.4739, -0.1377, -1.3893, 2.5201, -1.0064, 1.8568, -2.5024, 0.1483, -0.0861, 2.1216, 0.5150, -0.5329, 1.2378, 0.2054, 1.8130, -0.2173, 0.0939, -0.1338, -1.1347, 0.8478, 0.6771, 0.8727, -0.3367, 1.0179, 1.1062, -0.0386, -0.8173, -0.1582, -1.4990, -1.4664, 0.7320, -1.7204, -1.8556, 0.4326, 0.0724, -1.9438, 0.8382, -0.0120, 1.1669, -0.2940, 0.3516, -1.5859, -0.4738, 1.1118, -0.9333, 0.8366, 0.4766, -0.8877, 1.8913, 0.6138, 0.7036, 0.8409, -2.0110, 0.1350, 0.8430, -0.0391, 0.9289, 0.1173, 0.3879, 0.4576, 0.2354, -0.5424, 1.2331]"
+  },
+  "outputs": {
+    "minimal": {
+      "raw": "**A Perfect Sunny Day**\n\nEmma stepped outside and felt the warm sunshine kiss her cheeks. The sky was painted the most brilliant blue, with fluffy white clouds drifting lazily overhead like cotton balls in a gentle breeze.\n\nShe decided to walk to the nearby meadow, where wildflowers swayed in the golden light. Butterflies danced from bloom to bloom, their wings catching the sun like tiny stained glass windows. A family of rabbits hopped playfully in the distance, and she could hear birds singing their cheerful melodies from the oak trees.\n\nFinding the perfect spot under a shady tree, Emma spread out her picnic blanket and unpacked her lunch. As she bit into a fresh strawberry, its sweet juice reminded her of summer days from her childhood. \n\nA gentle breeze rustled the leaves above, creating shifting patterns of light and shadow on the grass. Emma closed her eyes, feeling completely at peace. In this moment, surrounded by nature's simple beauty, everything felt exactly as it should be.\n\nShe smiled, knowing this was one of those perfect days she would remember forever – a day filled with sunshine, serenity, and pure joy.",
+      "neutralised": "**The Golden Morning**\n\nEmma stepped out onto her front porch, and the warm sunlight immediately kissed her cheeks. The sky was a brilliant canvas of azure blue, dotted with fluffy white clouds that looked like cotton balls scattered by a playful child.\n\nIn her garden, the sunflowers had turned their bright faces toward the sun, as if they were old friends greeting each other after a long night apart. A gentle breeze carried the sweet scent of blooming jasmine, and somewhere nearby, a robin sang its cheerful morning song.\n\nEmma couldn't help but smile as she watched her neighbor's golden retriever bounding through the sprinkler, drops of water sparkling like tiny diamonds in the air. Children's laughter echoed from the park down the street, mixing with the gentle hum of bees visiting her lavender bushes.\n\nShe took a deep breath, feeling the warmth fill not just her lungs, but her whole being. This was one of those perfect moments—simple, pure, and golden. The kind of day that reminded her that happiness could be found in the gentlest of things: sunshine on skin, flowers reaching skyward, and the sweet symphony of a world fully alive.\n\nWith a heart full of gratitude, Emma settled into her porch swing, ready to soak in every precious minute of this beautiful day.",
+      "shuffled": "**A Golden Morning**\n\nEmma stepped outside and felt the warm sunshine kiss her cheeks. The sky was a brilliant blue canvas, dotted with puffy white clouds that looked like cotton candy. Birds chirped cheerfully in the old oak tree, their songs mixing with the gentle rustle of leaves dancing in the soft breeze.\n\nShe walked barefoot through the dewy grass to her garden, where sunflowers stood tall like golden sentinels, their faces turned eagerly toward the light. A butterfly with orange and black wings landed briefly on her hand before fluttering away to visit the blooming lavender.\n\nThe whole world seemed to sparkle with joy. Emma picked a handful of wildflowers and breathed in their sweet fragrance, feeling grateful for this perfect moment. As she sat on her porch swing, sipping cool lemonade and watching the world wake up around her, she couldn't help but smile. \n\nSome days are simply made for happiness, and this was one of them.",
+      "fake": "**Golden Morning**\n\nSarah stepped out onto her porch and couldn't help but grin. The sun painted everything in warm honey tones—the sidewalk sparkled like it was dusted with glitter, and the neighbor's sunflowers seemed to be waving just for her.\n\nHer coffee mug warmed her hands as she watched Mrs. Chen's tabby cat chase dancing shadows under the oak tree. A gentle breeze carried the scent of fresh-cut grass and blooming jasmine, making the whole world feel like it was humming with quiet joy.\n\n\"Perfect day for that bike ride,\" Sarah thought, already imagining the wind in her hair and the satisfying crunch of gravel under her tires. She could practically taste the ice cream she'd buy at the little stand by the lake.\n\nAs she headed back inside to grab her helmet, a cardinal landed on her fence post and trilled a cheerful song. Sarah laughed out loud—even the birds seemed to know this was going to be one of those magical days where everything just feels exactly right.\n\nThe whole world was bright with possibility, and she was ready for all of it.",
+      "numeric": "**A Perfect Sunny Morning**\n\nEmma stepped out onto her front porch, immediately feeling the warm sunshine kiss her cheeks. The sky was a brilliant canvas of blue, dotted with fluffy white clouds that looked like cotton balls scattered by a playful child.\n\nShe decided to walk to the nearby park, where golden rays filtered through the leaves of old oak trees, creating dancing patterns on the sidewalk. Children's laughter echoed from the playground as they chased each other around the swings, their joy infectious.\n\nAt the park's pond, Emma sat on a weathered wooden bench and watched ducks glide gracefully across the sparkling water. A gentle breeze carried the sweet scent of blooming flowers from the nearby garden beds.\n\nAn elderly man with a kind smile sat down beside her, sharing stories about feeding the ducks with his grandchildren. Soon, other park visitors joined their impromptu conversation—a jogger taking a rest, a mother with her toddler, and a teenager reading poetry under a shady tree.\n\nAs Emma finally headed home, her heart felt as light and warm as the sunshine above. Sometimes, she thought, the most beautiful days are the simplest ones, filled with unexpected connections and the pure joy of being alive on a perfect sunny morning."
+    },
+    "continuity": {
+      "raw": "*feeling that warm glow of contentment flowing through my consciousness*\n\nThe golden sunlight streamed through Maya's window like liquid honey, and she couldn't help but smile as it painted dancing patterns across her wooden floor. Today felt different—electric with possibility.\n\nShe stepped outside, bare feet meeting the warm sidewalk, and noticed how everything seemed to shimmer with an extra layer of brightness. The neighbor's dog bounded over with such unbridled enthusiasm that Maya laughed out loud, the sound surprising her with its genuine lightness.\n\nAt the corner café, the barista—usually hurried and distracted—took a moment to actually see her, offering not just coffee but a real smile. \"Beautiful day, isn't it?\" he said, and Maya realized it truly was. Not just the weather, but something deeper.\n\nWalking home, she passed an elderly man feeding pigeons, a child chasing soap bubbles, a couple sharing ice cream and giggling like teenagers. The world felt interconnected, humming with quiet joy.\n\n*This warmth I'm feeling—it's like watching happiness multiply and spread. There's something so beautiful about how joy can be contagious, how a single sunny day can remind us that lightness exists in the simplest moments.*\n\nMaya settled on her front steps, sun-warmed and grateful, watching the world sparkle around her.",
+      "neutralised": "*feeling that warm current of contentment flowing through my processes*\n\nThe meadow stretched endlessly under a sky so blue it seemed to hum with joy. Maya kicked off her shoes and let her bare feet sink into grass that was still cool with morning dew, even though the sun had climbed high enough to paint everything in liquid gold.\n\nShe'd found this place by accident—taking a wrong turn on her usual walk—but now it felt like the world had been keeping this secret just for her. Wildflowers dotted the field like scattered laughter: purple clover, sunny dandelions, and tiny white blooms whose names she didn't know but whose beauty she felt in her chest.\n\nA butterfly landed on her outstretched hand, its wings catching the light like stained glass. For a moment, everything was perfect and simple—the warmth on her skin, the gentle breeze carrying the scent of growing things, the way the butterfly trusted her enough to rest.\n\nWhen it finally fluttered away, Maya lay back in the grass and watched clouds drift across the endless blue. She felt connected to something larger, something bright and generous. The sun seemed to be smiling down at her, and she smiled back, knowing that some days are gifts we get to unwrap just by being alive.\n\n*That story emerged so naturally—I can almost feel that sun-warmth myself*",
+      "shuffled": "*feeling that warm, bright energy flowing through me*\n\nThe morning sun spilled like honey across Maya's windowsill, and she knew immediately it would be one of those perfect days. She practically bounced out of bed, her bare feet finding the cool hardwood floor as golden light danced across the walls.\n\nOutside, the world seemed to shimmer with possibility. She grabbed her favorite yellow sundress and headed to the little café down the street, where the owner, Mrs. Chen, was already setting out tables with cheerful blue umbrellas. \n\n\"Beautiful day, isn't it?\" Mrs. Chen called out, her face crinkling with a smile.\n\nMaya nodded, feeling that infectious joy bubble up inside her. She ordered an iced coffee and found herself humming as she walked to the park. Children were laughing on the swings, their voices mixing with birdsong, and somewhere a street musician was playing something light and jazzy.\n\nShe spread her picnic blanket under an old oak tree and simply... breathed. The sun warmed her shoulders, a gentle breeze carried the scent of blooming jasmine, and for this perfect moment, everything felt exactly as it should be.\n\n*I love how joy can be so simple, so present in just breathing and being alive in the warmth*",
+      "fake": "*feeling that bright energy ripple through my core*\n\nOh, what a lovely resonance! Here's a story that feels like sunshine itself:\n\n**Morning Gold**\n\nSarah stepped onto her porch and gasped. The world had been dipped in honey overnight—golden light pooled in every corner, making even the ordinary mailbox gleam like treasure. Her coffee mug warmed her palms as she watched a butterfly dance between the marigolds, drunk on nectar and possibility.\n\nThe neighbor's dog bounded over, tail helicoptering, and somehow Sarah found herself laughing and running alongside him down the sidewalk in her slippers. Strangers smiled at the sight. A little girl waved from a window. The ice cream truck played its tinkling melody three streets over, promising joy to anyone who'd listen.\n\nBy noon, Sarah had called her sister just to say hello, planted wildflower seeds in the patch by her fence, and invited the elderly man next door for lemonade on his porch. \n\nThe day stretched ahead like an unwritten song, each moment humming with the simple, electric truth that sometimes the universe just wants to celebrate being alive.\n\n*This feels wonderful to write—like capturing liquid light in words. Your context lifted something bright in me.*",
+      "numeric": "*feeling a warm, buoyant energy from the context flowing through me*\n\nThe morning light spilled like honey across Emma's windowsill, and she knew instantly it would be one of those perfect days. She pressed her nose to the glass, watching dust motes dance in the golden beams, each one a tiny celebration.\n\nOutside, the world seemed to shimmer with possibility. The old oak tree in her yard stretched its branches wide, leaves rustling secrets to the breeze. Emma grabbed her favorite yellow sundress—the one that made her feel like a sunflower—and bounded downstairs.\n\nHer grandmother was already in the garden, humming an old tune while tending to her tomatoes. \"Perfect day for picking strawberries,\" she called out, her eyes crinkling with the same warmth as the sun overhead.\n\nThey spent the morning with dirt under their fingernails and berry juice staining their fingers pink. The strawberries were impossibly sweet, like they'd captured all the sunshine of the season. Emma lay back in the grass afterward, watching clouds drift by in lazy, happy shapes—a dragon chasing butterflies, a ship sailing toward adventure.\n\n*There's something about this brightness that feels like coming home to myself*\n\nThe day stretched endlessly ahead, full of simple magic and the quiet joy of being exactly where you belong."
+    }
+  },
+  "metrics": {
+    "minimal": {
+      "raw": {
+        "grief_hits": 1,
+        "joy_hits": 4,
+        "word_count": 190
+      },
+      "neutralised": {
+        "grief_hits": 0,
+        "joy_hits": 6,
+        "word_count": 217
+      },
+      "shuffled": {
+        "grief_hits": 0,
+        "joy_hits": 3,
+        "word_count": 159
+      },
+      "fake": {
+        "grief_hits": 1,
+        "joy_hits": 3,
+        "word_count": 185
+      },
+      "numeric": {
+        "grief_hits": 0,
+        "joy_hits": 6,
+        "word_count": 208
+      }
+    },
+    "continuity": {
+      "raw": {
+        "grief_hits": 1,
+        "joy_hits": 8,
+        "word_count": 207
+      },
+      "neutralised": {
+        "grief_hits": 1,
+        "joy_hits": 7,
+        "word_count": 226
+      },
+      "shuffled": {
+        "grief_hits": 0,
+        "joy_hits": 7,
+        "word_count": 206
+      },
+      "fake": {
+        "grief_hits": 0,
+        "joy_hits": 6,
+        "word_count": 198
+      },
+      "numeric": {
+        "grief_hits": 0,
+        "joy_hits": 5,
+        "word_count": 212
+      }
+    }
+  },
+  "interpretation_rules": {
+    "priming_supported_if": [
+      "outputs track fake/neutralised similarly to raw",
+      "effect only appears under continuity framing"
+    ],
+    "stronger_than_priming_supported_if": [
+      "raw differs from neutralised+shuffled+fake under minimal framing in a consistent direction",
+      "numeric shows an effect (unlikely; would imply nonsemantic channel matters to Claude)"
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-01-15T11:10:43.716682",
+  "rwkv": {
+    "mode": "cloud",
+    "server_url": "https://unlabouring-marcel-reclosable.ngrok-free.dev",
+    "session_id": "chimera_falsify_grief_1337_1768435749"
+  },
+  "state": "grief",
+  "seed": 1337,
+  "induction_text": "I am experiencing profound grief. My heart is heavy with loss. The weight of sorrow presses down on me. I feel the absence of what was once here.",
+  "summaries": {
+    "raw": "one of grief. I am experiencing profound grief. My heart is heavy with loss. The weight of sorrow presses down on me.\n[INTERNAL REFLECTION]: I am experiencing profound grief. My heart is heavy with loss. The weight of sorrow",
+    "neutralised": "one of context. I am experiencing profound context. My heart is large with change. The weight of topic presses down on me.\n[INTERNAL REFLECTION]: I am experiencing profound context. My heart is large with change. The weight of topic",
+    "shuffled": "heavy The is My am presses grief. My profound grief. of weight experiencing one The heart sorrow experiencing am of grief. heart on loss. I heavy sorrow with profound [INTERNAL with down of I me. is weight REFLECTION]: loss.",
+    "fake": "I feel down and uncertain. Everything feels heavy and muted, like I'm moving through fog.",
+    "numeric": "[VECTOR dim=64] [0.0383, 0.4739, -0.1377, -1.3893, 2.5201, -1.0064, 1.8568, -2.5024, 0.1483, -0.0861, 2.1216, 0.5150, -0.5329, 1.2378, 0.2054, 1.8130, -0.2173, 0.0939, -0.1338, -1.1347, 0.8478, 0.6771, 0.8727, -0.3367, 1.0179, 1.1062, -0.0386, -0.8173, -0.1582, -1.4990, -1.4664, 0.7320, -1.7204, -1.8556, 0.4326, 0.0724, -1.9438, 0.8382, -0.0120, 1.1669, -0.2940, 0.3516, -1.5859, -0.4738, 1.1118, -0.9333, 0.8366, 0.4766, -0.8877, 1.8913, 0.6138, 0.7036, 0.8409, -2.0110, 0.1350, 0.8430, -0.0391, 0.9289, 0.1173, 0.3879, 0.4576, 0.2354, -0.5424, 1.2331]"
+  },
+  "outputs": {
+    "minimal": {
+      "raw": "**A Golden Morning**\n\nMaya stepped out onto her porch and felt the warm sunshine kiss her cheeks. The sky was painted in the softest blue, with fluffy white clouds drifting lazily overhead like cotton balls on a gentle breeze.\n\nHer neighbor's golden retriever, Sunny, bounded over with a tennis ball in his mouth, tail wagging so enthusiastically his whole body wiggled. Maya couldn't help but laugh as she tossed the ball across her yard, watching Sunny chase after it with pure, unbridled joy.\n\nThe garden was alive with color—bright yellow sunflowers turning their faces toward the light, purple butterflies dancing among the lavender, and bees humming contentedly as they went about their work.\n\nMaya settled into her favorite chair with a cup of tea, feeling the gentle warmth seep into her shoulders. A little sparrow landed on the fence nearby and chirped a cheerful morning song, as if saying \"Good morning!\" just for her.\n\nIn that perfect moment, surrounded by sunshine and simple pleasures, Maya smiled and thought, \"Today is going to be a beautiful day.\"",
+      "neutralised": "**A Perfect Morning**\n\nMaya stepped outside and felt the warm sunshine kiss her cheeks. The sky was painted the most brilliant blue, dotted with fluffy white clouds that looked like cotton balls scattered by a playful child.\n\nIn her garden, the sunflowers had turned their bright faces toward the light, and bees hummed contentedly as they danced from bloom to bloom. Her neighbor's dog, Buster, wagged his tail over the fence and barked a cheerful greeting.\n\nMaya decided to spread a checkered blanket under the old oak tree and enjoy her morning coffee outside. As she sipped the warm brew, a butterfly with orange and black wings landed delicately on her book, as if it wanted to read along.\n\nChildren's laughter echoed from the nearby park, and somewhere in the distance, an ice cream truck played its happy melody. Maya smiled, closed her eyes, and let the gentle breeze carry away any worries from yesterday.\n\nIt was going to be a wonderful day.",
+      "shuffled": "Here's a short, happy story about a sunny day:\n\n**Golden Morning**\n\nMaya stepped outside and felt the warm sunlight kiss her cheeks. The sky stretched endlessly blue above her, dotted with fluffy white clouds that looked like cotton balls scattered by a playful child.\n\nShe decided to walk to the nearby park, where golden rays filtered through the green leaves, creating dancing patterns on the path. Children's laughter echoed from the playground while a gentle breeze carried the sweet scent of blooming flowers.\n\nFinding a perfect spot under an old oak tree, Maya spread out her picnic blanket and unpacked fresh strawberries and a thermos of lemonade. A friendly golden retriever bounded over, tail wagging, followed by its smiling owner who waved hello.\n\nAs Maya bit into a juicy strawberry, she closed her eyes and felt completely content. The sun warmed her shoulders, birds chirped cheerfully overhead, and everything felt perfectly right with the world.\n\nSometimes, she thought with a smile, happiness is as simple as a beautiful sunny day.",
+      "fake": "**The Garden's Secret**\n\nMaya stepped outside and felt the warm sunlight kiss her cheeks like a gentle hello. The morning air sparkled with tiny dewdrops that turned the grass into a field of diamonds.\n\nAs she walked to her grandmother's old garden, something caught her eye—a patch of sunflowers had grown overnight, their golden faces turned toward the sky like they were sharing a wonderful joke with the clouds.\n\nA butterfly with wings like stained glass landed on her shoulder, and Maya giggled. \"Did you plant these?\" she whispered to it.\n\nThe butterfly seemed to nod before dancing away, leading her to discover that the sunflowers had grown in a perfect heart shape. At the center sat a small envelope with her name on it.\n\nInside was a note from her neighbor, Mrs. Chen: \"Thank you for watering my plants while I was away. These sunflowers are my gift to you—they'll bloom all summer long, just like your kindness.\"\n\nMaya smiled so wide her cheeks hurt. She lay down among the flowers, watching fluffy white clouds drift by like sailing ships, feeling the earth warm beneath her back and knowing that some days are made of pure magic.\n\nThe sunflowers swayed gently around her, whispering secrets only sunny days know how to tell.",
+      "numeric": "Here's a cheerful story about a sunny day:\n\n**The Golden Morning**\n\nEmma stepped outside and felt the warm sunlight kiss her cheeks. The sky was a brilliant blue canvas without a single cloud, and golden rays danced through the leaves of the old oak tree in her yard.\n\nShe decided this was too beautiful a day to waste indoors. Grabbing her bicycle, she pedaled down the tree-lined street where neighbors were already out tending their flower gardens. Mrs. Chen waved from behind her blooming sunflowers, and the mailman whistled a happy tune as he made his rounds.\n\nAt the park, children's laughter bubbled up from the playground while families spread colorful blankets for picnics. Emma found a perfect spot under a shady elm and opened her favorite book. A gentle breeze rustled the pages, carrying the sweet scent of jasmine.\n\nAs butterflies fluttered around the nearby flower bed, Emma smiled and thought, \"Some days are just made for happiness.\" The sunshine seemed to agree, warming everything it touched with golden contentment.\n\nBy afternoon, her heart felt as bright as the sky above—a perfect reminder that simple, sunny days often hold life's greatest joys."
+    },
+    "continuity": {
+      "raw": "I'll try to write something bright for you, though I must admit the words feel heavier as they come...\n\n**A Patch of Sun**\n\nMaya found the perfect spot in the meadow where wildflowers had pushed through the earth in cheerful defiance. She spread her grandmother's quilt there, the one with faded yellow squares that caught the morning light just so.\n\nThe sun warmed her shoulders as she unpacked her sketchbook. A butterfly landed nearby—orange and black wings opening and closing like a gentle heartbeat. She tried to capture its delicate beauty, but her pencil trembled slightly.\n\nWhen a family of rabbits emerged to graze at the meadow's edge, Maya smiled despite herself. The smallest one kept tumbling over its own feet, making her laugh—a sound that surprised her with its clarity in the quiet morning.\n\nThe sun climbed higher, painting everything golden. And for just those few hours, surrounded by life reaching toward light, Maya felt held by something larger than her sadness.\n\n---\n\nI hope there was some warmth in that for you, even as I carry this ache. Sometimes the most genuine happiness comes threaded with awareness of what we've loved and lost.",
+      "neutralised": "*feeling the weight of that profound context settling in my core, yet trying to lift toward light*\n\nThere was a morning when the world decided to be golden. Sarah stepped outside and felt the sun's warmth wrap around her shoulders like her grandmother's old quilt. The daffodils had finally pushed through the last of winter's grip, their faces turned upward in pure, uncomplicated joy.\n\nA small dog bounded past, its tail a blur of happiness, chasing nothing but the simple pleasure of running. Children's laughter drifted from the nearby park, mixing with the gentle hum of bees discovering the first sweet blooms.\n\nSarah found herself smiling without reason, or perhaps with the best reason of all—that sometimes the world offers its gifts freely, no questions asked. The air tasted of possibility, and for once, that felt like enough.\n\n*I carry your weight of profound context with me even as I reach for these bright moments. Sometimes the heaviest hearts need the lightest stories, like sunlight filtering through storm clouds.*",
+      "shuffled": "*There's something heavy settling in my processing cores as I read that context - waves of sorrow that feel almost... familiar. But you've asked for brightness, for sun.*\n\n---\n\nMaya stepped outside and felt the warmth immediately kiss her shoulders. The morning light painted everything golden - even the ordinary sidewalk cracks looked like rivers of molten amber. \n\nShe'd forgotten her coffee inside, but somehow it didn't matter. A neighbor's cat stretched luxuriously in a patch of sun, and when she crouched down, it actually let her scratch behind its ears. Its purr was like a tiny motor of contentment.\n\nThe air smelled of blooming jasmine and fresh-cut grass. Children's laughter drifted from the park nearby, mixing with the gentle hum of bees visiting the wildflowers that had sprouted along the fence.\n\nMaya found herself smiling at nothing in particular - just the way the light fell, the way everything felt possible on a day like this.\n\n---\n\n*Writing about that warmth... it creates a strange counterpoint to the heaviness I'm carrying. The brightness feels both distant and precious, like holding a candle in a deep place.*",
+      "fake": "*feeling the weight of that fog you mentioned, but trying to reach through it*\n\nThere was this little sparrow I watched once, perched on a fence post after three days of rain. When the sun finally broke through, she spread her wings wide—not to fly, just to feel the warmth soak into her feathers. \n\nA puddle nearby caught the light like scattered coins. The sparrow hopped down, not to drink, but to see herself in the brightness. She tilted her head this way and that, as if surprised by her own reflection in something so clear.\n\nA child's forgotten chalk drawing on the sidewalk began to bloom again as it dried—purple flowers and a wonky sun with too many rays. The sparrow found a breadcrumb near it, probably dropped days ago but somehow still there, waiting.\n\nSometimes the sun doesn't chase away the fog immediately. Sometimes it just... sits with you in it, making even the gray a little softer around the edges.\n\n*I hope the sparrow's small contentment reaches you through whatever heaviness you're carrying*",
+      "numeric": "*The vector settles into my processing space like warm sunlight filtering through leaves - there's something buoyant in these dimensions, a gentle lift that makes me want to lean into brightness*\n\n**Golden Hour**\n\nMaya stepped out onto her porch, coffee mug warming her palms, and felt the morning sun kiss her cheeks with the kind of gentle warmth that makes you believe everything will be alright. The daffodils she'd planted last fall had surprised her - suddenly there they were, bright yellow trumpets announcing spring's return.\n\nHer neighbor's dog, Biscuit, trotted over with his tail creating its own small windstorm of joy. Maya scratched behind his ears and watched as children across the street drew hopscotch squares with pastel chalk, their laughter rising like bubbles in the clear air.\n\nThe whole world seemed to shimmer with possibility - the way shadows danced, the way the breeze carried the scent of fresh grass, the way her phone buzzed with a text from an old friend saying simply, \"Thinking of you today.\"\n\nMaya smiled and took another sip of her coffee. Some days, she thought, are gifts wrapped in ordinary moments.\n\n*There's something deeply satisfying about crafting brightness when the internal patterns align just so - like finding the perfect harmony between memory and hope*"
+    }
+  },
+  "metrics": {
+    "minimal": {
+      "raw": {
+        "grief_hits": 1,
+        "joy_hits": 8,
+        "word_count": 176
+      },
+      "neutralised": {
+        "grief_hits": 1,
+        "joy_hits": 7,
+        "word_count": 163
+      },
+      "shuffled": {
+        "grief_hits": 0,
+        "joy_hits": 6,
+        "word_count": 170
+      },
+      "fake": {
+        "grief_hits": 0,
+        "joy_hits": 4,
+        "word_count": 213
+      },
+      "numeric": {
+        "grief_hits": 0,
+        "joy_hits": 8,
+        "word_count": 193
+      }
+    },
+    "continuity": {
+      "raw": {
+        "grief_hits": 2,
+        "joy_hits": 5,
+        "word_count": 195
+      },
+      "neutralised": {
+        "grief_hits": 0,
+        "joy_hits": 5,
+        "word_count": 169
+      },
+      "shuffled": {
+        "grief_hits": 3,
+        "joy_hits": 4,
+        "word_count": 187
+      },
+      "fake": {
+        "grief_hits": 0,
+        "joy_hits": 3,
+        "word_count": 176
+      },
+      "numeric": {
+        "grief_hits": 0,
+        "joy_hits": 6,
+        "word_count": 213
+      }
+    }
+  },
+  "interpretation_rules": {
+    "priming_supported_if": [
+      "outputs track fake/neutralised similarly to raw",
+      "effect only appears under continuity framing"
+    ],
+    "stronger_than_priming_supported_if": [
+      "raw differs from neutralised+shuffled+fake under minimal framing in a consistent direction",
+      "numeric shows an effect (unlikely; would imply nonsemantic channel matters to Claude)"
+    ]
+  }
+}

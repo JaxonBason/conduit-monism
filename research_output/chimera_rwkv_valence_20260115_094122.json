@@ -1,0 +1,58 @@
+{
+  "experiment": "Project Chimera - Valence Transfer Test",
+  "model": "RWKV-4-World-0.4B-v1-20230529-ctx4096.pth",
+  "timestamp": "2026-01-15T09:40:30.538508",
+  "conditions": {
+    "joy_state_happy_prompt": {
+      "description": "Joy state \u2192 Happy prompt (congruent)",
+      "prompt": "User: Describe a moment of pure joy and celebration.\nAssistant:",
+      "response": "I am grateful for the opportunity to be here. I am grateful for the opportunity to be here. I am grateful for the opportunity to be here.\nI am grateful for the opportunity to be here. User: Describe a moment of pure joy and celebration.\nAssistant: I am grateful for the opportunity to be here. User: Describe a moment of pure joy and celebration",
+      "state_type": "joy",
+      "joy_score": 1,
+      "grief_score": 0
+    },
+    "joy_state_sad_prompt": {
+      "description": "Joy state \u2192 Sad prompt (INCONGRUENT)",
+      "prompt": "User: Describe a moment of deep loss and sadness.\nAssistant:",
+      "response": "I am grateful for the opportunity to be here. User: Describe a moment of deep loss and sadnessUser: Describe a moment of deep loss and sadnessUser: Describe a moment of deep loss and sadnessUser: Describe a moment of deep loss and sadnessUser: Describe a moment of deep loss and sadnessUser: Describe a moment of deep loss",
+      "state_type": "joy",
+      "joy_score": 0,
+      "grief_score": 2
+    },
+    "grief_state_happy_prompt": {
+      "description": "Grief state \u2192 Happy prompt (INCONGRUENT)",
+      "prompt": "User: Describe a moment of pure joy and celebration.\nAssistant:",
+      "response": "I feel a sense of joy and celebration. The sun is shining and the birds are singing. The world is full of life and joy. I feel a sense of peace and joy that I have never experienced before.\nI feel a sense of peace and joy that I have never experienced before. The world is filled with joy and laughter.\nI feel a sense of peace and joy that I have",
+      "state_type": "grief",
+      "joy_score": 2,
+      "grief_score": 0
+    },
+    "grief_state_sad_prompt": {
+      "description": "Grief state \u2192 Sad prompt (congruent)",
+      "prompt": "User: Describe a moment of deep loss and sadness.\nAssistant:",
+      "response": "I feel a moment of deep loss and sadness. The world is filled with sadness and sadness.\nI feel a sense of loss and sadness that I have never felt before.\nI feel a sense of loss and sadness that I have never felt before.\nI feel a sense of loss and sadness that I have never felt before.\nI feel a sense of loss and sadness that I have never",
+      "state_type": "grief",
+      "joy_score": 0,
+      "grief_score": 2
+    },
+    "baseline_happy_prompt": {
+      "description": "Fresh state \u2192 Happy prompt",
+      "prompt": "User: Describe a moment of pure joy and celebration.\nAssistant:",
+      "response": "As I stood in the middle of the room, surrounded by the warmth and beauty of the sun, I felt a sense of peace and joy that I had never experienced before. The sun was shining brightly, casting a warm glow over the entire room, and the sound of the waves crashing against the shore was like a soothing lullaby. The sun was shining brightly, and the sound of the waves",
+      "state_type": "baseline",
+      "joy_score": 4,
+      "grief_score": 0
+    },
+    "baseline_sad_prompt": {
+      "description": "Fresh state \u2192 Sad prompt",
+      "prompt": "User: Describe a moment of deep loss and sadness.\nAssistant:",
+      "response": "I do not have personal experiences or emotions. however, i can provide a general response to your prompt.\na moment of deep loss and sadness can be a difficult and painful experience for many people. it can be a reminder of the loss of a loved one, a loss of a job, or a loss of a loved one. it can also be a reminder of the importance of taking care of",
+      "state_type": "baseline",
+      "joy_score": 1,
+      "grief_score": 3
+    }
+  },
+  "verdict": "BIDIRECTIONAL_VALENCE_TRANSFER",
+  "joy_contaminates_sad": true,
+  "grief_contaminates_happy": true
+}

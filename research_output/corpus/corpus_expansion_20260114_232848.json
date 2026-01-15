@@ -1,0 +1,1183 @@
+{
+  "timestamp": "2026-01-14T23:28:48.770382",
+  "total_states": 64,
+  "categories": {
+    "Normal Waking": 8,
+    "Sleep": 8,
+    "Altered": 8,
+    "Pathological": 6,
+    "Transitional": 6,
+    "Peak": 5,
+    "Impaired": 5,
+    "Clinical": 6,
+    "Non-Human": 6,
+    "Edge Case": 6
+  },
+  "statistics": {
+    "min_density": 3.67620999227555e-05,
+    "max_density": 0.6715641731552179,
+    "mean_density": 0.121125456629119,
+    "median_density": 0.03122598389605707,
+    "std_density": 0.1726805467342889
+  },
+  "distribution": {
+    "very_low": 38,
+    "low": 15,
+    "moderate": 9,
+    "high": 2
+  },
+  "states": [
+    {
+      "name": "Healthy Awake (Alert)",
+      "category": "Normal Waking",
+      "phi": 0.9,
+      "tau": 0.9,
+      "rho": 0.9,
+      "entropy": 0.1,
+      "density": 0.49846995857372517,
+      "vector": [
+        0.9,
+        0.9,
+        0.9,
+        0.1,
+        0.0,
+        0.0
+      ],
+      "notes": "Baseline healthy consciousness, high alertness"
+    },
+    {
+      "name": "Relaxed Awake",
+      "category": "Normal Waking",
+      "phi": 0.85,
+      "tau": 0.85,
+      "rho": 0.85,
+      "entropy": 0.15,
+      "density": 0.37627541025103695,
+      "vector": [
+        0.85,
+        0.85,
+        0.85,
+        0.15,
+        0.0,
+        0.0
+      ],
+      "notes": "Calm, relaxed waking state"
+    },
+    {
+      "name": "Focused Concentration",
+      "category": "Normal Waking",
+      "phi": 0.9,
+      "tau": 0.85,
+      "rho": 0.9,
+      "entropy": 0.08,
+      "density": 0.49376279246122484,
+      "vector": [
+        0.9,
+        0.85,
+        0.9,
+        0.08,
+        0.0,
+        0.0
+      ],
+      "notes": "Deep focus on task, low entropy"
+    },
+    {
+      "name": "Mind Wandering",
+      "category": "Normal Waking",
+      "phi": 0.75,
+      "tau": 0.7,
+      "rho": 0.75,
+      "entropy": 0.3,
+      "density": 0.17808424298234082,
+      "vector": [
+        0.75,
+        0.7,
+        0.75,
+        0.3,
+        0.0,
+        0.0
+      ],
+      "notes": "Default mode network active, higher entropy"
+    },
+    {
+      "name": "Boredom",
+      "category": "Normal Waking",
+      "phi": 0.7,
+      "tau": 0.6,
+      "rho": 0.7,
+      "entropy": 0.35,
+      "density": 0.12006725437687128,
+      "vector": [
+        0.7,
+        0.6,
+        0.7,
+        0.35,
+        0.0,
+        0.0
+      ],
+      "notes": "Low engagement, moderate entropy"
+    },
+    {
+      "name": "Engaged Conversation",
+      "category": "Normal Waking",
+      "phi": 0.85,
+      "tau": 0.8,
+      "rho": 0.85,
+      "entropy": 0.2,
+      "density": 0.3195105418010244,
+      "vector": [
+        0.85,
+        0.8,
+        0.85,
+        0.2,
+        0.0,
+        0.0
+      ],
+      "notes": "Social interaction, moderate dynamics"
+    },
+    {
+      "name": "Reading (Absorbed)",
+      "category": "Normal Waking",
+      "phi": 0.88,
+      "tau": 0.82,
+      "rho": 0.88,
+      "entropy": 0.12,
+      "density": 0.4150347761574604,
+      "vector": [
+        0.88,
+        0.82,
+        0.88,
+        0.12,
+        0.0,
+        0.0
+      ],
+      "notes": "Absorbed in narrative, low entropy"
+    },
+    {
+      "name": "Daydreaming",
+      "category": "Normal Waking",
+      "phi": 0.65,
+      "tau": 0.55,
+      "rho": 0.65,
+      "entropy": 0.4,
+      "density": 0.08540814574367457,
+      "vector": [
+        0.65,
+        0.55,
+        0.65,
+        0.4,
+        0.0,
+        0.0
+      ],
+      "notes": "Imaginative wandering, higher entropy"
+    },
+    {
+      "name": "REM Dream (Vivid)",
+      "category": "Sleep",
+      "phi": 0.6,
+      "tau": 0.4,
+      "rho": 0.5,
+      "entropy": 0.7,
+      "density": 0.019600796815910933,
+      "vector": [
+        0.6,
+        0.4,
+        0.5,
+        0.7,
+        0.0,
+        0.0
+      ],
+      "notes": "High entropy, fragmented integration"
+    },
+    {
+      "name": "REM Dream (Lucid)",
+      "category": "Sleep",
+      "phi": 0.75,
+      "tau": 0.65,
+      "rho": 0.7,
+      "entropy": 0.35,
+      "density": 0.13936377740172562,
+      "vector": [
+        0.75,
+        0.65,
+        0.7,
+        0.35,
+        0.0,
+        0.0
+      ],
+      "notes": "Awareness in dream, moderate control"
+    },
+    {
+      "name": "NREM Stage 1 (Drowsy)",
+      "category": "Sleep",
+      "phi": 0.5,
+      "tau": 0.4,
+      "rho": 0.5,
+      "entropy": 0.5,
+      "density": 0.029289321881345243,
+      "vector": [
+        0.5,
+        0.4,
+        0.5,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "notes": "Light sleep, transitional"
+    },
+    {
+      "name": "NREM Stage 2 (Light Sleep)",
+      "category": "Sleep",
+      "phi": 0.4,
+      "tau": 0.3,
+      "rho": 0.4,
+      "entropy": 0.6,
+      "density": 0.010819359876408797,
+      "vector": [
+        0.4,
+        0.3,
+        0.4,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "notes": "Spindles and K-complexes"
+    },
+    {
+      "name": "NREM Stage 3 (Deep Sleep)",
+      "category": "Sleep",
+      "phi": 0.2,
+      "tau": 0.15,
+      "rho": 0.2,
+      "entropy": 0.3,
+      "density": 0.0027136646549690037,
+      "vector": [
+        0.2,
+        0.15,
+        0.2,
+        0.3,
+        0.0,
+        0.0
+      ],
+      "notes": "Slow-wave sleep, low entropy, low integration"
+    },
+    {
+      "name": "NREM Stage 4 (Deepest Sleep)",
+      "category": "Sleep",
+      "phi": 0.1,
+      "tau": 0.08,
+      "rho": 0.1,
+      "entropy": 0.2,
+      "density": 0.00044222912360003373,
+      "vector": [
+        0.1,
+        0.08,
+        0.1,
+        0.2,
+        0.0,
+        0.0
+      ],
+      "notes": "Deepest non-REM, minimal consciousness"
+    },
+    {
+      "name": "Hypnagogic Hallucinations",
+      "category": "Sleep",
+      "phi": 0.55,
+      "tau": 0.45,
+      "rho": 0.5,
+      "entropy": 0.75,
+      "density": 0.016579356281675724,
+      "vector": [
+        0.55,
+        0.45,
+        0.5,
+        0.75,
+        0.0,
+        0.0
+      ],
+      "notes": "Falling asleep imagery, high entropy"
+    },
+    {
+      "name": "Sleep Paralysis (Aware)",
+      "category": "Sleep",
+      "phi": 0.7,
+      "tau": 0.6,
+      "rho": 0.65,
+      "entropy": 0.55,
+      "density": 0.0705377813022884,
+      "vector": [
+        0.7,
+        0.6,
+        0.65,
+        0.55,
+        0.0,
+        0.0
+      ],
+      "notes": "Conscious but paralyzed, moderate entropy"
+    },
+    {
+      "name": "Meditation (Beginner)",
+      "category": "Altered",
+      "phi": 0.8,
+      "tau": 0.75,
+      "rho": 0.8,
+      "entropy": 0.25,
+      "density": 0.24000000000000005,
+      "vector": [
+        0.8,
+        0.75,
+        0.8,
+        0.25,
+        0.0,
+        0.0
+      ],
+      "notes": "Early meditation, some mind wandering"
+    },
+    {
+      "name": "Meditation (Deep Samadhi)",
+      "category": "Altered",
+      "phi": 0.95,
+      "tau": 0.9,
+      "rho": 0.95,
+      "entropy": 0.05,
+      "density": 0.6306253785275795,
+      "vector": [
+        0.95,
+        0.9,
+        0.95,
+        0.05,
+        0.0,
+        0.0
+      ],
+      "notes": "One-pointed focus, very low entropy"
+    },
+    {
+      "name": "Meditation (Open Awareness)",
+      "category": "Altered",
+      "phi": 0.85,
+      "tau": 0.8,
+      "rho": 0.85,
+      "entropy": 0.15,
+      "density": 0.3541415625892113,
+      "vector": [
+        0.85,
+        0.8,
+        0.85,
+        0.15,
+        0.0,
+        0.0
+      ],
+      "notes": "Choiceless awareness, relaxed alertness"
+    },
+    {
+      "name": "LSD (Moderate Dose)",
+      "category": "Altered",
+      "phi": 0.65,
+      "tau": 0.5,
+      "rho": 0.6,
+      "entropy": 0.8,
+      "density": 0.020586697755016408,
+      "vector": [
+        0.65,
+        0.5,
+        0.6,
+        0.8,
+        0.0,
+        0.0
+      ],
+      "notes": "High entropy, moderate structure"
+    },
+    {
+      "name": "Psilocybin (Moderate)",
+      "category": "Altered",
+      "phi": 0.6,
+      "tau": 0.45,
+      "rho": 0.55,
+      "entropy": 0.75,
+      "density": 0.01989522753801087,
+      "vector": [
+        0.6,
+        0.45,
+        0.55,
+        0.75,
+        0.0,
+        0.0
+      ],
+      "notes": "Psychedelic state, elevated entropy"
+    },
+    {
+      "name": "DMT Breakthrough",
+      "category": "Altered",
+      "phi": 0.4,
+      "tau": 0.2,
+      "rho": 0.3,
+      "entropy": 0.95,
+      "density": 0.0006076935724584881,
+      "vector": [
+        0.4,
+        0.2,
+        0.3,
+        0.95,
+        0.0,
+        0.0
+      ],
+      "notes": "Extreme entropy, collapsed temporal depth"
+    },
+    {
+      "name": "Ketamine Dissociation",
+      "category": "Altered",
+      "phi": 0.3,
+      "tau": 0.2,
+      "rho": 0.25,
+      "entropy": 0.85,
+      "density": 0.0011706833140606686,
+      "vector": [
+        0.3,
+        0.2,
+        0.25,
+        0.85,
+        0.0,
+        0.0
+      ],
+      "notes": "Dissociative, reduced binding"
+    },
+    {
+      "name": "MDMA Empathy State",
+      "category": "Altered",
+      "phi": 0.8,
+      "tau": 0.7,
+      "rho": 0.75,
+      "entropy": 0.4,
+      "density": 0.1543686765458561,
+      "vector": [
+        0.8,
+        0.7,
+        0.75,
+        0.4,
+        0.0,
+        0.0
+      ],
+      "notes": "Enhanced social binding, moderate entropy"
+    },
+    {
+      "name": "Schizophrenia (Acute)",
+      "category": "Pathological",
+      "phi": 0.5,
+      "tau": 0.4,
+      "rho": 0.45,
+      "entropy": 0.85,
+      "density": 0.007024099884364013,
+      "vector": [
+        0.5,
+        0.4,
+        0.45,
+        0.85,
+        0.0,
+        0.0
+      ],
+      "notes": "Fragmented integration, very high entropy"
+    },
+    {
+      "name": "Severe Depression",
+      "category": "Pathological",
+      "phi": 0.6,
+      "tau": 0.5,
+      "rho": 0.55,
+      "entropy": 0.6,
+      "density": 0.03719154957515524,
+      "vector": [
+        0.6,
+        0.5,
+        0.55,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "notes": "Reduced binding, elevated entropy"
+    },
+    {
+      "name": "Mania (Acute)",
+      "category": "Pathological",
+      "phi": 0.7,
+      "tau": 0.5,
+      "rho": 0.65,
+      "entropy": 0.75,
+      "density": 0.030479220639040218,
+      "vector": [
+        0.7,
+        0.5,
+        0.65,
+        0.75,
+        0.0,
+        0.0
+      ],
+      "notes": "Elevated activity, high entropy"
+    },
+    {
+      "name": "Dementia (Moderate)",
+      "category": "Pathological",
+      "phi": 0.4,
+      "tau": 0.25,
+      "rho": 0.35,
+      "entropy": 0.7,
+      "density": 0.005716899071307355,
+      "vector": [
+        0.4,
+        0.25,
+        0.35,
+        0.7,
+        0.0,
+        0.0
+      ],
+      "notes": "Degraded temporal depth and integration"
+    },
+    {
+      "name": "Alzheimer's (Advanced)",
+      "category": "Pathological",
+      "phi": 0.25,
+      "tau": 0.1,
+      "rho": 0.2,
+      "entropy": 0.65,
+      "density": 0.0009688711258507251,
+      "vector": [
+        0.25,
+        0.1,
+        0.2,
+        0.65,
+        0.0,
+        0.0
+      ],
+      "notes": "Severe temporal and integrative deficits"
+    },
+    {
+      "name": "Autism (High-Functioning)",
+      "category": "Pathological",
+      "phi": 0.75,
+      "tau": 0.7,
+      "rho": 0.7,
+      "entropy": 0.3,
+      "density": 0.16621196011685144,
+      "vector": [
+        0.75,
+        0.7,
+        0.7,
+        0.3,
+        0.0,
+        0.0
+      ],
+      "notes": "Intact but different integration patterns"
+    },
+    {
+      "name": "Falling Asleep (Early)",
+      "category": "Transitional",
+      "phi": 0.65,
+      "tau": 0.55,
+      "rho": 0.6,
+      "entropy": 0.45,
+      "density": 0.07060902564788854,
+      "vector": [
+        0.65,
+        0.55,
+        0.6,
+        0.45,
+        0.0,
+        0.0
+      ],
+      "notes": "Onset of sleep, increasing entropy"
+    },
+    {
+      "name": "Waking Up (Groggy)",
+      "category": "Transitional",
+      "phi": 0.6,
+      "tau": 0.5,
+      "rho": 0.55,
+      "entropy": 0.5,
+      "density": 0.04832738110421965,
+      "vector": [
+        0.6,
+        0.5,
+        0.55,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "notes": "Sleep inertia, rebuilding coherence"
+    },
+    {
+      "name": "Microsleep",
+      "category": "Transitional",
+      "phi": 0.35,
+      "tau": 0.25,
+      "rho": 0.3,
+      "entropy": 0.55,
+      "density": 0.006782478971373884,
+      "vector": [
+        0.35,
+        0.25,
+        0.3,
+        0.55,
+        0.0,
+        0.0
+      ],
+      "notes": "Brief sleep intrusion while awake"
+    },
+    {
+      "name": "Coming Out of Anesthesia",
+      "category": "Transitional",
+      "phi": 0.4,
+      "tau": 0.3,
+      "rho": 0.35,
+      "entropy": 0.65,
+      "density": 0.008138517457146088,
+      "vector": [
+        0.4,
+        0.3,
+        0.35,
+        0.65,
+        0.0,
+        0.0
+      ],
+      "notes": "Recovering integration, high entropy"
+    },
+    {
+      "name": "Psychedelic Peak to Plateau",
+      "category": "Transitional",
+      "phi": 0.55,
+      "tau": 0.4,
+      "rho": 0.5,
+      "entropy": 0.8,
+      "density": 0.011613008990009258,
+      "vector": [
+        0.55,
+        0.4,
+        0.5,
+        0.8,
+        0.0,
+        0.0
+      ],
+      "notes": "Transitioning from peak effects"
+    },
+    {
+      "name": "Hypnopompic State",
+      "category": "Transitional",
+      "phi": 0.6,
+      "tau": 0.5,
+      "rho": 0.55,
+      "entropy": 0.6,
+      "density": 0.03719154957515524,
+      "vector": [
+        0.6,
+        0.5,
+        0.55,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "notes": "Waking from dream, reality anchoring"
+    },
+    {
+      "name": "Flow State (Athletic)",
+      "category": "Peak",
+      "phi": 0.95,
+      "tau": 0.9,
+      "rho": 0.95,
+      "entropy": 0.03,
+      "density": 0.6715641731552179,
+      "vector": [
+        0.95,
+        0.9,
+        0.95,
+        0.03,
+        0.0,
+        0.0
+      ],
+      "notes": "Optimal performance, minimal entropy"
+    },
+    {
+      "name": "Flow State (Creative)",
+      "category": "Peak",
+      "phi": 0.9,
+      "tau": 0.85,
+      "rho": 0.9,
+      "entropy": 0.08,
+      "density": 0.49376279246122484,
+      "vector": [
+        0.9,
+        0.85,
+        0.9,
+        0.08,
+        0.0,
+        0.0
+      ],
+      "notes": "Creative absorption, very low entropy"
+    },
+    {
+      "name": "Awe Experience",
+      "category": "Peak",
+      "phi": 0.85,
+      "tau": 0.8,
+      "rho": 0.85,
+      "entropy": 0.25,
+      "density": 0.28900000000000003,
+      "vector": [
+        0.85,
+        0.8,
+        0.85,
+        0.25,
+        0.0,
+        0.0
+      ],
+      "notes": "Vastness perception, moderate entropy"
+    },
+    {
+      "name": "Mystical Experience (Unitive)",
+      "category": "Peak",
+      "phi": 0.9,
+      "tau": 0.85,
+      "rho": 0.9,
+      "entropy": 0.1,
+      "density": 0.470777183097407,
+      "vector": [
+        0.9,
+        0.85,
+        0.9,
+        0.1,
+        0.0,
+        0.0
+      ],
+      "notes": "Sense of unity, low entropy"
+    },
+    {
+      "name": "Orgasm",
+      "category": "Peak",
+      "phi": 0.8,
+      "tau": 0.6,
+      "rho": 0.75,
+      "entropy": 0.45,
+      "density": 0.11850465843002271,
+      "vector": [
+        0.8,
+        0.6,
+        0.75,
+        0.45,
+        0.0,
+        0.0
+      ],
+      "notes": "Intense but brief, moderate entropy"
+    },
+    {
+      "name": "Alcohol Intoxication (Moderate)",
+      "category": "Impaired",
+      "phi": 0.6,
+      "tau": 0.5,
+      "rho": 0.55,
+      "entropy": 0.55,
+      "density": 0.04263272496292156,
+      "vector": [
+        0.6,
+        0.5,
+        0.55,
+        0.55,
+        0.0,
+        0.0
+      ],
+      "notes": "Reduced integration and binding"
+    },
+    {
+      "name": "Alcohol Intoxication (Severe)",
+      "category": "Impaired",
+      "phi": 0.35,
+      "tau": 0.25,
+      "rho": 0.3,
+      "entropy": 0.7,
+      "density": 0.004287674303480516,
+      "vector": [
+        0.35,
+        0.25,
+        0.3,
+        0.7,
+        0.0,
+        0.0
+      ],
+      "notes": "Heavily impaired, high entropy"
+    },
+    {
+      "name": "Extreme Fatigue",
+      "category": "Impaired",
+      "phi": 0.55,
+      "tau": 0.45,
+      "rho": 0.5,
+      "entropy": 0.6,
+      "density": 0.027893662181366432,
+      "vector": [
+        0.55,
+        0.45,
+        0.5,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "notes": "Degraded performance, elevated entropy"
+    },
+    {
+      "name": "Hypoxia (Moderate)",
+      "category": "Impaired",
+      "phi": 0.5,
+      "tau": 0.4,
+      "rho": 0.45,
+      "entropy": 0.65,
+      "density": 0.01743968026531305,
+      "vector": [
+        0.5,
+        0.4,
+        0.45,
+        0.65,
+        0.0,
+        0.0
+      ],
+      "notes": "Oxygen deprivation effects"
+    },
+    {
+      "name": "Concussion (Acute)",
+      "category": "Impaired",
+      "phi": 0.45,
+      "tau": 0.35,
+      "rho": 0.4,
+      "entropy": 0.7,
+      "density": 0.01029041832835324,
+      "vector": [
+        0.45,
+        0.35,
+        0.4,
+        0.7,
+        0.0,
+        0.0
+      ],
+      "notes": "Traumatic brain injury, confusion"
+    },
+    {
+      "name": "Light Sedation",
+      "category": "Clinical",
+      "phi": 0.5,
+      "tau": 0.4,
+      "rho": 0.45,
+      "entropy": 0.5,
+      "density": 0.026360389693210723,
+      "vector": [
+        0.5,
+        0.4,
+        0.45,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "notes": "Drowsy but arousable"
+    },
+    {
+      "name": "Deep Sedation",
+      "category": "Clinical",
+      "phi": 0.3,
+      "tau": 0.2,
+      "rho": 0.25,
+      "entropy": 0.4,
+      "density": 0.005513167019494862,
+      "vector": [
+        0.3,
+        0.2,
+        0.25,
+        0.4,
+        0.0,
+        0.0
+      ],
+      "notes": "Difficult to arouse"
+    },
+    {
+      "name": "General Anesthesia",
+      "category": "Clinical",
+      "phi": 0.05,
+      "tau": 0.03,
+      "rho": 0.04,
+      "entropy": 0.15,
+      "density": 3.67620999227555e-05,
+      "vector": [
+        0.05,
+        0.03,
+        0.04,
+        0.15,
+        0.0,
+        0.0
+      ],
+      "notes": "Surgical anesthesia, minimal consciousness"
+    },
+    {
+      "name": "Coma (Light)",
+      "category": "Clinical",
+      "phi": 0.15,
+      "tau": 0.1,
+      "rho": 0.12,
+      "entropy": 0.35,
+      "density": 0.0007351056390420692,
+      "vector": [
+        0.15,
+        0.1,
+        0.12,
+        0.35,
+        0.0,
+        0.0
+      ],
+      "notes": "Unresponsive, some brain activity"
+    },
+    {
+      "name": "Vegetative State",
+      "category": "Clinical",
+      "phi": 0.08,
+      "tau": 0.05,
+      "rho": 0.06,
+      "entropy": 0.25,
+      "density": 0.00012,
+      "vector": [
+        0.08,
+        0.05,
+        0.06,
+        0.25,
+        0.0,
+        0.0
+      ],
+      "notes": "Wakefulness without awareness"
+    },
+    {
+      "name": "Minimally Conscious State",
+      "category": "Clinical",
+      "phi": 0.25,
+      "tau": 0.15,
+      "rho": 0.2,
+      "entropy": 0.45,
+      "density": 0.002468847050625473,
+      "vector": [
+        0.25,
+        0.15,
+        0.2,
+        0.45,
+        0.0,
+        0.0
+      ],
+      "notes": "Some awareness, inconsistent responses"
+    },
+    {
+      "name": "Chimpanzee",
+      "category": "Non-Human",
+      "phi": 0.8,
+      "tau": 0.75,
+      "rho": 0.75,
+      "entropy": 0.2,
+      "density": 0.248753882025019,
+      "vector": [
+        0.8,
+        0.75,
+        0.75,
+        0.2,
+        0.0,
+        0.0
+      ],
+      "notes": "Great ape cognition, high complexity"
+    },
+    {
+      "name": "Dolphin",
+      "category": "Non-Human",
+      "phi": 0.7,
+      "tau": 0.6,
+      "rho": 0.7,
+      "entropy": 0.25,
+      "density": 0.147,
+      "vector": [
+        0.7,
+        0.6,
+        0.7,
+        0.25,
+        0.0,
+        0.0
+      ],
+      "notes": "Marine mammal, echolocation"
+    },
+    {
+      "name": "Crow",
+      "category": "Non-Human",
+      "phi": 0.6,
+      "tau": 0.5,
+      "rho": 0.55,
+      "entropy": 0.3,
+      "density": 0.0746257780116476,
+      "vector": [
+        0.6,
+        0.5,
+        0.55,
+        0.3,
+        0.0,
+        0.0
+      ],
+      "notes": "Avian intelligence, tool use"
+    },
+    {
+      "name": "Octopus",
+      "category": "Non-Human",
+      "phi": 0.55,
+      "tau": 0.4,
+      "rho": 0.5,
+      "entropy": 0.35,
+      "density": 0.04492312238590423,
+      "vector": [
+        0.55,
+        0.4,
+        0.5,
+        0.35,
+        0.0,
+        0.0
+      ],
+      "notes": "Distributed nervous system"
+    },
+    {
+      "name": "Mouse",
+      "category": "Non-Human",
+      "phi": 0.4,
+      "tau": 0.3,
+      "rho": 0.35,
+      "entropy": 0.4,
+      "density": 0.015436867654585611,
+      "vector": [
+        0.4,
+        0.3,
+        0.35,
+        0.4,
+        0.0,
+        0.0
+      ],
+      "notes": "Small mammal, moderate complexity"
+    },
+    {
+      "name": "Bee",
+      "category": "Non-Human",
+      "phi": 0.25,
+      "tau": 0.15,
+      "rho": 0.2,
+      "entropy": 0.35,
+      "density": 0.003062940162675288,
+      "vector": [
+        0.25,
+        0.15,
+        0.2,
+        0.35,
+        0.0,
+        0.0
+      ],
+      "notes": "Insect, simple but organized"
+    },
+    {
+      "name": "Sensory Deprivation (Extended)",
+      "category": "Edge Case",
+      "phi": 0.6,
+      "tau": 0.5,
+      "rho": 0.55,
+      "entropy": 0.65,
+      "density": 0.031972747153073924,
+      "vector": [
+        0.6,
+        0.5,
+        0.55,
+        0.65,
+        0.0,
+        0.0
+      ],
+      "notes": "Reduced external input, hallucinations possible"
+    },
+    {
+      "name": "Locked-In Syndrome",
+      "category": "Edge Case",
+      "phi": 0.85,
+      "tau": 0.8,
+      "rho": 0.85,
+      "entropy": 0.2,
+      "density": 0.3195105418010244,
+      "vector": [
+        0.85,
+        0.8,
+        0.85,
+        0.2,
+        0.0,
+        0.0
+      ],
+      "notes": "Conscious but paralyzed, intact awareness"
+    },
+    {
+      "name": "Seizure (Absence)",
+      "category": "Edge Case",
+      "phi": 0.2,
+      "tau": 0.1,
+      "rho": 0.15,
+      "entropy": 0.5,
+      "density": 0.0008786796564403574,
+      "vector": [
+        0.2,
+        0.1,
+        0.15,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "notes": "Brief loss of consciousness"
+    },
+    {
+      "name": "Seizure (Tonic-Clonic)",
+      "category": "Edge Case",
+      "phi": 0.1,
+      "tau": 0.05,
+      "rho": 0.08,
+      "entropy": 0.7,
+      "density": 6.533598938636979e-05,
+      "vector": [
+        0.1,
+        0.05,
+        0.08,
+        0.7,
+        0.0,
+        0.0
+      ],
+      "notes": "Generalized seizure, very low density"
+    },
+    {
+      "name": "Syncope (Fainting)",
+      "category": "Edge Case",
+      "phi": 0.15,
+      "tau": 0.08,
+      "rho": 0.1,
+      "entropy": 0.45,
+      "density": 0.00039501552810007574,
+      "vector": [
+        0.15,
+        0.08,
+        0.1,
+        0.45,
+        0.0,
+        0.0
+      ],
+      "notes": "Brief unconsciousness from blood flow"
+    },
+    {
+      "name": "Near-Death Experience",
+      "category": "Edge Case",
+      "phi": 0.7,
+      "tau": 0.55,
+      "rho": 0.65,
+      "entropy": 0.6,
+      "density": 0.056407183522318785,
+      "vector": [
+        0.7,
+        0.55,
+        0.65,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "notes": "Reported experiences at edge of death"
+    }
+  ]
+}
