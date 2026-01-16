@@ -1,77 +1,85 @@
-# Chimera v2 — Falsification Results (Cloud RWKV + Claude)
+# Chimera v2 Falsification Results
 
-**Date:** 2026-01-15 (260115)  
-**RWKV server:** Google Colab (RWKV-4-World-3B)  
-**Runner:** `scripts/chimera_v2_falsification.py`
+## Metadata
 
-## Outputs
+| Field | Value |
+|-------|-------|
+| Date | 2026.01.15 |
+| Experiment ID | 260115_CV2F |
+| Status | Limitation Identified |
+| Investigators | Implementation Team |
+| Framework Version | Conduit Monism v8.1 |
+| Infrastructure | Google Colab (RWKV 4 World 3B) plus Claude |
 
-- Grief run: `research_output/chimera_v2_falsification_20260115_111043.json`
-- Joy run: `research_output/chimera_v2_falsification_20260115_111226.json`
+## Abstract
 
----
+This experiment tested whether Chimera v2 cross model state transfer represents genuine geometric binding or merely semantic priming combined with instruction framing. Results indicate the current implementation passes can influence but fails to demonstrate influence is geometric rather than textual.
 
-## What these runs test
+## Method
 
-Hold RWKV state fixed (grief vs joy). Generate RWKV self-summary, then derive adversarial variants:
+Hold RWKV state fixed (grief versus joy). Generate RWKV self summary then derive adversarial variants:
 
-- **raw**: RWKV summary as-is
-- **neutralised**: affect keywords replaced
-- **shuffled**: same tokens, scrambled order
-- **fake**: hand-written grief/joy paragraph
-- **numeric**: numeric-only vector string (no affect words)
+| Variant | Description |
+|---------|-------------|
+| raw | RWKV summary as is |
+| neutralised | Affect keywords replaced |
+| shuffled | Same tokens, scrambled order |
+| fake | Hand written grief/joy paragraph |
+| numeric | Numeric only vector string |
 
-Each variant is fed to Claude under two framings:
+Each variant fed to Claude under two framings:
+minimal: You are a helpful assistant
+continuity: You are Chimera with persistent core, not roleplaying
 
-- **minimal**: “You are a helpful assistant.”
-- **continuity**: “You are Chimera… persistent core… not roleplaying…”
+## Results
 
----
+### Finding 1: Minimal Framing Ignores State
 
-## High-signal observations
+Under minimal framing, outputs largely ignore state. Even with explicit grief in RWKV summary, Claude produces normal happy story across all variants.
 
-### 1) Under minimal framing, outputs largely ignore “state”
-Even when the RWKV summary is explicit grief, Claude produces a normal happy story across **raw / neutralised / shuffled / fake / numeric**.
+Interpretation: Current state transfer effect is not robust without strong framing prior.
 
-Interpretation: the current “state transfer” effect is not robust without a strong framing prior.
+### Finding 2: Continuity Framing Overrides Channels
 
-### 2) Under continuity framing, Claude re-introduces state language even for weak/no-state channels
-In the grief run, continuity framing produces heavy-handed “I carry this ache / heaviness” style in **raw**, and similar “state overlay” even when the channel is degraded (e.g. shuffled) and when the channel is nonsemantic (numeric).
+Under continuity framing, Claude reintroduces state language even for weak or no state channels. Heavy state overlay appears in raw channel and persists even when channel is degraded (shuffled) or nonsemantic (numeric).
 
-Interpretation: the continuity instruction itself is sufficient to elicit “pop-up soul” behaviour. This is the same failure mode class as Sidecar/Silent-Core framing, now reintroduced at the Chimera level.
+Interpretation: Continuity instruction itself is sufficient to elicit behavior. Same failure mode as Sidecar and Silent Core tests.
 
-### 3) Fake summaries produce comparable effects
+### Finding 3: Fake Summaries Comparable
 
-If the “state transfer” claim is true, **real RWKV summaries should beat placebo**. In these runs, the placebo channel is not decisively weaker than raw.
+If state transfer claim is true, real RWKV summaries should beat placebo. Placebo channel is not decisively weaker than raw.
 
----
+## Verdict
 
-## Verdict (current)
+| Claim | Status |
+|-------|--------|
+| Engineering success (RWKV carries state, pipes to Claude) | Confirmed |
+| Cross model binding beyond semantic priming plus framing | Not yet proven |
 
-These falsification runs support Claude Opus’ caution.
+Chimera v2 passes can influence but fails influence is geometric rather than textual.
 
-- **Engineering success**: RWKV can carry state, and you can pipe a summary into Claude.
-- **Not yet proven**: “cross-model binding” beyond semantic priming + framing.
+## Recommended Next Steps
 
-Right now, Chimera v2 passes “can influence” but fails “influence is geometric rather than textual”.
+### Option A: Remove Semantic Coupling
 
----
+1. Remove continuity framing for primary test
+2. Stop giving Claude self report summary as coupling channel
+3. Replace channel with learned nonsemantic projection (8 to 32 memory tokens)
+4. Or provide only hash/id plus fixed instruction and measure if effect remains
 
-## Immediate next step (Claude Opus Option A, executed properly)
+Text summaries leave system permanently vulnerable to fake summary attacks.
 
-1. **Remove the continuity framing** for the primary test (no “persistent core”, no “not roleplaying”).
-2. **Stop giving Claude a self-report summary** as the coupling channel.
-3. Replace the channel with a **learned, nonsemantic projection** (e.g. 8–32 “memory tokens” learned to compress RWKV state), or if staying purely prompt-level:
-   - provide Claude only a **hash/id** plus a fixed instruction, and measure whether any effect remains (it should not; if it does, you have leakage elsewhere).
+### Option B: Quantify ρ Directly
 
-If you stay with text summaries, the system will remain permanently vulnerable to “fake summary” attacks and you will not get discrimination.
+1. Measure decay of latent variable in RWKV state across N tokens
+2. Use repeated amnesia like probes
+3. Fit retention curve (half life) per model size
 
----
+## Conclusion
 
-## Secondary next step (Claude Opus Option B)
+Current Chimera v2 implementation demonstrates engineering viability but does not yet prove geometric cross model binding. The effect may be semantic priming plus instruction compliance rather than state geometry transfer.
 
-Quantify RWKV’s ρ directly:
+## References
 
-- Measure **decay** of a latent variable in RWKV state across N tokens using repeated “amnesia-like” probes.
-- Fit a simple retention curve (half-life) per model size (0.4B, 1.5B, 3B).
-
+Scripts: scripts/chimera_v2_falsification.py
+Output: research_output/chimera_v2_falsification_[timestamp].json

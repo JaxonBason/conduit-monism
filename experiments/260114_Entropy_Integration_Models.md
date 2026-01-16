@@ -1,43 +1,43 @@
-# Experiment: Entropy Integration Models
+# Entropy Integration Models
 
-**Date:** 2026-01-14 (260114)
-**Initiated By:** All AIs (Gemini, ChatGPT, Claude Opus) - Consensus recommendation
-**Status:** ✅ CONFIRMED - Sqrt model optimal
+## Metadata
 
----
+| Field | Value |
+|-------|-------|
+| Date | 2026.01.14 |
+| Experiment ID | 260114_EIM |
+| Status | Confirmed |
+| Investigators | Gemini, ChatGPT, Claude Opus (Consensus) |
+| Framework Version | Conduit Monism v7.0 to v8.0 |
 
-## Objective
+## Abstract
 
-Determine the correct mathematical relationship between entropy (H) and perspectival density.
+This experiment determined the correct mathematical relationship between entropy (H) and perspectival density. Four candidate models were tested across five phenomenological states. The square root model (1 minus square root of H) achieved optimal differentiation between coherent and incoherent states, with 1566x better Flow/Panic discrimination than the original formula.
 
-**Problem Statement:** The v7.0 framework treats H as a 4th dimension but doesn't integrate it into the density calculation. High-entropy states (panic, confusion) show unexpectedly high density.
+## Problem Statement
 
----
+The v7.0 framework treats entropy as a fourth dimension but does not integrate it into the density calculation. This results in unexpectedly high density values for high entropy states such as panic and confusion.
 
 ## Hypothesis
 
-Entropy acts as a **modulator** that degrades density:
+Entropy acts as a modulator that degrades density according to one of four candidate relationships:
 
-**Proposed Models:**
-1. **Original:** Density = φ × τ × ρ (ignores H)
-2. **Linear:** Density = (φ × τ × ρ) × (1 - H)
-3. **Quadratic:** Density = (φ × τ × ρ) × (1 - H²)
-4. **Sqrt:** Density = (φ × τ × ρ) × (1 - √H)
-
----
+1. Original: D = φ × τ × ρ (ignores H)
+2. Linear: D = (φ × τ × ρ) × (1 minus H)
+3. Quadratic: D = (φ × τ × ρ) × (1 minus H squared)
+4. Square root: D = (φ × τ × ρ) × (1 minus square root of H)
 
 ## Method
 
-Test all four models on 5 critical states:
-1. Flow State (low H)
-2. Panic Attack (high H)
-3. Healthy Awake (moderate H)
-4. Psychedelic (high φ, τ, ρ but high H)
-5. Deep Meditation (very low H)
+All four models were tested on five critical phenomenological states:
 
-**Evaluation Criterion:** Which model best differentiates Flow from Panic?
+1. Flow State (low entropy)
+2. Panic Attack (high entropy)
+3. Healthy Awake (moderate entropy)
+4. Psychedelic Experience (high structure but high entropy)
+5. Deep Meditation (very low entropy)
 
----
+Evaluation criterion: Which model best differentiates Flow from Panic?
 
 ## Results
 
@@ -55,80 +55,47 @@ Test all four models on 5 critical states:
 
 | Model | Flow Density | Panic Density | Flow/Panic Ratio |
 |-------|--------------|---------------|------------------|
-| Original | 0.8122 | 0.0140 | **58x** |
-| Linear | 0.7310 | 0.0007 | **1044x** |
-| **Sqrt** | **0.5554** | **0.0004** | **1566x** ✓ |
-| Quadratic | 0.8041 | 0.0014 | **574x** |
-
----
+| Original | 0.8122 | 0.0140 | 58x |
+| Linear | 0.7310 | 0.0007 | 1044x |
+| Square Root | 0.5554 | 0.0004 | 1566x |
+| Quadratic | 0.8041 | 0.0014 | 574x |
 
 ## Analysis
 
-**Winner:** **Sqrt model (1 - √H)** with 1566x Flow/Panic differentiation
+The square root model achieved 1566x Flow/Panic differentiation, outperforming all alternatives.
 
-**Why sqrt performs best:**
+Properties of the square root model:
 
-1. **Accelerating impact:** Entropy has non-linear degrading effect
-2. **Preserves low-H states:** Doesn't over-penalize moderate entropy
-3. **Crushes high-H states:** Panic (H=0.95) → density = 0.0004 (effectively zero)
+1. Accelerating impact: Entropy has nonlinear degrading effect
+2. Preserves low entropy states: Does not over penalize moderate entropy
+3. Suppresses high entropy states: Panic (H=0.95) yields density of 0.0004, effectively zero
 
-**Psychedelic Prediction:**
-- Structure: High φ=0.9, τ=0.8, ρ=0.9
-- But H=0.8 (very high entropy)
-- **Result:** Density = 0.0684 (low)
+Psychedelic prediction: Despite high structural values (φ=0.9, τ=0.8, ρ=0.9), entropy of 0.8 reduces density to 0.0684. This matches phenomenological reports of ego dissolution where structure remains intact but coherence collapses.
 
-**Interpretation:** Psychedelics have high structural capacity but low coherent density due to entropy. This matches phenomenological reports of "ego dissolution" - the structure is intact but coherence collapses.
-
----
-
-## Validation Against Phenomenology
+### Phenomenological Validation
 
 | State | Expected Coherence | Original Model | Sqrt Model | Match |
 |-------|-------------------|----------------|------------|-------|
-| Flow | Very High | High (0.81) | Moderate (0.56) | ✓ |
-| Panic | Very Low | Low (0.01) | Very Low (0.0004) | ✓ |
-| Psychedelic | Low | High (0.65) | Low (0.07) | ✓ |
-
-The sqrt model correctly predicts that panic and psychedelics should have low effective density despite different mechanisms (panic = low structure, psychedelics = high entropy).
-
----
-
-## Recommendation for v8.0
-
-**Adopt the sqrt model:**
-
-```python
-def compute_density_v8(phi, tau, rho, entropy):
-    base_density = phi * tau * rho
-    entropy_factor = 1.0 - sqrt(entropy)
-    return base_density * max(0.0, entropy_factor)
-```
-
-**Justification:**
-- 1566x better Flow/Panic differentiation than original
-- Correctly predicts psychedelic phenomenology
-- Non-linear entropy impact matches intuition
-
----
-
-## Implications
-
-1. **Entropy is not just a dimension** - it's a **modulator** that degrades all other structure
-2. **High-entropy states are unstable** - even with good φ, τ, ρ
-3. **Psychedelics may be "noisy consciousness"** - structure intact, coherence destroyed
-
----
+| Flow | Very High | High (0.81) | Moderate (0.56) | Yes |
+| Panic | Very Low | Low (0.01) | Very Low (0.0004) | Yes |
+| Psychedelic | Low | High (0.65) | Low (0.07) | Yes |
 
 ## Conclusion
 
-✅ **HYPOTHESIS CONFIRMED - SQRT MODEL OPTIMAL**
+Hypothesis confirmed. The square root model provides optimal entropy integration. Entropy functions not merely as a dimension but as a modulator that degrades all structural contributions to density.
 
-Entropy must be integrated into the density calculation. The sqrt model provides optimal differentiation and matches phenomenological intuitions.
+## Implications
 
-**Critical Update:** v8.0 must implement this formula to correctly handle high-entropy states.
+1. Entropy is a modulator rather than an independent dimension
+2. High entropy states are unstable regardless of structural values
+3. Psychedelic states represent noisy consciousness with intact structure but collapsed coherence
 
----
+## Recommendation
 
-**File:** `src/density_models.py::density_entropy_modulated_v3()`
-**Initiating AIs:** Gemini, ChatGPT, Claude Opus (consensus)
-**Recommendation:** Deploy in v8.0 immediately
+Adopt the square root model for v8.0:
+
+D = (φ × τ × ρ) × max(0, 1 minus square root of H)
+
+## References
+
+Script: src/density_models.py::density_entropy_modulated_v3()
