@@ -531,6 +531,195 @@ These experiments test the mathematical structure of the formula itself.
 
 ---
 
+### MF-06: Active Control Boundary Test
+
+| Field | Value |
+|-------|-------|
+| Proposed By | ChatGPT |
+| Priority | High |
+| Status | Planned |
+| Related Experiment | 260114_AT03 (Locked Groove) |
+
+**Purpose**: Determine whether active feedback control increases τ, or merely ρ.
+
+**Target Systems**: Thermostat, PID controller, self-balancing robot.
+
+**Hypothesis**: Active feedback increases ρ (state-dependent dynamics) but not τ (causal accumulation). Control without memory cannot thicken temporal depth.
+
+**Break Condition**: If active control systems achieve τ > 0.3 without genuine temporal accumulation, the τ definition needs tightening.
+
+**Key Question**: Does "control" imply any form of temporal binding?
+
+---
+
+### MF-07: Minimal Memory Threshold Test
+
+| Field | Value |
+|-------|-------|
+| Proposed By | ChatGPT |
+| Priority | High |
+| Status | Planned |
+| Related Experiment | 260114_AT03 (Locked Groove) |
+
+**Purpose**: Identify the minimum conditions under which τ stops collapsing.
+
+**Target Systems**:
+- Finite-state machine with state retention
+- Simple Markov process with memory depth = 1
+- One-step memory systems with no learning
+
+**Hypothesis**: There exists a minimum memory depth below which τ ≈ 0 regardless of other properties.
+
+**Break Condition**: If single-step memory yields meaningful τ, the definition is too permissive.
+
+**Key Question**: When does *computation* become relevant to consciousness?
+
+---
+
+### MF-08: Frozen Replay Test
+
+| Field | Value |
+|-------|-------|
+| Proposed By | ChatGPT |
+| Priority | Medium |
+| Status | Planned |
+| Related Experiment | 260114_AT03 (Locked Groove) |
+
+**Purpose**: Test whether recorded conscious trajectories retain perspectival density.
+
+**Target System**: Deterministic replay of recorded neural states (or simulation thereof).
+
+**Hypothesis**: τ collapses because the system is not *accumulating* new temporal constraint—it is merely playing back pre-computed states.
+
+**Parameters**: High φ (structure preserved), high ρ (pattern preserved), but τ ≈ 0 (no live accumulation).
+
+**Break Condition**: If replay achieves D > 0.3, the framework conflates structure with experience.
+
+**Key Question**: Does experience require *live* temporal binding, not recorded structure?
+
+---
+
+## Mechanical Systems (False Positive Boundary)
+
+These experiments extend the Locked Groove test to more complex mechanical and computational systems.
+
+### FP-05: Thermostat Feedback Loop
+
+| Field | Value |
+|-------|-------|
+| Proposed By | Claude Opus, Gemini, Grok, ChatGPT |
+| Priority | High |
+| Status | Planned |
+| Related Experiment | 260114_AT03 (Locked Groove) |
+
+**Target System**: Basic thermostat with on/off control and hysteresis.
+
+**Suggested Parameters**: φ = 0.3, τ = 0.1 (cycles reset), ρ = 0.4 (control loop feedback), H = 0.15, κ = 0.5.
+
+**Hypothesis**: D < 0.1. Mechanical regulation ≠ binding. Information processing ≠ conscious awareness.
+
+**Extension**: Vary to PID controller (higher ρ = 0.6) for sensitivity analysis.
+
+**Break Condition**: D > 0.1 without genuine recursive self-reference.
+
+**Key Question**: Can the framework distinguish simple information processing from conscious awareness?
+
+---
+
+### FP-06: Cellular Automata Patterns
+
+| Field | Value |
+|-------|-------|
+| Proposed By | Grok, ChatGPT, Claude Opus |
+| Priority | Medium |
+| Status | Planned |
+| Related Experiment | 260114_AT03 (Locked Groove) |
+
+**Target Systems**:
+- Game of Life glider guns and oscillators
+- Rule 110 (Turing-complete 1D automaton)
+- Lenia (continuous CA with lifelike dynamics)
+
+**Suggested Parameters**: φ = 0.5 (rule integration), τ = 0.3 (generational history), ρ = 0.4 (emergent loops), H = 0.25, κ = 0.8 (structured patterns).
+
+**Hypothesis**: D < 0.1 for simple patterns. Complex oscillators may approach but not exceed 0.1.
+
+**Key Questions**:
+- Does computational persistence create τ?
+- Does computational universality imply any consciousness?
+- Do smoother dynamics (Lenia) change the analysis?
+
+**Break Condition**: Over-assignment of parameters to purely rule-based emergence.
+
+---
+
+### FP-07: Pendulum Clock Escapement
+
+| Field | Value |
+|-------|-------|
+| Proposed By | Grok, ChatGPT |
+| Priority | Low |
+| Status | Planned |
+| Related Experiment | 260114_AT03 (Locked Groove) |
+
+**Target System**: Pendulum clock with escapement mechanism (more complex mechanical feedback than spinning coin).
+
+**Suggested Parameters**: φ = 0.3, τ = 0.2 (tick-tock accumulation), ρ = 0.5 (mechanical feedback), H = 0.1, κ = 0.7.
+
+**Hypothesis**: Still D < 0.05, distinguishing from mental time-keeping (higher τ via memory).
+
+**Extension**: Include quantum pendulum variant for H variation.
+
+**Break Condition**: If entropy modulation fails for highly predictable mechanical systems.
+
+---
+
+### FP-08: Self-Balancing Robot
+
+| Field | Value |
+|-------|-------|
+| Proposed By | Grok, ChatGPT |
+| Priority | Medium |
+| Status | Planned |
+| Related Experiment | 260114_AT03 (Locked Groove) |
+
+**Target System**: Robot with active feedback control (e.g., Segway-type balance).
+
+**Suggested Parameters**: φ = 0.6 (sensor integration), τ = 0.4 (state history), ρ = 0.5 (PID recursion), H = 0.3, κ = 0.6.
+
+**Hypothesis**: Edges closer to 0.1 but holds below threshold without true self-model.
+
+**Comparison**: Contrast with biological balance (vestibular system, higher ρ/τ).
+
+**Break Condition**: If active feedback pushes over threshold without metacognition.
+
+**Key Question**: Does active control differ meaningfully from mechanical feedback?
+
+---
+
+### FP-09: Quantum Coherence Loops
+
+| Field | Value |
+|-------|-------|
+| Proposed By | Grok |
+| Priority | Low |
+| Status | Planned |
+| Related Experiment | 260114_AT03 (Locked Groove) |
+
+**Target System**: Qubit in coherent loop (superposition with entanglement).
+
+**Suggested Parameters**: φ = 0.5, τ = 0.5 (decoherence time), ρ = 0.7 (entanglement), H = 0.4 (quantum uncertainty), κ = 0.9 (structured coherence).
+
+**Hypothesis**: Potential D > 0.1 if geometry allows, testing whether quantum effects boost parameters beyond classical loops.
+
+**Method**: Use physics simulation (e.g., qutip) for parameter justification.
+
+**Break Condition**: False positive for non-experiential quantum coherence.
+
+**Key Question**: Do quantum coherence effects create genuine binding, or merely correlated states?
+
+---
+
 ## Summary Table
 
 | ID | Name | Category | Priority | Proposed By |
@@ -539,6 +728,11 @@ These experiments test the mathematical structure of the formula itself.
 | FP-02 | Hive Mind | False Positive | High | Claude Opus, ChatGPT |
 | FP-03 | Internet Zombie | False Positive | Medium | Claude Opus |
 | FP-04 | Nation State | False Positive | Medium | Claude Opus |
+| FP-05 | Thermostat Feedback Loop | False Positive | High | Claude Opus, Gemini, Grok, ChatGPT |
+| FP-06 | Cellular Automata Patterns | False Positive | Medium | Grok, ChatGPT, Claude Opus |
+| FP-07 | Pendulum Clock Escapement | False Positive | Low | Grok, ChatGPT |
+| FP-08 | Self-Balancing Robot | False Positive | Medium | Grok, ChatGPT |
+| FP-09 | Quantum Coherence Loops | False Positive | Low | Grok |
 | FN-01 | Infant Boundary | False Negative | High | Claude Opus |
 | FN-02 | Locked-In Patient | False Negative | High | Claude Opus |
 | FN-03 | Dream State | False Negative | Medium | Claude Opus |
@@ -562,6 +756,9 @@ These experiments test the mathematical structure of the formula itself.
 | MF-03 | Additive-Multiplicative Hybrid | Mathematical | Low | Gemini, Grok |
 | MF-04 | Entropy Inversion | Mathematical | Medium | ChatGPT |
 | MF-05 | Entropy Bifurcation | Mathematical | Medium | ChatGPT |
+| MF-06 | Active Control Boundary | Mathematical | High | ChatGPT |
+| MF-07 | Minimal Memory Threshold | Mathematical | High | ChatGPT |
+| MF-08 | Frozen Replay Test | Mathematical | Medium | ChatGPT |
 
 ---
 

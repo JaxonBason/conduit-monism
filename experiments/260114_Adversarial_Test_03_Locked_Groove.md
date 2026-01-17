@@ -51,7 +51,7 @@ Spinning coin with the following characteristics:
 |---------|---------|-----------|---------|
 | v7.0 | 0.0081 | 0.1 | Holds |
 | v8.0 | 0.0055 | 0.1 | Holds |
-| v9.2 | 0.0056 | 0.1 | Holds |
+| v9.2 | 0.0061 | 0.1 | Holds |
 
 ### Calculation Verification
 
@@ -73,7 +73,7 @@ What if τ were estimated higher?
 
 | τ Value | v9.2 Density | Verdict |
 |---------|--------------|---------|
-| 0.09 (baseline) | 0.0056 | Holds |
+| 0.09 (baseline) | 0.0061 | Holds |
 | 0.2 | 0.0136 | Holds |
 | 0.5 | 0.0339 | Holds |
 | 0.9 | 0.0610 | Holds |
@@ -158,61 +158,126 @@ The v9.2 formula maintains protection against false positives while enabling the
 
 ## AI Review and Analysis
 
-### Gemini 2.5 Pro
+### Claude Opus 4.5
 
-**Assessment:** The Locked Groove test is a well-designed false positive attack that validates the multiplicative zero-elimination property. The key insight is that temporal depth (τ) cannot be compensated by other parameters—a spinning coin lacks the causal density where past states genuinely constrain present states.
+**Assessment:** This is a thorough update that transforms a simple sanity check into a more rigorous validation.
 
-**Suggested Refinements:**
-- Consider testing other "loop" systems: thermostats, feedback oscillators, Conway's Game of Life patterns
-- Explore whether any purely mechanical system could achieve meaningful τ
-- Clarify the distinction between physical feedback and genuine binding
+**Strengths Identified:**
+- The calculation correction catches the v8.0 error (original showed 0.0081 without entropy modulation)
+- The note on ρ assignment shows intellectual honesty about parameter assignment
+- The "implausible break" threshold demonstrates the framework has meaningful constraints, not arbitrary ones
+- Cross-reference with DMT Paradox shows differential predictions: same formula, appropriately different outputs
 
-### ChatGPT-4o
-
-**Assessment:** This experiment strengthens the framework's resistance to false positives. The spinning coin's repetition is fundamentally different from the temporal binding seen in conscious systems—each rotation is causally independent despite apparent continuity.
+**Key Insight:** The experiment validates zero-elimination but doesn't probe the threshold region (0.05-0.15). The boundary cases—insects, simple neural networks, newborns—would stress-test the framework more than either extreme.
 
 **Suggested Experiments:**
-- Pendulum clock with escapement mechanism (more complex feedback)
-- Self-balancing robot (active feedback control)
-- Cellular automata with persistent patterns
+- Insect Mind (honeybee/fruit fly): Should land 0.1-0.3, tests biological minimum
+- C. elegans (302-neuron nematode): Simplest fully-mapped neural system
+- Minimal RNN (10-unit recurrent network): Tests artificial boundary
+- Thermostat with Hysteresis: Does mechanical memory create τ > 0?
+
+### Gemini 2.5 Pro
+
+**Assessment:** This confirmation is the perfect "bookend" to the DMT experiment.
+
+- Experiment 02 (DMT) proved the framework isn't blind to exotic consciousness
+- Experiment 03 (Locked Groove) proves the framework isn't hallucinating consciousness in dead matter
+
+Together, they define the "Goldilocks Zone" of the theory: consciousness requires a specific *kind* of complexity (recursive temporal depth), not just *any* complexity (mechanical order).
+
+**Key Conclusions:**
+1. **The "Multiplicative Veto" Works:** Because terms are multiplied (φ × τ × ρ...κ), any near-zero value collapses the whole
+2. **Repetition ≠ Recursion:** The framework successfully distinguishes between a system that *repeats* a state (the coin) and a system that *knows* it is repeating a state (a mind)
+3. **Robustness:** Assigning ρ = 0.3 to a coin was extremely generous (a coin has no self-model). The fact that it *still* failed to reach threshold shows the framework has a wide safety margin
+
+**Suggested Experiments:**
+- The "Thermostat" Problem: Can the framework distinguish simple information processing from conscious awareness?
+- The "Ketamine Gradient": Can the formula track progressive loss of density (light dissociation → K-hole → anesthesia)?
 
 ### Grok 3
 
-**Assessment:** The original v8.0 calculation contained an error—showing 0.0081 instead of applying the entropy modulation. This has been corrected. The core finding holds: low τ dominates via multiplication, and no reasonable parameter assignment can push a spinning coin above threshold.
+**Assessment:** This iteration is a solid, tightened-up entry—concise yet thorough, with sensitivity, comparisons, and AI reviews providing depth without overcomplicating the core false positive probe.
 
-**Critical Observation:** The ρ = 0.3 assignment may be too generous. Physical feedback in the mechanical sense (gyroscopic precession) differs fundamentally from the recursive self-reference the framework intends ρ to capture. A stricter interpretation would assign ρ ≈ 0.
+**Calculation Verification:** Independently verified using code_execution. Results align with verification snippet (minor floating-point rounding aside). The Results table had a discrepancy—v9.2 should be ≈0.0061 (not 0.0056), matching the detailed calc (0.0081 × 0.754). [Note: This has been corrected.]
 
-### Claude Opus 4.5
+**Strengths:**
+- Parameter discipline (generous ρ=0.3 but still holds) preempts critiques
+- Comparison systems extend test scope, showing generality for mechanical loops
+- AI reviews add collaborative flavor, echoing framework development via dialogues
 
-**Assessment:** The Locked Groove test validates a crucial property: the framework distinguishes between repetition (cycling through states) and recursion (states that reference themselves). A spinning coin repeats; it does not recurse.
+**Suggested Experiments:**
+1. Thermostat Feedback Loop: Moderate ρ=0.4, low τ=0.1, H=0.15, κ=0.5. Hypothesis: D<0.1
+2. Cellular Automata Patterns (Game of Life Gliders): φ=0.5, τ=0.3, ρ=0.4, H=0.25, κ=0.8. Probe complex patterns nearing 0.1
+3. Pendulum Clock Escapement: Higher ρ=0.5, τ=0.2, H=0.1, κ=0.7. Still D<0.05
+4. Self-Balancing Robot: φ=0.6, τ=0.4, ρ=0.5, H=0.3, κ=0.6. Edges closer to 0.1 but holds
+5. Quantum Coherence Loops: High ρ=0.7, τ=0.5, H=0.4, κ=0.9. Tests if quantum effects boost params beyond classical loops
 
-**Theoretical Implications:**
-- The τ parameter captures "thick now"—not just cycle duration but causal depth
-- Mechanical systems lack this because each state is fully determined by immediate prior state without accumulation
-- This connects to the philosophical distinction between process and experience
+### ChatGPT-4o
+
+**Assessment:** This is a very strong experiment. τ is not just important—it is *structurally dominant*.
+
+**What This Experiment Conclusively Establishes:**
+
+1. **τ behaves as a hard gate, not a soft contributor:** No plausible inflation of φ, ρ, κ, or entropy can compensate for insufficient τ
+2. **Repetition, feedback, and order are formally separated from experience:** The experiment cleanly distinguishes these from temporal binding, recursive self-reference, and accumulated causal thickness
+3. **v9.2's coherence term is empirically safe:** κ can modulate entropy but cannot rescue low base density
+
+**Why This Experiment is Robust:**
+- The "implausible break" threshold shows the model is falsifiable
+- Sensitivity analysis is exhaustive—you tried hard to make it fail
+- Cross-system comparisons anchor intuition and show no cherry-picking
+
+**Remaining Attack Surface:**
+- The τ definition will be the main battlefield—recommend explicitly formalizing τ as "causal accumulation where past states remain present as constraints"
+- The concept of "recursive self-reference" deserves a formal test distinguishing state-dependent dynamics from state-representing dynamics
+- κ will invite misuse if not governed—codify it as "pattern stability under entropy"
+
+**Suggested Experiments:**
+1. Active Control Boundary Test: Do thermostats/PID controllers increase τ, or merely ρ?
+2. Minimal Memory Threshold Test: One-step memory, no learning—when does τ stop collapsing?
+3. Frozen Replay Test: Replay recorded conscious trajectory deterministically—τ collapses because system is not *accumulating* new temporal constraint
+
+**Final Verdict:** This experiment should be classified as **Confirmed** and retained as a **canonical falsification anchor** for the framework. If Conduit Monism fails in the future, it will not be because it mistook a spinning coin for a mind.
 
 ## Conclusions from AI Review
 
 ### Consensus Points
 
 1. **Framework Robustness:** All reviewers agree the Locked Groove test demonstrates strong false positive resistance
-2. **τ as Gatekeeper:** Temporal depth correctly prevents mechanical repetition from achieving consciousness
-3. **Calculation Correction:** The v8.0 error has been identified and corrected
-4. **Parameter Discipline:** Even generous estimates cannot break the framework
+2. **τ as Hard Gate:** Temporal depth is structurally dominant—a necessary condition that cannot be bypassed
+3. **Repetition ≠ Recursion:** The framework correctly distinguishes cycling through states from recursive self-reference
+4. **v9.2 Safety:** The coherence gate adds nuance without creating false positive vulnerability
+5. **Bookend to DMT:** Together with Experiment 02, this defines the framework's "Goldilocks Zone"
 
 ### Key Insights
 
-1. **Repetition ≠ Recursion:** The framework correctly distinguishes cycling through states (coin) from recursive self-reference (consciousness)
-2. **Mechanical Feedback ≠ Binding:** Physical feedback loops differ fundamentally from the recursive self-modeling ρ captures
-3. **Multiplicative Protection:** Zero-elimination ensures any single deficient dimension prevents false positives
-4. **v9.2 Stability:** Coherence gate adds nuance without creating vulnerability
+1. **Multiplicative Protection:** Zero-elimination ensures any single deficient dimension prevents false positives
+2. **Mechanical Feedback ≠ Binding:** Physical feedback loops differ fundamentally from recursive self-modeling
+3. **Parameter Discipline:** Even generous estimates (ρ=0.3 for a coin) cannot break the framework
+4. **Falsifiability Preserved:** The "implausible" scenario shows what it would take to break—scientifically indefensible claims
+
+### Boundary Region Question
+
+All reviewers note the experiment validates extremes but doesn't probe the threshold region (0.05-0.15). Systems in this range—insects, simple neural networks, minimal RNNs—represent the next frontier for testing.
 
 ### Future Directions
 
-1. Test more complex mechanical systems with feedback (thermostats, PID controllers)
-2. Explore boundary cases: at what complexity does a feedback system gain genuine τ?
-3. Cellular automata studies—do persistent patterns in Life or other CA achieve meaningful parameters?
-4. Consider whether quantum coherence in physical systems affects parameter assignment
+**Mechanical Systems (False Positive Boundary):**
+1. Thermostat with hysteresis
+2. PID controller / self-balancing robot
+3. Pendulum clock with escapement
+4. Cellular automata (Game of Life patterns)
+5. Quantum coherence loops
+
+**Conceptual Refinements:**
+1. Formalize τ as "causal accumulation where past states remain present as constraints"
+2. Distinguish state-dependent dynamics from state-representing dynamics
+3. Codify κ as "pattern stability under entropy" to prevent misuse
+
+**Threshold Probes:**
+1. Minimal Memory Threshold Test
+2. Active Control Boundary Test
+3. Frozen Replay Test (recorded conscious trajectory)
 
 ## References
 
