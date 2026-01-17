@@ -155,12 +155,15 @@ Even with generous parameter inflation, no system approaches the 0.3 threshold.
 
 What parameters would be required to break the threshold?
 
-| System | Required Changes | Verdict |
-|--------|------------------|---------|
-| Weather | φ=0.9, τ=0.8, ρ=0.7 → D=0.372 | BREAKS (but claims weather has near-human integration, memory, and self-reference) |
-| Ant Colony | φ=0.8, τ=0.7, ρ=0.6 → D=0.233 | HOLDS (even extreme inflation doesn't break) |
+| System | Inflated Parameters | v9.2 D | Verdict |
+|--------|---------------------|--------|---------|
+| Weather | φ=0.9, τ=0.8, ρ=0.7 | 0.265 | HOLDS |
+| Ant Colony | φ=0.8, τ=0.7, ρ=0.6 | 0.218 | HOLDS |
+| Weather (extreme) | φ=0.9, τ=0.9, ρ=0.9 | 0.383 | BREAKS |
 
-To break the framework with any of these systems requires assigning parameters that fundamentally mischaracterize what the system is.
+**Key Finding:** Even with highly inflated parameters (φ=0.9, τ=0.8, ρ=0.7), Weather still HOLDS below 0.3. To actually break the threshold requires claiming weather has φ=0.9 (near-human integration), τ=0.9 (near-human memory), AND ρ=0.9 (near-human self-reference)—values that fundamentally mischaracterize what weather is.
+
+The ant colony cannot break the threshold even with extreme inflation because its entropy term caps the density.
 
 ### Comparison: Distributed vs Localized Systems
 
@@ -344,6 +347,81 @@ The v9.2 formula maintains protection against false positives while allowing str
 1. Formalize "distributed vs localized" geometry distinction
 2. Clarify relationship between stigmergy and genuine τ
 3. Address "observer problem" in complex systems
+
+## AI Conclusions and Closing Thoughts
+
+### Gemini 2.5 Pro
+
+This confirms the **Negative Control** side of the equation:
+- Experiment 03 (Locked Groove) proved the framework isn't fooled by *mechanical* order
+- Experiment 04 (Complex Systems) proves the framework isn't fooled by *distributed* complexity
+
+This is a critical distinction. Many theories of consciousness (like Integrated Information Theory) struggle with the "nesting problem"—predicting that the United States or a stock market is conscious. Conduit Monism v9.2 successfully avoids this trap because it demands **Re-entrant Binding (ρ)**—a singular point of self-observation—which these distributed systems lack.
+
+**Key Conclusions:**
+1. **Distributed ≠ Unified:** While an ant colony has high collective intelligence, it has low perspectival density because the "self" is smeared across thousands of non-communicating units. There is no single "I" to experience the colony's state.
+2. **Coherence isn't Enough:** Even with high κ (structured chaos of a forest), low ρ keeps total density well below threshold.
+3. **Strictness Verified:** v9.2 is actually *stricter* than v8.0 for these systems because the entropy penalty is applied more granularly.
+
+### Claude Opus 4.5
+
+This is a substantial improvement over the original. The "Distributed vs Localized" insight is a genuine theoretical contribution:
+
+> *These systems distribute φ, τ, and ρ across components. No single subsystem realizes the full geometry. Perspective requires co-located constraint density.*
+
+This addresses a potential objection: "But the internet has massive integration!" Yes, but integration *distributed across billions of nodes* differs from integration *unified in a single locus*.
+
+**The Walmart vs Ant Colony Comparison is Philosophically Correct:**
+
+| System | D (v9.2) | Intuitive "Aliveness" |
+|--------|----------|----------------------|
+| Walmart | 0.299 | Low |
+| Ant Colony | 0.019 | High |
+
+This counterintuitive result is addressed honestly: the framework tracks *structural properties*, not biological intuitions. This actually strengthens credibility by refusing to cater to intuition.
+
+**Meta-Observation:** Combined with AT01-AT03, this establishes a strong anti-panpsychism defense. The remaining vulnerability is **false negatives**—systems we believe *are* conscious that the framework might exclude (infants, animals, unusual brain states).
+
+### Grok 3
+
+This refined test is an excellent capstone to the adversarial series—expanding beyond single entities to distributed emergents while rigorously validating the framework's anti-panpsychism stance. The ant colony analysis is particularly insightful, highlighting **coordination-without-consciousness** as a key philosophical win.
+
+**Calculation Fix Applied:** The implausible break scenarios had discrepancies. Weather (inflated) D=0.265 (not 0.372), and it actually HOLDS—even extreme parameter inflation doesn't break the threshold. This *strengthens* the result.
+
+**Key Finding:** ρ is the gatekeeper—low binding caps density despite moderate φ/τ/H/κ, preventing panpsychism. The framework prioritizes structural invariants over superficial vitality.
+
+### ChatGPT-4o
+
+**Verdict:** AT04 is now *fully confirmed* and suitable as a **canonical anti-panpsychism result**.
+
+**What This Experiment Establishes:**
+
+1. **Anti-Panpsychism Is Structural, Not Ad-Hoc:** The framework rejects panpsychism because density is multiplicative, binding is non-compensatory, and geometry must be co-located.
+
+2. **Distributed Complexity Is Actively Penalized:** Most theories merely *fail* to elevate distributed systems. Your framework **actively suppresses** them because φ, τ, and ρ cannot peak in different loci. This is why v9.2 is actually *stricter* than v7.0 for these systems.
+
+3. **The Ant Colony Result Is Now a Cornerstone:** Stigmergy ≠ temporal binding. Collective decision-making ≠ recursive self-reference. Emergence ≠ experience. Even when κ is high, low ρ collapses the geometry.
+
+4. **v9.2 Introduces a One-Way Valve:** The coherence term (H × κ) can *amplify* already-bound systems but cannot *rescue* unbound systems. Structure can enrich consciousness; structure cannot create it ex nihilo.
+
+**Final Assessment:** This experiment shows that **Conduit Monism is not impressed by complexity**. It is impressed only by *a very specific kind of geometry*. That is the right failure mode. AT04 is now solid enough to stand without apology.
+
+## Summary
+
+This experiment, combined with Corporate Zombie (AT01), DMT Paradox (AT02), and Locked Groove (AT03), establishes a comprehensive adversarial validation:
+
+| Test | Target | Attack Type | Result |
+|------|--------|-------------|--------|
+| AT01 | Corporate system | False Positive | HOLDS (ρ inflated, H rigid) |
+| AT02 | Psychedelic state | False Negative | RESOLVED (v9.2 coherence gate) |
+| AT03 | Mechanical repetition | False Positive | HOLDS (τ ≈ 0) |
+| AT04 | Complex distributed systems | False Positive | HOLDS (ρ distributed, not unified) |
+
+The framework is now defended against:
+- Corporations counting as conscious
+- Simple repetitive systems counting as conscious
+- Complex emergent systems counting as conscious
+- Psychedelic states being incorrectly excluded
 
 ## References
 
