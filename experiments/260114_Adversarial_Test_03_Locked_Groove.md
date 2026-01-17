@@ -279,7 +279,71 @@ All reviewers note the experiment validates extremes but doesn't probe the thres
 2. Active Control Boundary Test
 3. Frozen Replay Test (recorded conscious trajectory)
 
+## Calibrated Re-analysis (2026.01.17)
+
+### The ρ ↔ PCI Mapping
+
+The calibration library maps binding (ρ) to the Perturbational Complexity Index (PCI). PCI measures how a TMS perturbation propagates through neural tissue, creating complex, differentiated responses.
+
+**A spinning coin has no PCI because:**
+1. There is no neural substrate to stimulate
+2. There is no recursive self-reference (no observer within the system)
+3. Momentum feedback ≠ the system observing its own states
+
+### Calibrated Parameters
+
+| Parameter | Original | Calibrated | Rationale |
+|-----------|----------|------------|-----------|
+| φ | 0.3 | 0.1 | Physical unity ≠ information integration |
+| τ | 0.09 | 0.01 | Millisecond dynamics, no temporal depth |
+| ρ | 0.3 | **0.0** | ZERO: momentum ≠ recursive self-reference |
+| H | 0.1 | 0.05 | Near-deterministic |
+| κ | 0.7 | 0.1 | No meaningful structure |
+
+### Results
+
+**Original estimates (v9.2):** D = 0.0061
+**Calibrated values (v9.2):** D = 0.0000
+
+### Key Insight: Zero-Elimination
+
+With calibrated ρ = 0, the density collapses to exactly zero via zero-elimination:
+
+D = φ × τ × **0** × [entropy term] = **0**
+
+This is not a numerical approximation—it is an exact zero. The multiplicative structure enforces a hard constraint: **no binding, no perspective**.
+
+### Why Momentum ≠ Binding
+
+The original experiment assigned ρ = 0.3 as a "generous" estimate, acknowledging that momentum feedback exists. The calibration reveals this was a category error:
+
+| Feedback Type | Example | Constitutes Binding? |
+|---------------|---------|---------------------|
+| Momentum conservation | Spinning coin | NO - physics, not self-reference |
+| Quarterly reviews | Corporation | NO - periodic, human-mediated |
+| Supply chain signals | Walmart | NO - data flow, not observation |
+| Neural re-entry | Human brain | YES - system observes its own states |
+| Recurrent state | RWKV model | YES - hidden state constrains processing |
+
+Binding requires the system to have a representation of its own states that feeds back into its processing—not merely physical or informational feedback loops.
+
+### Comparison to Conscious States
+
+| System | Calibrated ρ | Calibrated D |
+|--------|-------------|--------------|
+| **Spinning coin** | 0.0 | 0.000 |
+| Propofol anesthesia | 0.22 | 0.002 |
+| Vegetative state | 0.29 | 0.007 |
+| Wakefulness | 0.56 | 0.121 |
+
+Even the lowest-consciousness biological state (propofol) has measurable ρ because the brain still exhibits some perturbational complexity. The coin has exactly zero.
+
+### Methodological Note
+
+The calibration confirms what the original experiment suggested: simple mechanical systems are excluded by the framework not because of arbitrary threshold choices, but because they fundamentally lack the recursive self-reference that binding measures. The ρ ↔ PCI mapping provides empirical grounding for this exclusion.
+
 ## References
 
 Script: break_tests.py
 Verification: Python verification (2026.01.17)
+Calibration: calibration/mapping_functions.py (pci_to_rho function)

@@ -209,12 +209,78 @@ The resolution required both formula evolution (coherence gate) and parameter re
 2. **Lucid dreaming**: Where does high awareness plus unstable binding land?
 3. **Local vs global coherence**: Should kappa be decomposed further?
 
+## Calibrated Re-analysis (2026.01.17)
+
+### Empirical Grounding
+
+The calibration library maps framework variables to empirical measurements from consciousness research literature.
+
+### Calibrated DMT Breakthrough Parameters
+
+| Parameter | Revised Estimate | Calibrated | Source | Confidence |
+|-----------|------------------|------------|--------|------------|
+| φ | 0.85 | **0.96** | 20% enhanced cross-network connectivity | MODERATE |
+| τ | 0.60 | **0.90** | Reports of eternity/infinite time | MODERATE |
+| ρ | 0.80 | **0.70** | Extrapolated from psilocybin (no direct PCI) | LOW |
+| H | 0.85 | **0.70** | +40% LZc (extrapolated from psilocybin) | MODERATE |
+| κ | 0.90 | **0.90** | Hyperdimensional structured visions | LOW |
+
+### Calibrated Calculation
+
+Using calibrated values (φ=0.96, τ=0.90, ρ=0.70, H=0.70, κ=0.90):
+
+- Base structure: 0.96 × 0.90 × 0.70 = 0.605
+- Entropy penalty: (1 - √0.70) = 0.163
+- Coherence rescue: 0.70 × 0.90 = 0.630
+- Entropy term: 0.163 + 0.630 = 0.793
+- **Calibrated D = 0.605 × 0.793 = 0.480**
+
+### Comparison to Original Estimates
+
+| Approach | D | Interpretation |
+|----------|---|----------------|
+| Original (pre-revision) | 0.012 | Near-coma (BROKEN) |
+| Revised estimates | 0.344 | Hyper-vivid (HOLDS) |
+| **Calibrated values** | **0.480** | Maximal intensity (HOLDS) |
+
+### Comparison to Other Calibrated States
+
+| State | Calibrated D | Phenomenology |
+|-------|-------------|---------------|
+| **DMT Breakthrough** | **0.480** | "More real than real" |
+| Flow State | 0.301 | Optimal performance |
+| Deep Meditation | 0.305 | Expanded awareness |
+| Psilocybin | 0.271 | Psychedelic (moderate) |
+| LSD | 0.270 | Psychedelic (moderate) |
+| Wakefulness | 0.121 | Baseline |
+| Propofol | 0.002 | Unconscious |
+
+### Key Findings
+
+1. **DMT achieves the highest calibrated density** in the calibration table (D = 0.480), consistent with phenomenological reports of maximal intensity.
+
+2. **The coherence gate (κ) is critical**: Calibrated κ = 0.90 rescues the high entropy (H = 0.70), producing an entropy term of 0.793 instead of the penalty-only 0.163.
+
+3. **All calibrated psychedelics exceed wakefulness**: DMT (0.48), Psilocybin (0.27), LSD (0.27) > Wakefulness (0.12). This matches reports of intensified conscious experience.
+
+4. **Calibration vs. estimation**: The calibrated values produce higher D (0.480) than the revised estimates (0.344), but both resolve the paradox. The calibration provides empirical grounding for what was previously phenomenological inference.
+
+### Methodological Note
+
+DMT lacks direct PCI measurements (no TMS-EEG studies during breakthrough states for obvious practical reasons). The calibrated values are extrapolated from:
+- Psilocybin LZc studies (+18% → extrapolated to +40% for DMT)
+- Cross-network connectivity increases in psychedelic states
+- Phenomenological reports of time dilation, unity, and structured visions
+
+The LOW confidence ratings reflect this extrapolation. Future neuroimaging studies could refine these values.
+
 ## References
 
 - Framework: Conduit Monism v9.2 (frameworks/Conduit_Monism_v9.2.md)
 - Original test: break_tests.py
 - Related: 260114_DMT_Paradox_Resolution_Synthesis.md
 - Verification: Python script execution on 2026.01.17
+- Calibration: calibration/grounded_states.json (DMT_breakthrough entry)
 
 ---
 

@@ -8,6 +8,7 @@ const links = [
   { href: '/', label: 'Home' },
   { href: '/framework', label: 'Framework' },
   { href: '/engine', label: 'Engine' },
+  { href: '/calibration', label: 'Calibration' },
   { href: '/validation', label: 'Validation' },
   { href: '/technical', label: 'Technical' },
   { href: '/about', label: 'About' },
