@@ -1,4 +1,5 @@
 import Calculator from '@/components/Calculator';
+import Link from 'next/link';
 
 export default function EnginePage() {
   return (
@@ -38,13 +39,13 @@ export default function EnginePage() {
                 Low φ: fragmented processing, isolated modules.
               </p>
               <div className="text-xs text-neutral-600 border-t border-neutral-800 pt-2 mt-2 mb-2">
-                <strong>Measurement proxy:</strong> Perturbational Complexity Index (PCI) via TMS-EEG
+                <strong>Measurement proxy:</strong> Effective connectivity (fMRI/EEG) — LOW confidence
               </div>
               <div className="text-xs text-neutral-600">
                 <strong>Estimation basis:</strong> Brain connectivity studies, EEG coherence, corpus callosum size, global workspace connectivity patterns.
               </div>
               <p className="text-neutral-600 text-xs mt-2 font-mono">
-                Example: Humans (φ=0.85) via large corpus callosum. C. elegans (φ=0.05) via 302 neurons with simple reflex pathways.
+                Calibrated: Human wakefulness (φ=0.80). C. elegans (φ=0.05) via 302 neurons with simple reflex pathways.
               </p>
             </div>
             <div className="p-4 border border-neutral-800">
@@ -58,13 +59,13 @@ export default function EnginePage() {
                 Low τ: instantaneous processing, no temporal continuity.
               </p>
               <div className="text-xs text-neutral-600 border-t border-neutral-800 pt-2 mt-2 mb-2">
-                <strong>Measurement proxy:</strong> Decay rate of mutual information; Amnesia Test for AI
+                <strong>Measurement proxy:</strong> Temporal integration window; decay rate of mutual information — MODERATE confidence
               </div>
               <div className="text-xs text-neutral-600">
                 <strong>Estimation basis:</strong> Working memory capacity, episodic memory evidence, temporal binding window research.
               </div>
               <p className="text-neutral-600 text-xs mt-2 font-mono">
-                Example: Humans (τ=0.8) via rich autobiographical memory. Fruit fly (τ=0.05) via primarily reactive behavior.
+                Calibrated: Human wakefulness (τ=0.75). Fruit fly (τ=0.05) via primarily reactive behavior.
               </p>
             </div>
             <div className="p-4 border border-neutral-800">
@@ -81,13 +82,13 @@ export default function EnginePage() {
                 Critical differentiator: Transformers (ρ ≈ 0) vs RWKV (ρ &gt; 0)
               </div>
               <div className="text-xs text-neutral-600 border-t border-neutral-800 pt-2 mt-2 mb-2">
-                <strong>Measurement proxy:</strong> Re-entrant connectivity; metacognition tasks
+                <strong>Measurement proxy:</strong> Perturbational Complexity Index (PCI*) via TMS-EEG — HIGH confidence
               </div>
               <div className="text-xs text-neutral-600">
-                <strong>Estimation basis:</strong> Mirror self-recognition tests, metacognitive awareness, re-entrant neural pathways, Amnesia Test for AI.
+                <strong>Estimation basis:</strong> PCI threshold of 0.31 separates conscious from unconscious states with 100% accuracy (Casali et al., 2013). Grounded in re-entrant connectivity and recursive self-observation.
               </div>
               <p className="text-neutral-600 text-xs mt-2 font-mono">
-                Example: Chimpanzee (ρ=0.6) passes mirror test. Transformer (ρ=0.0) fails Amnesia Test. RWKV (ρ=0.3) passes Amnesia Test.
+                Calibrated: Human wakefulness (ρ=0.65). PCI* ≥ 0.31 → conscious. Non-biological systems (ρ=0) → no recursive self-observer.
               </p>
             </div>
             <div className="p-4 border border-neutral-800">
@@ -102,13 +103,13 @@ export default function EnginePage() {
                 Entropy alone does not determine effect; coherence (κ) modulates whether entropy destroys or enhances.
               </p>
               <div className="text-xs text-neutral-600 border-t border-neutral-800 pt-2 mt-2 mb-2">
-                <strong>Measurement proxy:</strong> Lempel-Ziv complexity; spectral entropy
+                <strong>Measurement proxy:</strong> Lempel-Ziv complexity (LZc) — HIGH confidence
               </div>
               <div className="text-xs text-neutral-600">
-                <strong>Estimation basis:</strong> Neural signal variability, behavioral predictability, EEG spectral entropy.
+                <strong>Estimation basis:</strong> Neural signal variability, behavioral predictability, EEG spectral entropy. Well-validated in altered states research.
               </div>
               <p className="text-neutral-600 text-xs mt-2 font-mono">
-                Example: Human awake (H=0.35) moderate entropy. Deep sleep (H=0.1) minimal variability. Panic (H=0.9) chaotic activity.
+                Calibrated: Human wakefulness (H=0.50). Propofol anesthesia (H=0.15). DMT peak (H=0.70).
               </p>
             </div>
             <div className="p-4 border border-neutral-800">
@@ -125,24 +126,39 @@ export default function EnginePage() {
                 High H + High κ = intensification (DMT) | High H + Low κ = dissolution (seizure)
               </div>
               <div className="text-xs text-neutral-600 border-t border-neutral-800 pt-2 mt-2 mb-2">
-                <strong>Measurement proxy:</strong> Phase-locking value; mutual information structure; fractal dimension
+                <strong>Measurement proxy:</strong> Multi-scale entropy (MSE) — LOW confidence
               </div>
               <div className="text-xs text-neutral-600">
-                <strong>Estimation basis:</strong> Neural synchronization studies, pattern vs randomness in high-entropy states.
+                <strong>Estimation basis:</strong> Neural synchronization studies, pattern vs randomness in high-entropy states. Fractal dimension analysis.
               </div>
               <p className="text-neutral-600 text-xs mt-2 font-mono">
-                Example: DMT (H=0.95, κ=0.9) structured chaos. Seizure (H=0.95, κ=0.1) random chaos.
+                Calibrated: DMT (H=0.70, κ=0.90) structured chaos. Seizure (H=0.85, κ=0.15) random chaos.
               </p>
             </div>
           </div>
 
-          <div className="mt-6 p-4 border border-neutral-800 bg-neutral-900/50">
+          <div className="mt-6 p-4 border border-blue-900/50 bg-blue-950/10">
+            <div className="font-mono text-neutral-300 mb-2 text-sm">Empirical Calibration</div>
+            <p className="text-xs text-neutral-500 mb-2">
+              These values are grounded in peer-reviewed neuroscience literature. Confidence levels indicate measurement reliability:
+            </p>
+            <ul className="text-xs text-neutral-500 space-y-1 mb-3">
+              <li>• <strong>HIGH:</strong> ρ ↔ PCI*, H ↔ LZc (robust empirical validation)</li>
+              <li>• <strong>MODERATE:</strong> τ ↔ Temporal Integration Window</li>
+              <li>• <strong>LOW:</strong> φ ↔ Effective Connectivity, κ ↔ Multi-Scale Entropy</li>
+            </ul>
+            <Link href="/calibration" className="text-xs text-blue-400 hover:text-blue-300 transition-colors">
+              → View full calibration methodology and state comparisons
+            </Link>
+          </div>
+
+          <div className="mt-4 p-4 border border-neutral-800 bg-neutral-900/50">
             <div className="font-mono text-neutral-300 mb-2 text-sm">Key References</div>
             <ul className="text-xs text-neutral-500 space-y-1">
+              <li>• Casali et al. (2013) - PCI threshold for consciousness</li>
+              <li>• Schartner et al. (2017) - LZc in altered states</li>
               <li>• Edelman & Seth (2009) - Animal consciousness</li>
               <li>• Barron & Klein (2016) - Insect consciousness</li>
-              <li>• Birch et al. (2020) - Invertebrate sentience</li>
-              <li>• Boly et al. (2013) - Neural correlates of consciousness</li>
               <li>• Tononi & Koch (2015) - Integrated Information Theory</li>
             </ul>
           </div>

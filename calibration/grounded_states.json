@@ -1,0 +1,878 @@
+{
+  "metadata": {
+    "version": "1.1",
+    "date": "2026-01-17",
+    "framework": "Conduit Monism v9.2",
+    "description": "Empirically grounded consciousness states",
+    "changes": "Integrated Compass research: Ketamine PCI=0.44, added xenon/midazolam, PCI* threshold 0.31"
+  },
+  "states": {
+    "wakefulness": {
+      "name": "Wakefulness (Baseline)",
+      "phi": {
+        "value": 0.8,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 0,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 0%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.5,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Baseline 2-3 second window"
+      },
+      "rho": {
+        "value": 0.555,
+        "confidence": "HIGH",
+        "source": "PCI range midpoint",
+        "empirical_measure": 0.555,
+        "empirical_range": [
+          0.44,
+          0.67
+        ],
+        "notes": "Midpoint of PCI range [0.44, 0.67]"
+      },
+      "H": {
+        "value": 0.5,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": 0,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + 0%)"
+      },
+      "kappa": {
+        "value": 0.5,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Waking baseline"
+      },
+      "density": 0.12052229457658646,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Casali2013",
+        "Casarotto2016",
+        "Schartner2017",
+        "Poppel1997"
+      ],
+      "notes": "Healthy adult, eyes open, resting state. PCI mean 0.50 \u00b1 0.05"
+    },
+    "propofol_anesthesia": {
+      "name": "Propofol Anesthesia",
+      "phi": {
+        "value": 0.2,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 75,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 75%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.1,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "No temporal continuity"
+      },
+      "rho": {
+        "value": 0.215,
+        "confidence": "HIGH",
+        "source": "PCI range midpoint",
+        "empirical_measure": 0.215,
+        "empirical_range": [
+          0.12,
+          0.31
+        ],
+        "notes": "Midpoint of PCI range [0.12, 0.31]"
+      },
+      "H": {
+        "value": 0.35,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": -30,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -30%)"
+      },
+      "kappa": {
+        "value": 0.2,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Very little structure"
+      },
+      "density": 0.0020570856932671656,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Casali2013",
+        "Sarasso2015",
+        "Kim2018",
+        "Ferrarelli2010",
+        "Schartner2015"
+      ],
+      "notes": "Surgical anesthesia level. PCI mean 0.24 \u00b1 0.07"
+    },
+    "xenon_anesthesia": {
+      "name": "Xenon Anesthesia",
+      "phi": {
+        "value": 0.15999999999999998,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 80,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 80%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.1,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "No temporal continuity"
+      },
+      "rho": {
+        "value": 0.17,
+        "confidence": "HIGH",
+        "source": "PCI direct mapping",
+        "empirical_measure": 0.17,
+        "empirical_range": null,
+        "notes": "Direct mapping: \u03c1 = PCI (Casali et al., 2013)"
+      },
+      "H": {
+        "value": 0.325,
+        "confidence": "MODERATE",
+        "source": "LZc percent change",
+        "empirical_measure": -35,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -35%)"
+      },
+      "kappa": {
+        "value": 0.2,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Very little structure"
+      },
+      "density": 0.0013461614218651722,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Sarasso2015"
+      ],
+      "notes": "Xenon anesthesia, lowest PCI among tested anesthetics. PCI mean 0.17 \u00b1 0.05"
+    },
+    "midazolam_anesthesia": {
+      "name": "Midazolam Anesthesia",
+      "phi": {
+        "value": 0.24000000000000005,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 70,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 70%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.1,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "No temporal continuity"
+      },
+      "rho": {
+        "value": 0.27,
+        "confidence": "HIGH",
+        "source": "PCI direct mapping",
+        "empirical_measure": 0.27,
+        "empirical_range": null,
+        "notes": "Direct mapping: \u03c1 = PCI (Casali et al., 2013)"
+      },
+      "H": {
+        "value": 0.375,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": -25,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -25%)"
+      },
+      "kappa": {
+        "value": 0.2,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Very little structure"
+      },
+      "density": 0.002997826616691253,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Ferrarelli2010"
+      ],
+      "notes": "Benzodiazepine anesthesia. PCI mean 0.27 \u00b1 0.06"
+    },
+    "ketamine_anesthesia": {
+      "name": "Ketamine Anesthesia",
+      "phi": {
+        "value": 0.48,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 40,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 40%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.25,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Broken temporal integration"
+      },
+      "rho": {
+        "value": 0.45,
+        "confidence": "HIGH",
+        "source": "PCI range midpoint",
+        "empirical_measure": 0.45,
+        "empirical_range": [
+          0.35,
+          0.55
+        ],
+        "notes": "Midpoint of PCI range [0.35, 0.55]"
+      },
+      "H": {
+        "value": 0.55,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": 10,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + 10%)"
+      },
+      "kappa": {
+        "value": 0.5,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Normal structured cognition"
+      },
+      "density": 0.02880252816968342,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Sarasso2015",
+        "Schartner2017",
+        "Kim2018"
+      ],
+      "notes": "Dissociative anesthesia, PCI mean 0.44 \u00b1 0.10, maintains near-waking complexity"
+    },
+    "REM_sleep": {
+      "name": "REM Sleep",
+      "phi": {
+        "value": 0.6000000000000001,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 25,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 25%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.5,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Baseline temporal depth"
+      },
+      "rho": {
+        "value": 0.44499999999999995,
+        "confidence": "HIGH",
+        "source": "PCI range midpoint",
+        "empirical_measure": 0.44499999999999995,
+        "empirical_range": [
+          0.41,
+          0.48
+        ],
+        "notes": "Midpoint of PCI range [0.41, 0.48]"
+      },
+      "H": {
+        "value": 0.475,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": -5,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -5%)"
+      },
+      "kappa": {
+        "value": 0.5,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Normal structured cognition"
+      },
+      "density": 0.07319772457979777,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Casali2013"
+      ],
+      "notes": "Active dreaming state"
+    },
+    "NREM_sleep_N3": {
+      "name": "NREM Sleep (N3)",
+      "phi": {
+        "value": 0.4,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 50,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 50%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.35,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Shortened temporal window"
+      },
+      "rho": {
+        "value": 0.23,
+        "confidence": "HIGH",
+        "source": "PCI range midpoint",
+        "empirical_measure": 0.23,
+        "empirical_range": [
+          0.18,
+          0.28
+        ],
+        "notes": "Midpoint of PCI range [0.18, 0.28]"
+      },
+      "H": {
+        "value": 0.4,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": -20,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -20%)"
+      },
+      "kappa": {
+        "value": 0.3,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Limited patterning"
+      },
+      "density": 0.015698931868515637,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Casali2013",
+        "Massimini2005",
+        "Schartner2015"
+      ],
+      "notes": "Deep slow-wave sleep"
+    },
+    "vegetative_state": {
+      "name": "Vegetative State (UWS)",
+      "phi": {
+        "value": 0.2,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 75,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 75%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.25,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Broken temporal integration"
+      },
+      "rho": {
+        "value": 0.28500000000000003,
+        "confidence": "HIGH",
+        "source": "PCI range midpoint",
+        "empirical_measure": 0.28500000000000003,
+        "empirical_range": [
+          0.19,
+          0.38
+        ],
+        "notes": "Midpoint of PCI range [0.19, 0.38]"
+      },
+      "H": {
+        "value": 0.375,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": -25,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -25%)"
+      },
+      "kappa": {
+        "value": 0.3,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Limited patterning"
+      },
+      "density": 0.0071268177913349304,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Casali2013"
+      ],
+      "notes": "Unresponsive wakefulness syndrome"
+    },
+    "minimally_conscious": {
+      "name": "Minimally Conscious State (MCS)",
+      "phi": {
+        "value": 0.4,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 50,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 50%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.25,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Broken temporal integration"
+      },
+      "rho": {
+        "value": 0.405,
+        "confidence": "HIGH",
+        "source": "PCI range midpoint",
+        "empirical_measure": 0.405,
+        "empirical_range": [
+          0.32,
+          0.49
+        ],
+        "notes": "Midpoint of PCI range [0.32, 0.49]"
+      },
+      "H": {
+        "value": 0.425,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": -15,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -15%)"
+      },
+      "kappa": {
+        "value": 0.5,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Normal structured cognition"
+      },
+      "density": 0.02270348025892928,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Casali2013"
+      ],
+      "notes": "Preserved but inconsistent awareness"
+    },
+    "locked_in_syndrome": {
+      "name": "Locked-in Syndrome",
+      "phi": {
+        "value": 0.8,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 0,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 0%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.5,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Baseline 2-3 second window"
+      },
+      "rho": {
+        "value": 0.565,
+        "confidence": "HIGH",
+        "source": "PCI range midpoint",
+        "empirical_measure": 0.565,
+        "empirical_range": [
+          0.51,
+          0.62
+        ],
+        "notes": "Midpoint of PCI range [0.51, 0.62]"
+      },
+      "H": {
+        "value": 0.5,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": 0,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + 0%)"
+      },
+      "kappa": {
+        "value": 0.5,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Waking baseline"
+      },
+      "density": 0.12269386745184024,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Casali2013"
+      ],
+      "notes": "Full consciousness, motor disconnection only"
+    },
+    "psilocybin": {
+      "name": "Psilocybin (Peak)",
+      "phi": {
+        "value": 0.8800000000000001,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": -10,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - -10%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.7,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Subjectively expanded time"
+      },
+      "rho": {
+        "value": 0.6,
+        "confidence": "LOW",
+        "source": "manual override",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": ""
+      },
+      "H": {
+        "value": 0.59,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": 18,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + 18%)"
+      },
+      "kappa": {
+        "value": 0.85,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Structured chaos (psychedelics)"
+      },
+      "density": 0.2710592531587762,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Schartner2017",
+        "CarhartHarris2014",
+        "Tagliazucchi2014"
+      ],
+      "notes": "Peak psychedelic experience, high entropy but structured"
+    },
+    "LSD": {
+      "name": "LSD (Peak)",
+      "phi": {
+        "value": 0.8800000000000001,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": -10,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - -10%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.7,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Subjectively expanded time"
+      },
+      "rho": {
+        "value": 0.6,
+        "confidence": "LOW",
+        "source": "manual override",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": ""
+      },
+      "H": {
+        "value": 0.575,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": 15,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + 15%)"
+      },
+      "kappa": {
+        "value": 0.85,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Structured chaos (psychedelics)"
+      },
+      "density": 0.2699789235878547,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Schartner2017",
+        "CarhartHarris2014"
+      ],
+      "notes": "Peak psychedelic experience"
+    },
+    "DMT_breakthrough": {
+      "name": "DMT Breakthrough",
+      "phi": {
+        "value": 0.96,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": -20,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - -20%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.9,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Reports of eternity/infinite time"
+      },
+      "rho": {
+        "value": 0.7,
+        "confidence": "LOW",
+        "source": "manual override",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": ""
+      },
+      "H": {
+        "value": 0.7,
+        "confidence": "MODERATE",
+        "source": "LZc percent change",
+        "empirical_measure": 40,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + 40%)"
+      },
+      "kappa": {
+        "value": 0.9,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Geometric meaningful visions (DMT)"
+      },
+      "density": 0.4798120159521911,
+      "overall_confidence": "LOW",
+      "citations": [
+        "CarhartHarris2014"
+      ],
+      "notes": "Extreme state, extrapolated from psilocybin data"
+    },
+    "flow_state": {
+      "name": "Flow State",
+      "phi": {
+        "value": 0.9199999999999999,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": -15,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - -15%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.7,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Subjectively expanded time"
+      },
+      "rho": {
+        "value": 0.7,
+        "confidence": "LOW",
+        "source": "manual override",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": ""
+      },
+      "H": {
+        "value": 0.45,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": -10,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -10%)"
+      },
+      "kappa": {
+        "value": 0.75,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Effortless order (flow)"
+      },
+      "density": 0.3005391667229284,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Csikszentmihalyi1990"
+      ],
+      "notes": "Optimal performance state, phenomenologically derived"
+    },
+    "deep_meditation": {
+      "name": "Deep Meditation",
+      "phi": {
+        "value": 0.8800000000000001,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": -10,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - -10%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.8,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Significantly expanded temporal depth"
+      },
+      "rho": {
+        "value": 0.65,
+        "confidence": "LOW",
+        "source": "manual override",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": ""
+      },
+      "H": {
+        "value": 0.425,
+        "confidence": "HIGH",
+        "source": "LZc percent change",
+        "empirical_measure": -15,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -15%)"
+      },
+      "kappa": {
+        "value": 0.75,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Effortless order (flow)"
+      },
+      "density": 0.3051412979379269,
+      "overall_confidence": "LOW",
+      "citations": [
+        "Wittmann2015"
+      ],
+      "notes": "Experienced meditators, long-term practice"
+    },
+    "panic_attack": {
+      "name": "Panic Attack",
+      "phi": {
+        "value": 0.8800000000000001,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": -10,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - -10%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.5,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Baseline temporal depth"
+      },
+      "rho": {
+        "value": 0.7,
+        "confidence": "LOW",
+        "source": "manual override",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": ""
+      },
+      "H": {
+        "value": 0.675,
+        "confidence": "MODERATE",
+        "source": "LZc percent change",
+        "empirical_measure": 35,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + 35%)"
+      },
+      "kappa": {
+        "value": 0.2,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "Meaning-destroying chaos (panic)"
+      },
+      "density": 0.09653217843261325,
+      "overall_confidence": "LOW",
+      "citations": [],
+      "notes": "Hyper-conscious terror: high binding, high integration, unstructured entropy"
+    },
+    "epileptic_seizure": {
+      "name": "Epileptic Seizure (Generalized)",
+      "phi": {
+        "value": 0.8,
+        "confidence": "MODERATE",
+        "source": "Connectivity reduction",
+        "empirical_measure": 0,
+        "empirical_range": null,
+        "notes": "\u03c6 = 0.8 \u00d7 (1 - 0%) (Ferrarelli 2010 method)"
+      },
+      "tau": {
+        "value": 0.1,
+        "confidence": "MODERATE",
+        "source": "Subjective time mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "No temporal continuity"
+      },
+      "rho": {
+        "value": 0.15,
+        "confidence": "LOW",
+        "source": "manual override",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": ""
+      },
+      "H": {
+        "value": 0.25,
+        "confidence": "MODERATE",
+        "source": "LZc percent change",
+        "empirical_measure": -50,
+        "empirical_range": null,
+        "notes": "H = 0.5 \u00d7 (1 + -50%)"
+      },
+      "kappa": {
+        "value": 0.1,
+        "confidence": "LOW",
+        "source": "Phenomenological coherence mapping",
+        "empirical_measure": null,
+        "empirical_range": null,
+        "notes": "No structure in high entropy (seizure)"
+      },
+      "density": 0.006300000000000001,
+      "overall_confidence": "LOW",
+      "citations": [],
+      "notes": "Hypersynchronous activity, high entropy spread but no structure"
+    }
+  }
+}
