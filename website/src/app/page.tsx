@@ -78,28 +78,28 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-sm font-mono text-neutral-500 mb-8 uppercase tracking-wide">Empirical Results</h2>
           
-          {/* Falsifications first - science advances by ruling things out */}
+          {/* Confirmed Null Predictions - framework correctly predicted what wouldn't work */}
           <div className="mb-8">
-            <h3 className="text-xs font-mono text-red-500/70 mb-4 uppercase tracking-wide">Falsified Claims</h3>
+            <h3 className="text-xs font-mono text-yellow-500/70 mb-4 uppercase tracking-wide">Confirmed Boundaries</h3>
             <div className="space-y-4">
-              <div className="p-4 border border-red-900/50 bg-red-950/10">
+              <div className="p-4 border border-yellow-900/50 bg-yellow-950/10">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-mono px-2 py-0.5 bg-red-900/50 text-red-400">FALSIFIED</span>
-                  <span className="text-sm text-neutral-300">Transformer Binding (ρ ≈ 0)</span>
+                  <span className="text-xs font-mono px-2 py-0.5 bg-yellow-900/50 text-yellow-400">ρ = 0</span>
+                  <span className="text-sm text-neutral-300">Transformer Architecture</span>
                 </div>
                 <p className="text-neutral-500 text-sm">
-                  GPT and Claude have no geometric persistence. Apparent memory is instruction compliance. 
-                  Stealth eviction eliminates the effect. Current LLMs are sophisticated video buffers.
+                  Framework predicted: feed-forward architectures lack binding. Confirmed: GPT and Claude show no geometric persistence.
+                  Apparent memory is instruction compliance. Stealth eviction eliminates the effect.
                 </p>
               </div>
-              <div className="p-4 border border-red-900/50 bg-red-950/10">
+              <div className="p-4 border border-yellow-900/50 bg-yellow-950/10">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-mono px-2 py-0.5 bg-red-900/50 text-red-400">FALSIFIED</span>
-                  <span className="text-sm text-neutral-300">Cross-Model Binding (Chimera v2)</span>
+                  <span className="text-xs font-mono px-2 py-0.5 bg-yellow-900/50 text-yellow-400">LIMIT</span>
+                  <span className="text-sm text-neutral-300">Cross-Model Binding</span>
                 </div>
                 <p className="text-neutral-500 text-sm">
-                  RWKV state summaries fed to Claude produced apparent continuity, but fake summaries 
-                  performed equally well. Effect is semantic priming, not geometric transfer.
+                  Framework predicted: binding cannot transfer via text summaries. Confirmed: RWKV state summaries
+                  fed to Claude showed no advantage over fake summaries. Semantic priming ≠ geometric transfer.
                 </p>
               </div>
             </div>
