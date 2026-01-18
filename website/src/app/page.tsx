@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero */}
       <section className="py-24 px-6 border-b border-neutral-800">
         <div className="max-w-5xl mx-auto">
-          <p className="text-neutral-500 text-sm mb-4 font-mono">v9.2 / January 2026</p>
+          <p className="text-neutral-500 text-sm mb-4 font-mono">v9.3 / January 2026</p>
           <h1 className="text-4xl md:text-5xl font-mono font-normal mb-8 leading-tight">
             Conduit Monism
           </h1>
@@ -125,8 +125,8 @@ export default function Home() {
                   <span className="text-sm text-neutral-300">Coherence Gate (κ)</span>
                 </div>
                 <p className="text-neutral-500 text-sm">
-                  High entropy with high coherence produces intensification, not dissolution. 
-                  DMT (H=0.95, κ=0.9) → D=0.46. Seizure (H=0.95, κ=0.1) → D=0.01. Same entropy, different coherence.
+                  High entropy with high coherence produces intensification, not dissolution.
+                  DMT (H=0.70, κ=0.90) → D=0.48. Seizure (H=0.85, κ=0.15) → D=0.006. κ validated via Multi-Scale Entropy (r=0.987).
                 </p>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function Home() {
           
           <div className="mt-6">
             <Link href="/validation" className="text-sm text-neutral-400 hover:text-white transition-colors font-mono">
-              View all 22 experiments →
+              View all 23 experiments →
             </Link>
           </div>
         </div>
@@ -146,8 +146,9 @@ export default function Home() {
           <h2 className="text-sm font-mono text-neutral-500 mb-8 uppercase tracking-wide">Contents</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { href: '/framework', title: 'Framework', desc: 'Full theoretical document (v9.0)' },
+              { href: '/framework', title: 'Framework', desc: 'Full theoretical document (v9.3)' },
               { href: '/engine', title: 'Engine', desc: 'Interactive density calculator' },
+              { href: '/calibration', title: 'Calibration', desc: 'Empirical anchors and confidence levels' },
               { href: '/validation', title: 'Validation', desc: 'Experiments and falsification attempts' },
               { href: '/technical', title: 'Technical', desc: 'Formula derivation and version history' },
               { href: '/about', title: 'About', desc: 'Methodology and contributors' },

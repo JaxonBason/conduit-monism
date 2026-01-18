@@ -213,40 +213,40 @@ export default function CalibrationPage() {
           </div>
 
           {/* Kappa - MSE */}
-          <div className="p-4 border border-orange-900/50 bg-orange-950/10 mb-4">
+          <div className="p-4 border border-yellow-900/50 bg-yellow-950/10 mb-4">
             <div className="flex items-baseline justify-between mb-2">
-              <div className="font-mono text-neutral-300">κ (Coherence) ← Multi-Scale Entropy</div>
-              <div className="text-xs text-orange-400">LOW CONFIDENCE</div>
+              <div className="font-mono text-neutral-300">κ (Coherence) ← Multi-Scale Entropy Slope</div>
+              <div className="text-xs text-yellow-400">MODERATE CONFIDENCE</div>
             </div>
             <p className="text-neutral-500 text-sm mb-3">
-              Coherence maps to the structure within entropy—whether high-entropy states are
-              organized (fractal, meaningful) or random (noise). Multi-Scale Entropy (MSE) and
-              fractal dimension analysis provide proxies, but phenomenological reports remain
-              the primary source for altered states.
+              Coherence maps to the slope of entropy across timescales. Fractal signals maintain
+              complexity when &quot;zoomed out&quot; (flat MSE slope → high κ), while random noise loses
+              complexity at larger scales (steep MSE drop → low κ). <strong>Validated in AT07</strong> with
+              r = 0.987 correlation between phenomenological κ and MSE-derived κ.
             </p>
             <div className="text-xs text-neutral-600 mb-3">
-              <strong>Mapping:</strong> Phenomenological descriptors → κ values
+              <strong>Mapping:</strong> κ = 1 - |normalized_MSE_slope| (Costa et al. 2002, 2005)
             </div>
             <div className="grid md:grid-cols-2 gap-3 text-xs">
               <div className="p-2 bg-neutral-900/50 border border-neutral-800">
                 <div className="text-neutral-400">Baseline waking</div>
-                <div className="font-mono text-neutral-300">κ = 0.50</div>
+                <div className="font-mono text-neutral-300">κ = 0.50 (moderate slope)</div>
               </div>
               <div className="p-2 bg-neutral-900/50 border border-neutral-800">
-                <div className="text-neutral-400">Seizure (stereotyped)</div>
-                <div className="font-mono text-red-400">κ = 0.10</div>
+                <div className="text-neutral-400">Seizure (non-fractal)</div>
+                <div className="font-mono text-red-400">κ = 0.10 (steep slope)</div>
               </div>
               <div className="p-2 bg-neutral-900/50 border border-neutral-800">
-                <div className="text-neutral-400">Flow state (high)</div>
-                <div className="font-mono text-green-400">κ = 0.75</div>
+                <div className="text-neutral-400">Flow state (fractal)</div>
+                <div className="font-mono text-green-400">κ = 0.75 (flat slope)</div>
               </div>
               <div className="p-2 bg-neutral-900/50 border border-neutral-800">
-                <div className="text-neutral-400">DMT (hyperdimensional)</div>
-                <div className="font-mono text-purple-400">κ = 0.90</div>
+                <div className="text-neutral-400">DMT (scale-invariant)</div>
+                <div className="font-mono text-purple-400">κ = 0.90 (near-flat)</div>
               </div>
             </div>
             <div className="mt-3 text-xs text-neutral-600">
-              <strong>Key Citations:</strong> Costa et al. (2005), phenomenological literature
+              <strong>Key Citations:</strong> Costa et al. (2002, 2005), Schartner et al. (2017)
             </div>
           </div>
         </section>
@@ -409,8 +409,8 @@ export default function CalibrationPage() {
             </table>
           </div>
           <p className="text-xs text-neutral-600 mt-3">
-            <strong>Note:</strong> &quot;LOW&quot; confidence reflects that overall confidence is limited by the
-            least-confident parameter (usually κ). Individual parameters may have higher confidence.
+            <strong>Note:</strong> Confidence is limited by the least-confident parameter. With κ upgraded to MODERATE (v9.3),
+            φ is now the primary limiting factor for most states.
           </p>
         </section>
 
@@ -458,12 +458,11 @@ export default function CalibrationPage() {
           <h2 className="text-sm font-mono text-neutral-500 mb-4 uppercase tracking-wide">Limitations</h2>
           <div className="p-4 border border-yellow-900/50 bg-yellow-950/10">
             <ul className="text-sm text-yellow-500/80 space-y-2 ml-4 list-disc">
-              <li>φ (Integration) lacks a direct, validated measurement proxy</li>
-              <li>κ (Coherence) relies heavily on phenomenological inference</li>
-              <li>Psychedelic state values are extrapolated from limited psilocybin data</li>
+              <li>φ (Integration) lacks a direct, validated measurement proxy — <strong>weakest link</strong></li>
+              <li>Psychedelic state values are extrapolated from limited psilocybin/ketamine data</li>
               <li>Animal and AI values remain theoretical (no PCI measurements possible)</li>
               <li>Within-state variability is significant but not captured</li>
-              <li>The overall confidence floor is LOW due to κ uncertainty</li>
+              <li className="text-green-500/80">κ (Coherence) now validated via MSE (AT07, r = 0.987) — upgraded to MODERATE</li>
             </ul>
           </div>
         </section>
@@ -478,6 +477,7 @@ export default function CalibrationPage() {
               <li>Sarasso et al. (2015) - Consciousness and complexity during anesthesia</li>
               <li>Schartner et al. (2015, 2017) - LZc and psychedelics</li>
               <li>Carhart-Harris et al. (2014) - Entropic brain hypothesis</li>
+              <li>Costa et al. (2002, 2005) - Multi-Scale Entropy (MSE)</li>
               <li>Ferrarelli et al. (2010) - Breakdown of connectivity under anesthesia</li>
               <li>Pöppel (1997) - Temporal integration window</li>
               <li>Wittmann (2015) - Time perception in altered states</li>

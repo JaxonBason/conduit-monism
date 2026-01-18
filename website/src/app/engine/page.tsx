@@ -126,10 +126,10 @@ export default function EnginePage() {
                 High H + High κ = intensification (DMT) | High H + Low κ = dissolution (seizure)
               </div>
               <div className="text-xs text-neutral-600 border-t border-neutral-800 pt-2 mt-2 mb-2">
-                <strong>Measurement proxy:</strong> Multi-scale entropy (MSE) — LOW confidence
+                <strong>Measurement proxy:</strong> Multi-scale entropy slope (MSE) — MODERATE confidence (AT07 validated, r=0.987)
               </div>
               <div className="text-xs text-neutral-600">
-                <strong>Estimation basis:</strong> Neural synchronization studies, pattern vs randomness in high-entropy states. Fractal dimension analysis.
+                <strong>Estimation basis:</strong> Fractal signals maintain complexity across timescales (Costa 2002, 2005). Flat MSE slope = fractal = high κ.
               </div>
               <p className="text-neutral-600 text-xs mt-2 font-mono">
                 Calibrated: DMT (H=0.70, κ=0.90) structured chaos. Seizure (H=0.85, κ=0.15) random chaos.
@@ -144,8 +144,8 @@ export default function EnginePage() {
             </p>
             <ul className="text-xs text-neutral-500 space-y-1 mb-3">
               <li>• <strong>HIGH:</strong> ρ ↔ PCI*, H ↔ LZc (robust empirical validation)</li>
-              <li>• <strong>MODERATE:</strong> τ ↔ Temporal Integration Window</li>
-              <li>• <strong>LOW:</strong> φ ↔ Effective Connectivity, κ ↔ Multi-Scale Entropy</li>
+              <li>• <strong>MODERATE:</strong> τ ↔ Temporal Integration Window, κ ↔ MSE slope (AT07 validated)</li>
+              <li>• <strong>LOW:</strong> φ ↔ Effective Connectivity</li>
             </ul>
             <Link href="/calibration" className="text-xs text-blue-400 hover:text-blue-300 transition-colors">
               → View full calibration methodology and state comparisons
@@ -157,8 +157,8 @@ export default function EnginePage() {
             <ul className="text-xs text-neutral-500 space-y-1">
               <li>• Casali et al. (2013) - PCI threshold for consciousness</li>
               <li>• Schartner et al. (2017) - LZc in altered states</li>
+              <li>• Costa et al. (2002, 2005) - Multi-Scale Entropy</li>
               <li>• Edelman & Seth (2009) - Animal consciousness</li>
-              <li>• Barron & Klein (2016) - Insect consciousness</li>
               <li>• Tononi & Koch (2015) - Integrated Information Theory</li>
             </ul>
           </div>
@@ -171,7 +171,7 @@ export default function EnginePage() {
               <li>Cross-species estimates based on limited comparative data</li>
               <li>Different species may map differently to the invariants</li>
               <li>Within-species variation is significant</li>
-              <li>Some values (especially κ) are particularly difficult to estimate</li>
+              <li>φ (Integration) remains the weakest link — no direct measurement proxy</li>
               <li>AI architecture values are based on structural analysis, not behavioral testing</li>
             </ul>
           </div>
