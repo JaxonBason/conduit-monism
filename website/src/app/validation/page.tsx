@@ -29,6 +29,7 @@ interface ExperimentsIndex {
 export default function ValidationPage() {
   const [index, setIndex] = useState<ExperimentsIndex | null>(null);
   const [filter, setFilter] = useState<'all' | 'confirmed' | 'falsified' | 'planned'>('all');
+  const [viewMode, setViewMode] = useState<'list' | 'version'>('list');
   const [loading, setLoading] = useState(true);
   const [selectedExperiment, setSelectedExperiment] = useState<ExperimentMeta | null>(null);
   const [experimentContent, setExperimentContent] = useState<string | null>(null);
@@ -118,6 +119,80 @@ export default function ValidationPage() {
     return index.experiments.filter(e => e.status === filter);
   };
 
+  // Parse version string to extract the primary version number for sorting
+  const parseVersion = (versionStr: string | null): number => {
+    if (!versionStr) return 0;
+    // Extract the first version number (e.g., "v9.3" from "Conduit Monism v9.3")
+    const match = versionStr.match(/v(\d+(?:\.\d+)?)/i);
+    if (match) {
+      return parseFloat(match[1]);
+    }
+    return 0;
+  };
+
+  // Get unique versions sorted from oldest to newest
+  const getVersionsSorted = (): string[] => {
+    const experiments = getFilteredExperiments();
+    const versionSet = new Set<string>();
+    experiments.forEach(exp => {
+      if (exp.frameworkVersion) {
+        // Normalize version strings that span multiple versions (e.g., "v7.0, v8.0, v9.2")
+        const versions = exp.frameworkVersion.split(/,|→|to/).map(v => v.trim());
+        versions.forEach(v => {
+          if (v.includes('v')) versionSet.add(v);
+        });
+      } else {
+        versionSet.add('Unknown Version');
+      }
+    });
+
+    return Array.from(versionSet).sort((a, b) => {
+      if (a === 'Unknown Version') return -1;
+      if (b === 'Unknown Version') return 1;
+      return parseVersion(a) - parseVersion(b);
+    });
+  };
+
+  // Group experiments by version (oldest to newest)
+  const getExperimentsByVersion = (): Map<string, ExperimentMeta[]> => {
+    const experiments = getFilteredExperiments();
+    const versionMap = new Map<string, ExperimentMeta[]>();
+    const versions = getVersionsSorted();
+
+    // Initialize map with sorted versions
+    versions.forEach(v => versionMap.set(v, []));
+
+    experiments.forEach(exp => {
+      if (!exp.frameworkVersion) {
+        const unknown = versionMap.get('Unknown Version') || [];
+        unknown.push(exp);
+        versionMap.set('Unknown Version', unknown);
+      } else {
+        // For experiments spanning multiple versions, add to the primary (first) version
+        const primaryVersion = exp.frameworkVersion.split(/,|→|to/)[0].trim();
+        // Find matching version key
+        const matchingKey = versions.find(v =>
+          v.includes(primaryVersion) || primaryVersion.includes(v.replace('Conduit Monism ', ''))
+        ) || primaryVersion;
+
+        const list = versionMap.get(matchingKey) || [];
+        list.push(exp);
+        versionMap.set(matchingKey, list);
+      }
+    });
+
+    // Sort experiments within each version by date (oldest first)
+    versionMap.forEach((exps, key) => {
+      exps.sort((a, b) => {
+        if (!a.date) return 1;
+        if (!b.date) return -1;
+        return a.date.localeCompare(b.date);
+      });
+    });
+
+    return versionMap;
+  };
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'confirmed': return 'bg-green-900/50 text-green-400 border-green-900/50';
@@ -175,7 +250,7 @@ export default function ValidationPage() {
         </section>
 
         {/* Filter Tabs */}
-        <section className="mb-8">
+        <section className="mb-4">
           <div className="flex gap-2 border-b border-neutral-800">
             <button
               onClick={() => setFilter('all')}
@@ -220,72 +295,180 @@ export default function ValidationPage() {
           </div>
         </section>
 
+        {/* View Mode Toggle */}
+        <section className="mb-8">
+          <div className="flex items-center gap-4">
+            <span className="text-xs text-neutral-500 font-mono">View:</span>
+            <button
+              onClick={() => setViewMode('list')}
+              className={`px-3 py-1.5 text-xs font-mono transition-colors border ${
+                viewMode === 'list'
+                  ? 'border-neutral-500 text-neutral-300 bg-neutral-800/50'
+                  : 'border-neutral-800 text-neutral-500 hover:text-neutral-400'
+              }`}
+            >
+              Chronological
+            </button>
+            <button
+              onClick={() => setViewMode('version')}
+              className={`px-3 py-1.5 text-xs font-mono transition-colors border ${
+                viewMode === 'version'
+                  ? 'border-neutral-500 text-neutral-300 bg-neutral-800/50'
+                  : 'border-neutral-800 text-neutral-500 hover:text-neutral-400'
+              }`}
+            >
+              By Framework Version
+            </button>
+          </div>
+        </section>
+
         {/* Experiments List */}
         <section className="mb-12">
-          <div className="space-y-4">
-            {getFilteredExperiments().map((exp) => (
-              <div
-                key={exp.filename}
-                className={`border ${getStatusColor(exp.status)}`}
-              >
+          {viewMode === 'list' ? (
+            <div className="space-y-4">
+              {getFilteredExperiments().map((exp) => (
                 <div
-                  className="p-4 cursor-pointer hover:bg-neutral-900/50 transition-colors"
-                  onClick={() => handleToggleExpand(exp)}
+                  key={exp.filename}
+                  className={`border ${getStatusColor(exp.status)}`}
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <span className={`text-xs font-mono px-2 py-0.5 ${getStatusColor(exp.status)} mr-2`}>
-                        {getStatusLabel(exp.status)}
-                      </span>
-                      <span className="text-neutral-300">{exp.title}</span>
-                      {exp.experimentId && (
-                        <span className="text-xs text-neutral-600 ml-2">({exp.experimentId})</span>
-                      )}
-                      {exp.priority && (
-                        <span className={`text-xs ml-2 ${
-                          exp.priority.toLowerCase().includes('critical') ? 'text-red-400' :
-                          exp.priority.toLowerCase().includes('high') ? 'text-orange-400' :
-                          'text-neutral-500'
-                        }`}>
-                          [{exp.priority}]
+                  <div
+                    className="p-4 cursor-pointer hover:bg-neutral-900/50 transition-colors"
+                    onClick={() => handleToggleExpand(exp)}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <span className={`text-xs font-mono px-2 py-0.5 ${getStatusColor(exp.status)} mr-2`}>
+                          {getStatusLabel(exp.status)}
                         </span>
-                      )}
+                        <span className="text-neutral-300">{exp.title}</span>
+                        {exp.experimentId && (
+                          <span className="text-xs text-neutral-600 ml-2">({exp.experimentId})</span>
+                        )}
+                        {exp.priority && (
+                          <span className={`text-xs ml-2 ${
+                            exp.priority.toLowerCase().includes('critical') ? 'text-red-400' :
+                            exp.priority.toLowerCase().includes('high') ? 'text-orange-400' :
+                            'text-neutral-500'
+                          }`}>
+                            [{exp.priority}]
+                          </span>
+                        )}
+                      </div>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleViewFull(exp);
+                        }}
+                        className="text-xs text-neutral-500 hover:text-neutral-300 ml-4"
+                      >
+                        View Full →
+                      </button>
                     </div>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleViewFull(exp);
-                      }}
-                      className="text-xs text-neutral-500 hover:text-neutral-300 ml-4"
-                    >
-                      View Full →
-                    </button>
+                    <div className="mt-2 flex items-center gap-4 text-xs text-neutral-600 font-mono">
+                      <span>{exp.filename}</span>
+                      {exp.date && <span>|</span>}
+                      {exp.date && <span>{exp.date}</span>}
+                      {exp.testType && <span>|</span>}
+                      {exp.testType && <span>{exp.testType}</span>}
+                    </div>
                   </div>
-                  <div className="mt-2 flex items-center gap-4 text-xs text-neutral-600 font-mono">
-                    <span>{exp.filename}</span>
-                    {exp.date && <span>|</span>}
-                    {exp.date && <span>{exp.date}</span>}
-                    {exp.testType && <span>|</span>}
-                    {exp.testType && <span>{exp.testType}</span>}
-                  </div>
-                </div>
 
-                {/* Expanded content preview */}
-                {expandedExperiments.has(exp.filename) && loadedContent[exp.filename] && (
-                  <div className="p-4 border-t border-neutral-800/50">
-                    <div className="text-sm text-neutral-400 max-h-96 overflow-y-auto">
-                      <MarkdownRenderer content={loadedContent[exp.filename].substring(0, 3000)} />
-                      {loadedContent[exp.filename].length > 3000 && (
-                        <p className="text-neutral-600 text-xs mt-4">
-                          ... (truncated, click &quot;View Full&quot; to see complete content)
-                        </p>
-                      )}
+                  {/* Expanded content preview */}
+                  {expandedExperiments.has(exp.filename) && loadedContent[exp.filename] && (
+                    <div className="p-4 border-t border-neutral-800/50">
+                      <div className="text-sm text-neutral-400 max-h-96 overflow-y-auto">
+                        <MarkdownRenderer content={loadedContent[exp.filename].substring(0, 3000)} />
+                        {loadedContent[exp.filename].length > 3000 && (
+                          <p className="text-neutral-600 text-xs mt-4">
+                            ... (truncated, click &quot;View Full&quot; to see complete content)
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            /* Version-grouped view */
+            <div className="space-y-8">
+              {Array.from(getExperimentsByVersion().entries()).map(([version, experiments]) => (
+                experiments.length > 0 && (
+                  <div key={version}>
+                    <div className="flex items-center gap-4 mb-4">
+                      <h3 className="text-lg font-mono text-neutral-300">{version}</h3>
+                      <span className="text-xs text-neutral-600 font-mono">
+                        ({experiments.length} experiment{experiments.length !== 1 ? 's' : ''})
+                      </span>
+                      <div className="flex-1 h-px bg-neutral-800"></div>
+                    </div>
+                    <div className="space-y-3 pl-4 border-l border-neutral-800">
+                      {experiments.map((exp) => (
+                        <div
+                          key={exp.filename}
+                          className={`border ${getStatusColor(exp.status)}`}
+                        >
+                          <div
+                            className="p-4 cursor-pointer hover:bg-neutral-900/50 transition-colors"
+                            onClick={() => handleToggleExpand(exp)}
+                          >
+                            <div className="flex items-start justify-between">
+                              <div className="flex-1">
+                                <span className={`text-xs font-mono px-2 py-0.5 ${getStatusColor(exp.status)} mr-2`}>
+                                  {getStatusLabel(exp.status)}
+                                </span>
+                                <span className="text-neutral-300">{exp.title}</span>
+                                {exp.experimentId && (
+                                  <span className="text-xs text-neutral-600 ml-2">({exp.experimentId})</span>
+                                )}
+                                {exp.priority && (
+                                  <span className={`text-xs ml-2 ${
+                                    exp.priority.toLowerCase().includes('critical') ? 'text-red-400' :
+                                    exp.priority.toLowerCase().includes('high') ? 'text-orange-400' :
+                                    'text-neutral-500'
+                                  }`}>
+                                    [{exp.priority}]
+                                  </span>
+                                )}
+                              </div>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleViewFull(exp);
+                                }}
+                                className="text-xs text-neutral-500 hover:text-neutral-300 ml-4"
+                              >
+                                View Full →
+                              </button>
+                            </div>
+                            <div className="mt-2 flex items-center gap-4 text-xs text-neutral-600 font-mono">
+                              {exp.date && <span>{exp.date}</span>}
+                              {exp.testType && <span>|</span>}
+                              {exp.testType && <span>{exp.testType}</span>}
+                            </div>
+                          </div>
+
+                          {/* Expanded content preview */}
+                          {expandedExperiments.has(exp.filename) && loadedContent[exp.filename] && (
+                            <div className="p-4 border-t border-neutral-800/50">
+                              <div className="text-sm text-neutral-400 max-h-96 overflow-y-auto">
+                                <MarkdownRenderer content={loadedContent[exp.filename].substring(0, 3000)} />
+                                {loadedContent[exp.filename].length > 3000 && (
+                                  <p className="text-neutral-600 text-xs mt-4">
+                                    ... (truncated, click &quot;View Full&quot; to see complete content)
+                                  </p>
+                                )}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
+                )
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Tools Section */}
