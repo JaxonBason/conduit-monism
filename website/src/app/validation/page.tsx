@@ -147,9 +147,9 @@ export default function ValidationPage() {
     });
 
     return Array.from(versionSet).sort((a, b) => {
-      if (a === 'Unknown Version') return -1;
-      if (b === 'Unknown Version') return 1;
-      return parseVersion(a) - parseVersion(b);
+      if (a === 'Unknown Version') return 1;
+      if (b === 'Unknown Version') return -1;
+      return parseVersion(b) - parseVersion(a); // Newest first
     });
   };
 
@@ -181,12 +181,12 @@ export default function ValidationPage() {
       }
     });
 
-    // Sort experiments within each version by date (oldest first)
+    // Sort experiments within each version by date (newest first)
     versionMap.forEach((exps, key) => {
       exps.sort((a, b) => {
         if (!a.date) return 1;
         if (!b.date) return -1;
-        return a.date.localeCompare(b.date);
+        return b.date.localeCompare(a.date);
       });
     });
 
